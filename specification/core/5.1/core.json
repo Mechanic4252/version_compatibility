@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "5.1"
+    "version": "6.0"
   },
   "host": "dev.azure.com",
   "x-ms-vss-area": "Core",
@@ -44,7 +44,7 @@
         "tags": [
           "Processes"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "processes",
         "x-ms-vss-method": "GetProcesses",
         "description": "Get a list of processes.",
@@ -89,7 +89,7 @@
         "tags": [
           "Processes"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "processes",
         "x-ms-vss-method": "GetProcessById",
         "description": "Get a process by ID.",
@@ -139,7 +139,7 @@
         "tags": [
           "Projects"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "projects",
         "x-ms-vss-method": "GetProjects",
         "description": "Get all projects in the organization that the authenticated user has access to.",
@@ -267,7 +267,7 @@
         "tags": [
           "Projects"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "projects",
         "x-ms-vss-method": "QueueCreateProject",
         "description": "Queues a project to be created. Use the [GetOperation](../../operations/operations/get) to periodically check for create project status.",
@@ -326,7 +326,7 @@
         "tags": [
           "Projects"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "projects",
         "x-ms-vss-method": "GetProject",
         "description": "Get project with the specified id or name, optionally including capabilities.",
@@ -388,7 +388,7 @@
         "tags": [
           "Projects"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "projects",
         "x-ms-vss-method": "QueueDeleteProject",
         "description": "Queues a project to be deleted. Use the [GetOperation](../../operations/operations/get) to periodically check for delete project status.",
@@ -436,7 +436,7 @@
         "tags": [
           "Projects"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "projects",
         "x-ms-vss-method": "UpdateProject",
         "description": "Update an existing project's name, abbreviation, description, or restore a project.",
@@ -498,7 +498,7 @@
         "tags": [
           "Avatar"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "avatar",
         "x-ms-vss-method": "RemoveProjectAvatar",
         "x-ms-preview": true,
@@ -540,7 +540,7 @@
         "tags": [
           "Avatar"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "avatar",
         "x-ms-vss-method": "SetProjectAvatar",
         "x-ms-preview": true,
@@ -589,7 +589,7 @@
         "tags": [
           "Projects"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "properties",
         "x-ms-vss-method": "GetProjectProperties",
         "x-ms-preview": true,
@@ -658,7 +658,7 @@
         "tags": [
           "Projects"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "properties",
         "x-ms-vss-method": "SetProjectProperties",
         "x-ms-preview": true,
@@ -723,7 +723,7 @@
         "tags": [
           "Teams"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "teams",
         "x-ms-vss-method": "CreateTeam",
         "description": "Create a team in a team project.\n\nPossible failure scenarios\nInvalid project name/ID (project doesn't exist) 404\nInvalid team name or description 400\nTeam already exists 400\nInsufficient privileges 400",
@@ -787,7 +787,7 @@
         "tags": [
           "Teams"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "teams",
         "x-ms-vss-method": "GetTeams",
         "description": "Get a list of teams.",
@@ -875,7 +875,7 @@
         "tags": [
           "Teams"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "teams",
         "x-ms-vss-method": "DeleteTeam",
         "description": "Delete a team.",
@@ -928,7 +928,7 @@
         "tags": [
           "Teams"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "teams",
         "x-ms-vss-method": "GetTeam",
         "description": "Get a specific team.",
@@ -977,14 +977,7 @@
             }
           }
         },
-        "security": [
-          {
-            "oauth2": [
-              "vso.profile",
-              "vso.project"
-            ]
-          }
-        ],
+        "security": [],
         "x-ms-examples": {
           "": {
             "$ref": "./httpExamples/teams/GET__projects__projectId__teams__teamId_.json"
@@ -995,7 +988,7 @@
         "tags": [
           "Teams"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "teams",
         "x-ms-vss-method": "UpdateTeam",
         "description": "Update a team's name and/or description.",
@@ -1068,7 +1061,7 @@
         "tags": [
           "Teams"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "members",
         "x-ms-vss-method": "GetTeamMembersWithExtendedProperties",
         "description": "Get a list of members for a specific team.",
@@ -1149,7 +1142,7 @@
         "tags": [
           "Teams"
         ],
-        "x-ms-docs-override-version": "5.1-preview.3",
+        "x-ms-docs-override-version": "6.0-preview.3",
         "x-ms-vss-resource": "teams",
         "x-ms-vss-method": "GetAllTeams",
         "x-ms-preview": true,
@@ -1271,13 +1264,16 @@
           "$ref": "#/definitions/IdentityDescriptor"
         },
         "id": {
+          "description": "Identity Identifier. Also called Storage Key, or VSID",
           "type": "string",
           "format": "uuid"
         },
         "isActive": {
+          "description": "True if the identity has a membership in any Azure Devops group in the organization.",
           "type": "boolean"
         },
         "isContainer": {
+          "description": "True if the identity is a group.",
           "type": "boolean"
         },
         "masterId": {
@@ -1285,6 +1281,7 @@
           "format": "uuid"
         },
         "memberIds": {
+          "description": "Id of the members of the identity (groups only).",
           "type": "array",
           "items": {
             "type": "string",
@@ -1322,6 +1319,7 @@
           "type": "string"
         },
         "subjectDescriptor": {
+          "description": "Subject descriptor of a Graph entity.",
           "type": "string"
         },
         "uniqueUserId": {
@@ -1991,12 +1989,17 @@
         "processCustomizationType": {
           "description": "Process customization type on this collection. It can be Xml or Inherited.",
           "enum": [
+            "unknown",
             "xml",
             "inherited"
           ],
           "x-ms-enum": {
             "name": "ProcessCustomizationType",
             "values": [
+              {
+                "value": "unknown",
+                "description": "Process customization can't be computed."
+              },
               {
                 "value": "xml",
                 "description": "Customization based on project-scoped xml customization"
@@ -2448,28 +2451,28 @@
     "api-Version": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '5.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '6.0' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.2": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '5.1-preview.2' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '6.0-preview.2' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.3": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '5.1-preview.3' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '6.0-preview.3' to use this version of the api.",
       "required": true,
       "type": "string"
     }

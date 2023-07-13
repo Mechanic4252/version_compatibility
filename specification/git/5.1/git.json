@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "5.1"
+    "version": "6.0"
   },
   "host": "dev.azure.com",
   "x-ms-vss-area": "Git",
@@ -168,7 +168,7 @@
         "tags": [
           "Repositories"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "deletedRepositories",
         "x-ms-vss-method": "GetDeletedRepositories",
         "x-ms-preview": true,
@@ -214,7 +214,7 @@
         "tags": [
           "Refs Favorites"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "refsFavorites",
         "x-ms-vss-method": "CreateFavorite",
         "x-ms-preview": true,
@@ -274,7 +274,7 @@
         "tags": [
           "Refs Favorites"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "refsFavorites",
         "x-ms-vss-method": "GetRefFavorites",
         "x-ms-preview": true,
@@ -341,7 +341,7 @@
         "tags": [
           "Refs Favorites"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "refsFavorites",
         "x-ms-vss-method": "DeleteRefFavorite",
         "x-ms-preview": true,
@@ -378,13 +378,20 @@
           "200": {
             "description": "successful operation"
           }
-        }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "vso.code"
+            ]
+          }
+        ]
       },
       "get": {
         "tags": [
           "Refs Favorites"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "refsFavorites",
         "x-ms-vss-method": "GetRefFavorite",
         "x-ms-preview": true,
@@ -442,7 +449,7 @@
         "tags": [
           "Policy Configurations"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "policyConfigurations",
         "x-ms-vss-method": "GetPolicyConfigurations",
         "x-ms-preview": true,
@@ -538,7 +545,7 @@
         "tags": [
           "Pull Requests"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequests",
         "x-ms-vss-method": "GetPullRequestsByProject",
         "description": "Retrieve all pull requests matching a specified criteria.",
@@ -563,10 +570,34 @@
           },
           {
             "in": "query",
+            "name": "searchCriteria.creatorId",
+            "description": "If set, search for pull requests that were created by this identity.",
+            "required": false,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "query",
             "name": "searchCriteria.includeLinks",
             "description": "Whether to include the _links field on the shallow references",
             "required": false,
             "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.repositoryId",
+            "description": "If set, search for pull requests whose target branch is in this repository.",
+            "required": false,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.reviewerId",
+            "description": "If set, search for pull requests that have this identity as a reviewer.",
+            "required": false,
+            "type": "string",
+            "format": "uuid"
           },
           {
             "in": "query",
@@ -582,13 +613,6 @@
             "required": false,
             "type": "string",
             "format": "uuid"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.targetRefName",
-            "description": "If set, search for pull requests into this branch.",
-            "required": false,
-            "type": "string"
           },
           {
             "in": "query",
@@ -631,27 +655,10 @@
           },
           {
             "in": "query",
-            "name": "searchCriteria.reviewerId",
-            "description": "If set, search for pull requests that have this identity as a reviewer.",
+            "name": "searchCriteria.targetRefName",
+            "description": "If set, search for pull requests into this branch.",
             "required": false,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.creatorId",
-            "description": "If set, search for pull requests that were created by this identity.",
-            "required": false,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.repositoryId",
-            "description": "If set, search for pull requests whose target branch is in this repository.",
-            "required": false,
-            "type": "string",
-            "format": "uuid"
+            "type": "string"
           },
           {
             "in": "query",
@@ -711,7 +718,7 @@
         "tags": [
           "Pull Requests"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequests",
         "x-ms-vss-method": "GetPullRequestById",
         "description": "Retrieve a pull request.",
@@ -774,7 +781,7 @@
         "tags": [
           "Repositories"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "recycleBinRepositories",
         "x-ms-vss-method": "GetRecycleBinRepositories",
         "x-ms-preview": true,
@@ -827,7 +834,7 @@
         "tags": [
           "Repositories"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "recycleBinRepositories",
         "x-ms-vss-method": "DeleteRepositoryFromRecycleBin",
         "x-ms-preview": true,
@@ -877,7 +884,7 @@
         "tags": [
           "Repositories"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "recycleBinRepositories",
         "x-ms-vss-method": "RestoreRepositoryFromRecycleBin",
         "x-ms-preview": true,
@@ -947,7 +954,7 @@
         "tags": [
           "Repositories"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "repositories",
         "x-ms-vss-method": "CreateRepository",
         "description": "Create a git repository in a team project.",
@@ -1025,7 +1032,7 @@
         "tags": [
           "Repositories"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "repositories",
         "x-ms-vss-method": "GetRepositories",
         "description": "Retrieve git repositories.",
@@ -1104,7 +1111,7 @@
         "tags": [
           "Repositories"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "repositories",
         "x-ms-vss-method": "DeleteRepository",
         "description": "Delete a git repository",
@@ -1120,7 +1127,7 @@
           {
             "in": "path",
             "name": "repositoryId",
-            "description": "The name or ID of the repository.",
+            "description": "The ID of the repository.",
             "required": true,
             "type": "string",
             "format": "uuid"
@@ -1159,7 +1166,7 @@
         "tags": [
           "Repositories"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "repositories",
         "x-ms-vss-method": "GetRepository",
         "description": "Retrieve a git repository.",
@@ -1222,7 +1229,7 @@
         "tags": [
           "Repositories"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "repositories",
         "x-ms-vss-method": "UpdateRepository",
         "description": "Updates the Git repository with either a new repo name or a new default branch.",
@@ -1253,7 +1260,7 @@
           {
             "in": "path",
             "name": "repositoryId",
-            "description": "The name or ID of the repository.",
+            "description": "The ID of the repository.",
             "required": true,
             "type": "string",
             "format": "uuid"
@@ -1286,8 +1293,11 @@
           }
         ],
         "x-ms-examples": {
-          "": {
+          "Update a respository without specifying the project": {
             "$ref": "./httpExamples/Repositories/PATCH__git_repositories__repositoryId_.json"
+          },
+          "Update a respository while specifying the project": {
+            "$ref": "./httpExamples/Repositories/PATCH__git_repositories__project_.json"
           }
         }
       }
@@ -1297,7 +1307,7 @@
         "tags": [
           "Annotated Tags"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "annotatedTags",
         "x-ms-vss-method": "CreateAnnotatedTag",
         "x-ms-preview": true,
@@ -1371,7 +1381,7 @@
         "tags": [
           "Annotated Tags"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "annotatedTags",
         "x-ms-vss-method": "GetAnnotatedTag",
         "x-ms-preview": true,
@@ -1440,7 +1450,7 @@
         "tags": [
           "Blobs"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "blobs",
         "x-ms-vss-method": "GetBlobs",
         "description": "Gets one or more blobs in a zip file download.",
@@ -1520,7 +1530,7 @@
         "tags": [
           "Blobs"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "blobs",
         "x-ms-vss-method": "GetBlob",
         "description": "Get a single blob.\n\nRepositories have both a name and an identifier. Identifiers are globally unique,\nbut several projects may contain a repository of the same name. You don't need to include\nthe project if you specify a repository by ID. However, if you specify a repository by name,\nyou must also specify the project (by name or ID).",
@@ -1619,7 +1629,7 @@
         "tags": [
           "Cherry Picks"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "cherryPicks",
         "x-ms-vss-method": "CreateCherryPick",
         "x-ms-preview": true,
@@ -1686,11 +1696,11 @@
         "tags": [
           "Cherry Picks"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "cherryPicks",
         "x-ms-vss-method": "GetCherryPickForRefName",
         "x-ms-preview": true,
-        "description": "Retrieve information about a cherry pick for a specific branch.",
+        "description": "Retrieve information about a cherry pick operation for a specific branch. This operation is expensive due to the underlying object structure, so this API only looks at the 1000 most recent cherry pick operations.",
         "operationId": "Cherry Picks_Get Cherry Pick For Ref Name",
         "produces": [
           "application/json"
@@ -1750,11 +1760,11 @@
         "tags": [
           "Cherry Picks"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "cherryPicks",
         "x-ms-vss-method": "GetCherryPick",
         "x-ms-preview": true,
-        "description": "Retrieve information about a cherry pick by cherry pick Id.",
+        "description": "Retrieve information about a cherry pick operation by cherry pick Id.",
         "operationId": "Cherry Picks_Get Cherry Pick",
         "produces": [
           "application/json"
@@ -1815,7 +1825,7 @@
         "tags": [
           "Commits"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "commits",
         "x-ms-vss-method": "GetPushCommits",
         "description": "Retrieve a list of commits associated with a particular push.",
@@ -1911,7 +1921,7 @@
         "tags": [
           "Commits"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "commits",
         "x-ms-vss-method": "GetCommit",
         "description": "Retrieve a particular commit.",
@@ -1991,7 +2001,7 @@
         "tags": [
           "Commits"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "changes",
         "x-ms-vss-method": "GetChanges",
         "description": "Retrieve changes for a particular commit.",
@@ -2076,7 +2086,7 @@
         "tags": [
           "Statuses"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "statuses",
         "x-ms-vss-method": "CreateCommitStatus",
         "description": "Create Git commit status.",
@@ -2156,7 +2166,7 @@
         "tags": [
           "Statuses"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "statuses",
         "x-ms-vss-method": "GetStatuses",
         "description": "Get statuses associated with the Git commit.",
@@ -2252,7 +2262,7 @@
         "tags": [
           "Commits"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "commitsBatch",
         "x-ms-vss-method": "GetCommitsBatch",
         "description": "Retrieve git commits for a project matching the search criteria",
@@ -2355,7 +2365,7 @@
         "tags": [
           "Diffs"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "commitDiffs",
         "x-ms-vss-method": "GetCommitDiffs",
         "description": "Find the closest common commit (the merge base) between base and target commits, and get the diff between either the base and target commits or common and target commits.",
@@ -2411,6 +2421,13 @@
           },
           {
             "in": "query",
+            "name": "baseVersion",
+            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "baseVersionOptions",
             "description": "Version options - Specify additional modifiers to version (e.g Previous)",
             "required": false,
@@ -2437,13 +2454,6 @@
                 }
               ]
             }
-          },
-          {
-            "in": "query",
-            "name": "baseVersion",
-            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
-            "required": false,
-            "type": "string"
           },
           {
             "in": "query",
@@ -2476,6 +2486,13 @@
           },
           {
             "in": "query",
+            "name": "targetVersion",
+            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "targetVersionOptions",
             "description": "Version options - Specify additional modifiers to version (e.g Previous)",
             "required": false,
@@ -2502,13 +2519,6 @@
                 }
               ]
             }
-          },
-          {
-            "in": "query",
-            "name": "targetVersion",
-            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
-            "required": false,
-            "type": "string"
           },
           {
             "in": "query",
@@ -2576,7 +2586,7 @@
         "tags": [
           "Import Requests"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "importRequests",
         "x-ms-vss-method": "CreateImportRequest",
         "x-ms-preview": true,
@@ -2648,7 +2658,7 @@
         "tags": [
           "Import Requests"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "importRequests",
         "x-ms-vss-method": "QueryImportRequests",
         "x-ms-preview": true,
@@ -2723,7 +2733,7 @@
         "tags": [
           "Import Requests"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "importRequests",
         "x-ms-vss-method": "GetImportRequest",
         "x-ms-preview": true,
@@ -2791,7 +2801,7 @@
         "tags": [
           "Import Requests"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "importRequests",
         "x-ms-vss-method": "UpdateImportRequest",
         "x-ms-preview": true,
@@ -2873,7 +2883,7 @@
         "tags": [
           "Items"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "items",
         "x-ms-vss-method": "GetItems",
         "description": "Get Item Metadata and/or Content for a collection of items. The download parameter is to indicate whether the content should be available as a download or just sent as a stream in the response. Doesn't apply to zipped content which is always returned as a download.",
@@ -2982,6 +2992,13 @@
           },
           {
             "in": "query",
+            "name": "versionDescriptor.version",
+            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "versionDescriptor.versionOptions",
             "description": "Version options - Specify additional modifiers to version (e.g Previous)",
             "required": false,
@@ -3008,13 +3025,6 @@
                 }
               ]
             }
-          },
-          {
-            "in": "query",
-            "name": "versionDescriptor.version",
-            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
-            "required": false,
-            "type": "string"
           },
           {
             "in": "query",
@@ -3085,7 +3095,7 @@
         "tags": [
           "Items"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "itemsBatch",
         "x-ms-vss-method": "GetItemsBatch",
         "description": "Post for retrieving a creating a batch out of a set of items in a repo / project given a list of paths or a long path",
@@ -3162,7 +3172,7 @@
         "tags": [
           "Pull Request Query"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestQuery",
         "x-ms-vss-method": "GetPullRequestQuery",
         "description": "This API is used to find what pull requests are related to a given commit.  It can be used to either find the pull request that created a particular merge commit or it can be used to find all pull requests that have ever merged a particular commit.  The input is a list of queries which each contain a list of commits. For each commit that you search against, you will get back a dictionary of commit -> pull requests.",
@@ -3231,7 +3241,7 @@
         "tags": [
           "Pull Requests"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequests",
         "x-ms-vss-method": "CreatePullRequest",
         "description": "Create a pull request.",
@@ -3310,7 +3320,7 @@
         "tags": [
           "Pull Requests"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequests",
         "x-ms-vss-method": "GetPullRequests",
         "description": "Retrieve all pull requests matching a specified criteria.",
@@ -3343,10 +3353,34 @@
           },
           {
             "in": "query",
+            "name": "searchCriteria.creatorId",
+            "description": "If set, search for pull requests that were created by this identity.",
+            "required": false,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "query",
             "name": "searchCriteria.includeLinks",
             "description": "Whether to include the _links field on the shallow references",
             "required": false,
             "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.repositoryId",
+            "description": "If set, search for pull requests whose target branch is in this repository.",
+            "required": false,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.reviewerId",
+            "description": "If set, search for pull requests that have this identity as a reviewer.",
+            "required": false,
+            "type": "string",
+            "format": "uuid"
           },
           {
             "in": "query",
@@ -3362,13 +3396,6 @@
             "required": false,
             "type": "string",
             "format": "uuid"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.targetRefName",
-            "description": "If set, search for pull requests into this branch.",
-            "required": false,
-            "type": "string"
           },
           {
             "in": "query",
@@ -3411,27 +3438,10 @@
           },
           {
             "in": "query",
-            "name": "searchCriteria.reviewerId",
-            "description": "If set, search for pull requests that have this identity as a reviewer.",
+            "name": "searchCriteria.targetRefName",
+            "description": "If set, search for pull requests into this branch.",
             "required": false,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.creatorId",
-            "description": "If set, search for pull requests that were created by this identity.",
-            "required": false,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.repositoryId",
-            "description": "If set, search for pull requests whose target branch is in this repository.",
-            "required": false,
-            "type": "string",
-            "format": "uuid"
+            "type": "string"
           },
           {
             "in": "query",
@@ -3497,7 +3507,7 @@
         "tags": [
           "Pull Requests"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequests",
         "x-ms-vss-method": "GetPullRequest",
         "description": "Retrieve a pull request.",
@@ -3598,7 +3608,7 @@
         "tags": [
           "Pull Requests"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequests",
         "x-ms-vss-method": "UpdatePullRequest",
         "description": "Update a pull request\n\nThese are the properties that can be updated with the API:\n - Status\n - Title\n - Description (up to 4000 characters)\n - CompletionOptions\n - MergeOptions\n - AutoCompleteSetBy.Id\n - TargetRefName (when the PR retargeting feature is enabled)\n Attempting to update other properties outside of this list will either cause the server to throw an `InvalidArgumentValueException`,\n or to silently ignore the update.",
@@ -3675,7 +3685,7 @@
         "tags": [
           "Pull Request Attachments"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestAttachments",
         "x-ms-vss-method": "GetAttachments",
         "x-ms-preview": true,
@@ -3744,7 +3754,7 @@
         "tags": [
           "Pull Request Attachments"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestAttachments",
         "x-ms-vss-method": "CreateAttachment",
         "x-ms-preview": true,
@@ -3834,7 +3844,7 @@
         "tags": [
           "Pull Request Attachments"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestAttachments",
         "x-ms-vss-method": "DeleteAttachment",
         "x-ms-preview": true,
@@ -3899,7 +3909,7 @@
         "tags": [
           "Pull Request Attachments"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestAttachments",
         "x-ms-vss-method": "GetAttachment",
         "x-ms-preview": true,
@@ -3974,7 +3984,7 @@
         "tags": [
           "Pull Request Commits"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestCommits",
         "x-ms-vss-method": "GetPullRequestCommits",
         "description": "Get the commits for the specified pull request.",
@@ -4014,6 +4024,21 @@
             "type": "string"
           },
           {
+            "in": "query",
+            "name": "$top",
+            "description": "Maximum number of commits to return.",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "continuationToken",
+            "description": "The continuation token used for pagination.",
+            "required": false,
+            "type": "string"
+          },
+          {
             "$ref": "#/parameters/api-Version"
           }
         ],
@@ -4042,7 +4067,7 @@
         "tags": [
           "Pull Request Iterations"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestIterations",
         "x-ms-vss-method": "GetPullRequestIterations",
         "description": "Get the list of iterations for the specified pull request.",
@@ -4117,7 +4142,7 @@
         "tags": [
           "Pull Request Iterations"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestIterations",
         "x-ms-vss-method": "GetPullRequestIteration",
         "description": "Get the specified iteration for a pull request.",
@@ -4190,7 +4215,7 @@
         "tags": [
           "Pull Request Iteration Changes"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestIterationChanges",
         "x-ms-vss-method": "GetPullRequestIterationChanges",
         "description": "Retrieve the changes made in a pull request between two iterations.",
@@ -4295,7 +4320,7 @@
         "tags": [
           "Pull Request Commits"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestCommits",
         "x-ms-vss-method": "GetPullRequestIterationCommits",
         "description": "Get the commits for the specified iteration of a pull request.",
@@ -4387,7 +4412,7 @@
         "tags": [
           "Pull Request Iteration Statuses"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestIterationStatuses",
         "x-ms-vss-method": "CreatePullRequestIterationStatus",
         "x-ms-preview": true,
@@ -4477,7 +4502,7 @@
         "tags": [
           "Pull Request Iteration Statuses"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestIterationStatuses",
         "x-ms-vss-method": "GetPullRequestIterationStatuses",
         "x-ms-preview": true,
@@ -4558,7 +4583,7 @@
         "tags": [
           "Pull Request Iteration Statuses"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestIterationStatuses",
         "x-ms-vss-method": "UpdatePullRequestIterationStatuses",
         "x-ms-preview": true,
@@ -4644,7 +4669,7 @@
         "tags": [
           "Pull Request Iteration Statuses"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestIterationStatuses",
         "x-ms-vss-method": "DeletePullRequestIterationStatus",
         "x-ms-preview": true,
@@ -4724,7 +4749,7 @@
         "tags": [
           "Pull Request Iteration Statuses"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestIterationStatuses",
         "x-ms-vss-method": "GetPullRequestIterationStatus",
         "x-ms-preview": true,
@@ -4812,7 +4837,7 @@
         "tags": [
           "Pull Request Labels"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestLabels",
         "x-ms-vss-method": "CreatePullRequestLabel",
         "x-ms-preview": true,
@@ -4895,7 +4920,7 @@
         "tags": [
           "Pull Request Labels"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestLabels",
         "x-ms-vss-method": "GetPullRequestLabels",
         "x-ms-preview": true,
@@ -4971,7 +4996,7 @@
         "tags": [
           "Pull Request Labels"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestLabels",
         "x-ms-vss-method": "DeletePullRequestLabels",
         "x-ms-preview": true,
@@ -5043,7 +5068,7 @@
         "tags": [
           "Pull Request Labels"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestLabels",
         "x-ms-vss-method": "GetPullRequestLabel",
         "x-ms-preview": true,
@@ -5123,7 +5148,7 @@
         "tags": [
           "Pull Request Properties"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestProperties",
         "x-ms-vss-method": "GetPullRequestProperties",
         "x-ms-preview": true,
@@ -5192,7 +5217,7 @@
         "tags": [
           "Pull Request Properties"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestProperties",
         "x-ms-vss-method": "UpdatePullRequestProperties",
         "x-ms-preview": true,
@@ -5278,7 +5303,7 @@
         "tags": [
           "Pull Request Reviewers"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestReviewers",
         "x-ms-vss-method": "CreatePullRequestReviewers",
         "description": "Add reviewers to a pull request.",
@@ -5312,7 +5337,7 @@
           {
             "in": "path",
             "name": "repositoryId",
-            "description": "The repository ID of the pull request’s target branch.",
+            "description": "The repository ID of the pull request's target branch.",
             "required": true,
             "type": "string"
           },
@@ -5355,11 +5380,86 @@
           }
         ]
       },
+      "put": {
+        "tags": [
+          "Pull Request Reviewers"
+        ],
+        "x-ms-docs-override-version": "6.0",
+        "x-ms-vss-resource": "pullRequestReviewers",
+        "x-ms-vss-method": "CreateUnmaterializedPullRequestReviewer",
+        "description": "Add an unmaterialized identity to the reviewers of a pull request.",
+        "operationId": "Pull Request Reviewers_Create Unmaterialized Pull Request Reviewer",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "organization",
+            "description": "The name of the Azure DevOps organization.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Reviewer to add to the pull request.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/IdentityRefWithVote"
+            }
+          },
+          {
+            "in": "path",
+            "name": "repositoryId",
+            "description": "The repository ID of the pull request's target branch.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "pullRequestId",
+            "description": "ID of the pull request.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "project",
+            "description": "Project ID or project name",
+            "required": true,
+            "x-ms-required": false,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/api-Version"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/IdentityRefWithVote"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "vso.code_write"
+            ]
+          }
+        ]
+      },
       "get": {
         "tags": [
           "Pull Request Reviewers"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestReviewers",
         "x-ms-vss-method": "GetPullRequestReviewers",
         "description": "Retrieve the reviewers for a pull request",
@@ -5378,7 +5478,7 @@
           {
             "in": "path",
             "name": "repositoryId",
-            "description": "The repository ID of the pull request’s target branch.",
+            "description": "The repository ID of the pull request's target branch.",
             "required": true,
             "type": "string"
           },
@@ -5430,11 +5530,11 @@
         "tags": [
           "Pull Request Reviewers"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestReviewers",
         "x-ms-vss-method": "UpdatePullRequestReviewers",
         "description": "Reset the votes of multiple reviewers on a pull request.  NOTE: This endpoint only supports updating votes, but does not support updating required reviewers (use policy) or display names.",
-        "operationId": "Pull Request Reviewers_Update",
+        "operationId": "Pull Request Reviewers_Update Pull Request Reviewers",
         "consumes": [
           "application/json"
         ],
@@ -5461,7 +5561,7 @@
           {
             "in": "path",
             "name": "repositoryId",
-            "description": "The repository ID of the pull request’s target branch.",
+            "description": "The repository ID of the pull request's target branch.",
             "required": true,
             "type": "string"
           },
@@ -5504,7 +5604,7 @@
         "tags": [
           "Pull Request Reviewers"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestReviewers",
         "x-ms-vss-method": "CreatePullRequestReviewer",
         "description": "Add a reviewer to a pull request or cast a vote.",
@@ -5535,7 +5635,7 @@
           {
             "in": "path",
             "name": "repositoryId",
-            "description": "The repository ID of the pull request’s target branch.",
+            "description": "The repository ID of the pull request's target branch.",
             "required": true,
             "type": "string"
           },
@@ -5594,7 +5694,7 @@
         "tags": [
           "Pull Request Reviewers"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestReviewers",
         "x-ms-vss-method": "DeletePullRequestReviewer",
         "description": "Remove a reviewer from a pull request.",
@@ -5610,7 +5710,7 @@
           {
             "in": "path",
             "name": "repositoryId",
-            "description": "The repository ID of the pull request’s target branch.",
+            "description": "The repository ID of the pull request's target branch.",
             "required": true,
             "type": "string"
           },
@@ -5663,7 +5763,7 @@
         "tags": [
           "Pull Request Reviewers"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestReviewers",
         "x-ms-vss-method": "GetPullRequestReviewer",
         "description": "Retrieve information about a particular reviewer on a pull request",
@@ -5682,7 +5782,7 @@
           {
             "in": "path",
             "name": "repositoryId",
-            "description": "The repository ID of the pull request’s target branch.",
+            "description": "The repository ID of the pull request's target branch.",
             "required": true,
             "type": "string"
           },
@@ -5733,6 +5833,88 @@
             "$ref": "./httpExamples/PullRequestReviewers/GET__git_repositories__repositoryId__pullRequests__pullRequestId__reviewers__additionalReviewerId_.json"
           }
         }
+      },
+      "patch": {
+        "tags": [
+          "Pull Request Reviewers"
+        ],
+        "x-ms-docs-override-version": "6.0",
+        "x-ms-vss-resource": "pullRequestReviewers",
+        "x-ms-vss-method": "UpdatePullRequestReviewer",
+        "description": "Edit a reviewer entry. These fields are patchable: isFlagged, hasDeclined",
+        "operationId": "Pull Request Reviewers_Update Pull Request Reviewer",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "organization",
+            "description": "The name of the Azure DevOps organization.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Reviewer data.<br />If the reviewer's ID is included here, it must match the reviewerID parameter.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/IdentityRefWithVote"
+            }
+          },
+          {
+            "in": "path",
+            "name": "repositoryId",
+            "description": "The repository ID of the pull request's target branch.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "pullRequestId",
+            "description": "ID of the pull request.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "path",
+            "name": "reviewerId",
+            "description": "ID of the reviewer.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "project",
+            "description": "Project ID or project name",
+            "required": true,
+            "x-ms-required": false,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/api-Version"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/IdentityRefWithVote"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "vso.code_write"
+            ]
+          }
+        ]
       }
     },
     "/{organization}/{project}/_apis/git/repositories/{repositoryId}/pullRequests/{pullRequestId}/share": {
@@ -5740,7 +5922,7 @@
         "tags": [
           "Pull Request Share"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestShare",
         "x-ms-vss-method": "SharePullRequest",
         "x-ms-preview": true,
@@ -5812,7 +5994,7 @@
         "tags": [
           "Pull Request Statuses"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestStatuses",
         "x-ms-vss-method": "CreatePullRequestStatus",
         "x-ms-preview": true,
@@ -5900,7 +6082,7 @@
         "tags": [
           "Pull Request Statuses"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestStatuses",
         "x-ms-vss-method": "GetPullRequestStatuses",
         "x-ms-preview": true,
@@ -5973,7 +6155,7 @@
         "tags": [
           "Pull Request Statuses"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestStatuses",
         "x-ms-vss-method": "UpdatePullRequestStatuses",
         "x-ms-preview": true,
@@ -6051,7 +6233,7 @@
         "tags": [
           "Pull Request Statuses"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestStatuses",
         "x-ms-vss-method": "DeletePullRequestStatus",
         "x-ms-preview": true,
@@ -6123,7 +6305,7 @@
         "tags": [
           "Pull Request Statuses"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestStatuses",
         "x-ms-vss-method": "GetPullRequestStatus",
         "x-ms-preview": true,
@@ -6203,7 +6385,7 @@
         "tags": [
           "Pull Request Threads"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestThreads",
         "x-ms-vss-method": "CreateThread",
         "description": "Create a thread in a pull request.",
@@ -6286,7 +6468,7 @@
         "tags": [
           "Pull Request Threads"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestThreads",
         "x-ms-vss-method": "GetThreads",
         "description": "Retrieve all threads in a pull request.",
@@ -6375,7 +6557,7 @@
         "tags": [
           "Pull Request Threads"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestThreads",
         "x-ms-vss-method": "GetPullRequestThread",
         "description": "Retrieve a thread in a pull request.",
@@ -6462,7 +6644,7 @@
         "tags": [
           "Pull Request Threads"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestThreads",
         "x-ms-vss-method": "UpdateThread",
         "description": "Update a thread in a pull request.",
@@ -6547,7 +6729,7 @@
         "tags": [
           "Pull Request Thread Comments"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestThreadComments",
         "x-ms-vss-method": "CreateComment",
         "description": "Create a comment on a specific thread in a pull request (up to 500 comments can be created per thread).",
@@ -6635,7 +6817,7 @@
         "tags": [
           "Pull Request Thread Comments"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestThreadComments",
         "x-ms-vss-method": "GetComments",
         "description": "Retrieve all comments associated with a specific thread in a pull request.",
@@ -6711,7 +6893,7 @@
         "tags": [
           "Pull Request Thread Comments"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestThreadComments",
         "x-ms-vss-method": "DeleteComment",
         "description": "Delete a comment associated with a specific thread in a pull request.",
@@ -6789,7 +6971,7 @@
         "tags": [
           "Pull Request Thread Comments"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestThreadComments",
         "x-ms-vss-method": "GetComment",
         "description": "Retrieve a comment associated with a specific thread in a pull request.",
@@ -6868,7 +7050,7 @@
         "tags": [
           "Pull Request Thread Comments"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestThreadComments",
         "x-ms-vss-method": "UpdateComment",
         "description": "Update a comment associated with a specific thread in a pull request.",
@@ -6961,7 +7143,7 @@
         "tags": [
           "Pull Request Comment Likes"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestCommentLikes",
         "x-ms-vss-method": "CreateLike",
         "x-ms-preview": true,
@@ -7035,7 +7217,7 @@
         "tags": [
           "Pull Request Comment Likes"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestCommentLikes",
         "x-ms-vss-method": "DeleteLike",
         "x-ms-preview": true,
@@ -7109,7 +7291,7 @@
         "tags": [
           "Pull Request Comment Likes"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "pullRequestCommentLikes",
         "x-ms-vss-method": "GetLikes",
         "x-ms-preview": true,
@@ -7194,7 +7376,7 @@
         "tags": [
           "Pull Request Work Items"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pullRequestWorkItems",
         "x-ms-vss-method": "GetPullRequestWorkItemRefs",
         "description": "Retrieve a list of work items associated with a pull request.",
@@ -7262,7 +7444,7 @@
         "tags": [
           "Pushes"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pushes",
         "x-ms-vss-method": "CreatePush",
         "description": "Push changes to the repository.",
@@ -7358,7 +7540,7 @@
         "tags": [
           "Pushes"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pushes",
         "x-ms-vss-method": "GetPushes",
         "description": "Retrieves pushes associated with the specified repository.",
@@ -7407,6 +7589,14 @@
           },
           {
             "in": "query",
+            "name": "searchCriteria.fromDate",
+            "description": "Search criteria attributes: fromDate, toDate, pusherId, refName, includeRefUpdates or includeLinks. fromDate: Start date to search from. toDate: End date to search to. pusherId: Identity of the person who submitted the push. refName: Branch name to consider. includeRefUpdates: If true, include the list of refs that were updated by the push. includeLinks: Whether to include the _links field on the shallow references.",
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+          },
+          {
+            "in": "query",
             "name": "searchCriteria.includeLinks",
             "description": "Whether to include the _links field on the shallow references",
             "required": false,
@@ -7421,13 +7611,6 @@
           },
           {
             "in": "query",
-            "name": "searchCriteria.refName",
-            "description": "Search criteria attributes: fromDate, toDate, pusherId, refName, includeRefUpdates or includeLinks. fromDate: Start date to search from. toDate: End date to search to. pusherId: Identity of the person who submitted the push. refName: Branch name to consider. includeRefUpdates: If true, include the list of refs that were updated by the push. includeLinks: Whether to include the _links field on the shallow references.",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
             "name": "searchCriteria.pusherId",
             "description": "Search criteria attributes: fromDate, toDate, pusherId, refName, includeRefUpdates or includeLinks. fromDate: Start date to search from. toDate: End date to search to. pusherId: Identity of the person who submitted the push. refName: Branch name to consider. includeRefUpdates: If true, include the list of refs that were updated by the push. includeLinks: Whether to include the _links field on the shallow references.",
             "required": false,
@@ -7436,15 +7619,14 @@
           },
           {
             "in": "query",
-            "name": "searchCriteria.toDate",
+            "name": "searchCriteria.refName",
             "description": "Search criteria attributes: fromDate, toDate, pusherId, refName, includeRefUpdates or includeLinks. fromDate: Start date to search from. toDate: End date to search to. pusherId: Identity of the person who submitted the push. refName: Branch name to consider. includeRefUpdates: If true, include the list of refs that were updated by the push. includeLinks: Whether to include the _links field on the shallow references.",
             "required": false,
-            "type": "string",
-            "format": "date-time"
+            "type": "string"
           },
           {
             "in": "query",
-            "name": "searchCriteria.fromDate",
+            "name": "searchCriteria.toDate",
             "description": "Search criteria attributes: fromDate, toDate, pusherId, refName, includeRefUpdates or includeLinks. fromDate: Start date to search from. toDate: End date to search to. pusherId: Identity of the person who submitted the push. refName: Branch name to consider. includeRefUpdates: If true, include the list of refs that were updated by the push. includeLinks: Whether to include the _links field on the shallow references.",
             "required": false,
             "type": "string",
@@ -7496,7 +7678,7 @@
         "tags": [
           "Pushes"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "pushes",
         "x-ms-vss-method": "GetPush",
         "description": "Retrieves a particular push.",
@@ -7581,7 +7763,7 @@
         "tags": [
           "Refs"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "refs",
         "x-ms-vss-method": "GetRefs",
         "description": "Queries the provided repository for its refs and returns them.",
@@ -7720,7 +7902,7 @@
         "tags": [
           "Refs"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "refs",
         "x-ms-vss-method": "UpdateRef",
         "description": "Lock or Unlock a branch.",
@@ -7806,7 +7988,7 @@
         "tags": [
           "Refs"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "refs",
         "x-ms-vss-method": "UpdateRefs",
         "description": "Creating, updating, or deleting refs(branches).\n\nUpdating a ref means making it point at a different commit than it used to. You must specify both the old and new commit to avoid race conditions.",
@@ -7893,7 +8075,7 @@
         "tags": [
           "Reverts"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "reverts",
         "x-ms-vss-method": "CreateRevert",
         "x-ms-preview": true,
@@ -7965,7 +8147,7 @@
         "tags": [
           "Reverts"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "reverts",
         "x-ms-vss-method": "GetRevertForRefName",
         "x-ms-preview": true,
@@ -8034,7 +8216,7 @@
         "tags": [
           "Reverts"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "reverts",
         "x-ms-vss-method": "GetRevert",
         "x-ms-preview": true,
@@ -8099,7 +8281,7 @@
         "tags": [
           "Stats"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "branchStats",
         "x-ms-vss-method": "GetBranches",
         "description": "Retrieve statistics about all branches within a repository.",
@@ -8132,6 +8314,13 @@
           },
           {
             "in": "query",
+            "name": "baseVersionDescriptor.version",
+            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "baseVersionDescriptor.versionOptions",
             "description": "Version options - Specify additional modifiers to version (e.g Previous)",
             "required": false,
@@ -8158,13 +8347,6 @@
                 }
               ]
             }
-          },
-          {
-            "in": "query",
-            "name": "baseVersionDescriptor.version",
-            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
-            "required": false,
-            "type": "string"
           },
           {
             "in": "query",
@@ -8229,7 +8411,7 @@
         "tags": [
           "Suggestions"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "suggestions",
         "x-ms-vss-method": "GetSuggestions",
         "x-ms-preview": true,
@@ -8290,7 +8472,7 @@
         "tags": [
           "Trees"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "trees",
         "x-ms-vss-method": "GetTree",
         "description": "The Tree endpoint returns the collection of objects underneath the specified tree. Trees are folders in a Git repository.\n\nRepositories have both a name and an identifier. Identifiers are globally unique, but several projects may contain a repository of the same name. You don't need to include the project if you specify a repository by ID. However, if you specify a repository by name, you must also specify the project (by name or ID.",
@@ -8391,7 +8573,7 @@
         "tags": [
           "Merge Bases"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "mergeBases",
         "x-ms-vss-method": "GetMergeBases",
         "x-ms-preview": true,
@@ -8482,7 +8664,7 @@
         "tags": [
           "Forks"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "forks",
         "x-ms-vss-method": "GetForks",
         "x-ms-preview": true,
@@ -8558,7 +8740,7 @@
         "tags": [
           "Forks"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "forkSyncRequests",
         "x-ms-vss-method": "CreateForkSyncRequest",
         "x-ms-preview": true,
@@ -8633,7 +8815,7 @@
         "tags": [
           "Forks"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "forkSyncRequests",
         "x-ms-vss-method": "GetForkSyncRequests",
         "x-ms-preview": true,
@@ -8708,7 +8890,7 @@
         "tags": [
           "Forks"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "forkSyncRequests",
         "x-ms-vss-method": "GetForkSyncRequest",
         "x-ms-preview": true,
@@ -8781,7 +8963,7 @@
         "tags": [
           "Merges"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "merges",
         "x-ms-vss-method": "CreateMergeRequest",
         "x-ms-preview": true,
@@ -8862,7 +9044,7 @@
         "tags": [
           "Merges"
         ],
-        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-docs-override-version": "6.0-preview.1",
         "x-ms-vss-resource": "merges",
         "x-ms-vss-method": "GetMergeRequest",
         "x-ms-preview": true,
@@ -8941,7 +9123,7 @@
         "tags": [
           "Repositories"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "repositories",
         "x-ms-vss-method": "GetRepositoryWithParent",
         "description": "Retrieve a git repository.",
@@ -9005,7 +9187,7 @@
         "tags": [
           "Commits"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "commits",
         "x-ms-vss-method": "GetCommits",
         "description": "Retrieve git commits for a project\n\nParameters that use the searchCriteria prefix in their name can be specified without it as query parameters, e.g. searchCriteria.$top -> $top",
@@ -9034,6 +9216,115 @@
             "description": "Project ID or project name",
             "required": true,
             "x-ms-required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.$skip",
+            "description": "Number of entries to skip",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.$top",
+            "description": "Maximum number of entries to retrieve",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.author",
+            "description": "Alias or display name of the author",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.compareVersion.version",
+            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.compareVersion.versionOptions",
+            "description": "Version options - Specify additional modifiers to version (e.g Previous)",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "none",
+              "previousChange",
+              "firstParent"
+            ],
+            "x-ms-enum": {
+              "name": "GitVersionOptions",
+              "values": [
+                {
+                  "value": "none",
+                  "description": "Not specified"
+                },
+                {
+                  "value": "previousChange",
+                  "description": "Commit that changed item prior to the current version"
+                },
+                {
+                  "value": "firstParent",
+                  "description": "First parent of commit (HEAD^)"
+                }
+              ]
+            }
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.compareVersion.versionType",
+            "description": "Version type (branch, tag, or commit). Determines how Id is interpreted",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "branch",
+              "tag",
+              "commit"
+            ],
+            "x-ms-enum": {
+              "name": "GitVersionType",
+              "values": [
+                {
+                  "value": "branch",
+                  "description": "Interpret the version as a branch name"
+                },
+                {
+                  "value": "tag",
+                  "description": "Interpret the version as a tag name"
+                },
+                {
+                  "value": "commit",
+                  "description": "Interpret the version as a commit ID (SHA1)"
+                }
+              ]
+            }
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.excludeDeletes",
+            "description": "Only applies when an itemPath is specified. This determines whether to exclude delete entries of the specified path.",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.fromCommitId",
+            "description": "If provided, a lower bound for filtering commits alphabetically",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.fromDate",
+            "description": "If provided, only include history entries created after this date (string)",
+            "required": false,
             "type": "string"
           },
           {
@@ -9072,6 +9363,23 @@
           },
           {
             "in": "query",
+            "name": "searchCriteria.ids",
+            "description": "If provided, specifies the exact commit ids of the commits to fetch. May not be combined with other parameters.",
+            "required": false,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.includeLinks",
+            "description": "Whether to include the _links field on the shallow references",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "query",
             "name": "searchCriteria.includePushData",
             "description": "Whether to include the push information",
             "required": false,
@@ -9093,36 +9401,6 @@
           },
           {
             "in": "query",
-            "name": "searchCriteria.includeLinks",
-            "description": "Whether to include the _links field on the shallow references",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.$top",
-            "description": "Maximum number of entries to retrieve",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.$skip",
-            "description": "Number of entries to skip",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.excludeDeletes",
-            "description": "Only applies when an itemPath is specified. This determines whether to exclude delete entries of the specified path.",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "searchCriteria.itemPath",
             "description": "Path of item to search under",
             "required": false,
@@ -9130,96 +9408,10 @@
           },
           {
             "in": "query",
-            "name": "searchCriteria.author",
-            "description": "Alias or display name of the author",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.user",
-            "description": "Alias or display name of the committer",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.toCommitId",
-            "description": "If provided, an upper bound for filtering commits alphabetically",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.fromCommitId",
-            "description": "If provided, a lower bound for filtering commits alphabetically",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.compareVersion.versionOptions",
-            "description": "Version options - Specify additional modifiers to version (e.g Previous)",
-            "required": false,
-            "type": "string",
-            "enum": [
-              "none",
-              "previousChange",
-              "firstParent"
-            ],
-            "x-ms-enum": {
-              "name": "GitVersionOptions",
-              "values": [
-                {
-                  "value": "none",
-                  "description": "Not specified"
-                },
-                {
-                  "value": "previousChange",
-                  "description": "Commit that changed item prior to the current version"
-                },
-                {
-                  "value": "firstParent",
-                  "description": "First parent of commit (HEAD^)"
-                }
-              ]
-            }
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.compareVersion.version",
+            "name": "searchCriteria.itemVersion.version",
             "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
             "required": false,
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.compareVersion.versionType",
-            "description": "Version type (branch, tag, or commit). Determines how Id is interpreted",
-            "required": false,
-            "type": "string",
-            "enum": [
-              "branch",
-              "tag",
-              "commit"
-            ],
-            "x-ms-enum": {
-              "name": "GitVersionType",
-              "values": [
-                {
-                  "value": "branch",
-                  "description": "Interpret the version as a branch name"
-                },
-                {
-                  "value": "tag",
-                  "description": "Interpret the version as a tag name"
-                },
-                {
-                  "value": "commit",
-                  "description": "Interpret the version as a commit ID (SHA1)"
-                }
-              ]
-            }
           },
           {
             "in": "query",
@@ -9252,13 +9444,6 @@
           },
           {
             "in": "query",
-            "name": "searchCriteria.itemVersion.version",
-            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
             "name": "searchCriteria.itemVersion.versionType",
             "description": "Version type (branch, tag, or commit). Determines how Id is interpreted",
             "required": false,
@@ -9288,6 +9473,20 @@
           },
           {
             "in": "query",
+            "name": "searchCriteria.showOldestCommitsFirst",
+            "description": "If enabled, this option will ignore the itemVersion and compareVersion parameters",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.toCommitId",
+            "description": "If provided, an upper bound for filtering commits alphabetically",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "searchCriteria.toDate",
             "description": "If provided, only include history entries created before this date (string)",
             "required": false,
@@ -9295,20 +9494,10 @@
           },
           {
             "in": "query",
-            "name": "searchCriteria.fromDate",
-            "description": "If provided, only include history entries created after this date (string)",
+            "name": "searchCriteria.user",
+            "description": "Alias or display name of the committer",
             "required": false,
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.ids",
-            "description": "If provided, specifies the exact commit ids of the commits to fetch. May not be combined with other parameters.",
-            "required": false,
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           {
             "$ref": "#/parameters/api-Version"
@@ -9368,7 +9557,7 @@
         "tags": [
           "Items"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "items",
         "x-ms-vss-method": "GetItem",
         "description": "Get Item Metadata and/or Content for a single item. The download parameter is to indicate whether the content should be available as a download or just sent as a stream in the response. Doesn't apply to zipped content, which is always returned as a download.",
@@ -9480,6 +9669,13 @@
           },
           {
             "in": "query",
+            "name": "versionDescriptor.version",
+            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "versionDescriptor.versionOptions",
             "description": "Version options - Specify additional modifiers to version (e.g Previous)",
             "required": false,
@@ -9506,13 +9702,6 @@
                 }
               ]
             }
-          },
-          {
-            "in": "query",
-            "name": "versionDescriptor.version",
-            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
-            "required": false,
-            "type": "string"
           },
           {
             "in": "query",
@@ -9558,6 +9747,13 @@
             "type": "boolean"
           },
           {
+            "in": "query",
+            "name": "sanitize",
+            "description": "Set to true to sanitize an svg file and return it as image. Useful only if requested for svg file. Default is false.",
+            "required": false,
+            "type": "boolean"
+          },
+          {
             "$ref": "#/parameters/api-Version"
           }
         ],
@@ -9591,7 +9787,7 @@
         "tags": [
           "Stats"
         ],
-        "x-ms-docs-override-version": "5.1",
+        "x-ms-docs-override-version": "6.0",
         "x-ms-vss-resource": "branchStats",
         "x-ms-vss-method": "GetBranch",
         "description": "Retrieve statistics about a single branch.",
@@ -9631,6 +9827,13 @@
           },
           {
             "in": "query",
+            "name": "baseVersionDescriptor.version",
+            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
             "name": "baseVersionDescriptor.versionOptions",
             "description": "Version options - Specify additional modifiers to version (e.g Previous)",
             "required": false,
@@ -9657,13 +9860,6 @@
                 }
               ]
             }
-          },
-          {
-            "in": "query",
-            "name": "baseVersionDescriptor.version",
-            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
-            "required": false,
-            "type": "string"
           },
           {
             "in": "query",
@@ -12273,7 +12469,15 @@
       "description": "",
       "type": "object",
       "properties": {
+        "cherryPickId": {
+          "type": "integer",
+          "format": "int32"
+        },
         "pullRequestId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "revertId": {
           "type": "integer",
           "format": "int32"
         }
@@ -12746,6 +12950,14 @@
       "description": "Preferences about how the pull request should be completed.",
       "type": "object",
       "properties": {
+        "autoCompleteIgnoreConfigIds": {
+          "description": "List of any policy configuration Id's which auto-complete should not wait for. Only applies to optional policies (isBlocking == false). Auto-complete always waits for required policies (isBlocking == true).",
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
         "bypassPolicy": {
           "description": "If true, policies will be explicitly bypassed while the pull request is completed.",
           "type": "boolean"
@@ -12763,7 +12975,7 @@
           "type": "string"
         },
         "mergeStrategy": {
-          "description": "Specify the strategy used to merge the pull request during completion. If MergeStrategy is not set to any value, a no-FF merge will be created if SquashMerge == false. If MergeStrategy is not set to any value, the pull request commits will be squash if SquashMerge == true. The SquashMerge member is deprecated. It is recommended that you explicitly set MergeStrategy in all cases. If an explicit value is provided for MergeStrategy, the SquashMerge member will be ignored.",
+          "description": "Specify the strategy used to merge the pull request during completion. If MergeStrategy is not set to any value, a no-FF merge will be created if SquashMerge == false. If MergeStrategy is not set to any value, the pull request commits will be squashed if SquashMerge == true. The SquashMerge property is deprecated. It is recommended that you explicitly set MergeStrategy in all cases. If an explicit value is provided for MergeStrategy, the SquashMerge property will be ignored.",
           "enum": [
             "noFastForward",
             "squash",
@@ -12948,6 +13160,10 @@
       "description": "The options which are used when a pull request merge is created.",
       "type": "object",
       "properties": {
+        "conflictAuthorshipCommits": {
+          "description": "If true, conflict resolutions applied during the merge will be put in separate commits to preserve authorship info for git blame, etc.",
+          "type": "boolean"
+        },
         "detectRenameFalsePositives": {
           "type": "boolean"
         },
@@ -13341,6 +13557,10 @@
         "itemVersion": {
           "description": "If provided, identifies the commit or branch to search",
           "$ref": "#/definitions/GitVersionDescriptor"
+        },
+        "showOldestCommitsFirst": {
+          "description": "If enabled, this option will ignore the itemVersion and compareVersion parameters",
+          "type": "boolean"
         },
         "toCommitId": {
           "description": "If provided, an upper bound for filtering commits alphabetically",
@@ -14743,6 +14963,14 @@
         }
       ],
       "properties": {
+        "hasDeclined": {
+          "description": "Indicates if this reviewer has declined to review this pull request.",
+          "type": "boolean"
+        },
+        "isFlagged": {
+          "description": "Indicates if this reviewer is flagged for attention on this pull request.",
+          "type": "boolean"
+        },
         "isRequired": {
           "description": "Indicates if this is a required reviewer for this pull request. <br /> Branches can have policies that require particular reviewers are required for pull requests.",
           "type": "boolean"
@@ -15090,6 +15318,10 @@
         },
         "isEnabled": {
           "description": "Indicates whether the policy is enabled.",
+          "type": "boolean"
+        },
+        "isEnterpriseManaged": {
+          "description": "If set, this policy requires \"Manage Enterprise Policies\" permission to create, edit, or delete.",
           "type": "boolean"
         },
         "settings": {
@@ -15576,7 +15808,7 @@
       }
     },
     "TfvcBranch": {
-      "description": "",
+      "description": "Class representing a branch object.",
       "type": "object",
       "allOf": [
         {
@@ -15612,7 +15844,7 @@
       }
     },
     "TfvcBranchMapping": {
-      "description": "",
+      "description": "A branch mapping.",
       "type": "object",
       "properties": {
         "depth": {
@@ -15630,7 +15862,7 @@
       }
     },
     "TfvcBranchRef": {
-      "description": "",
+      "description": "Metadata for a branchref.",
       "type": "object",
       "allOf": [
         {
@@ -15648,7 +15880,7 @@
           "format": "date-time"
         },
         "description": {
-          "description": "Description of the branch.",
+          "description": "Branch description.",
           "type": "string"
         },
         "isDeleted": {
@@ -15666,7 +15898,7 @@
       }
     },
     "TfvcChange": {
-      "description": "",
+      "description": "A change.",
       "type": "object",
       "allOf": [
         {
@@ -15689,7 +15921,7 @@
       }
     },
     "TfvcChangeset": {
-      "description": "",
+      "description": "A collection of changes.",
       "type": "object",
       "allOf": [
         {
@@ -15698,7 +15930,7 @@
       ],
       "properties": {
         "accountId": {
-          "description": "Account Id of the changeset.",
+          "description": "Changeset Account Id also known as Organization Id.",
           "type": "string",
           "format": "uuid"
         },
@@ -15710,19 +15942,19 @@
           }
         },
         "checkinNotes": {
-          "description": "Checkin Notes for the changeset.",
+          "description": "List of Checkin Notes for the changeset.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/CheckinNote"
           }
         },
         "collectionId": {
-          "description": "Collection Id of the changeset.",
+          "description": "Changeset collection Id.",
           "type": "string",
           "format": "uuid"
         },
         "hasMoreChanges": {
-          "description": "Are more changes available.",
+          "description": "True if more changes are available.",
           "type": "boolean"
         },
         "policyOverride": {
@@ -15747,7 +15979,7 @@
       }
     },
     "TfvcChangesetRef": {
-      "description": "",
+      "description": "Metadata for a changeset.",
       "type": "object",
       "properties": {
         "_links": {
@@ -15755,16 +15987,16 @@
           "$ref": "#/definitions/ReferenceLinks"
         },
         "author": {
-          "description": "Alias or display name of user",
+          "description": "Alias or display name of user.",
           "$ref": "#/definitions/IdentityRef"
         },
         "changesetId": {
-          "description": "Id of the changeset.",
+          "description": "Changeset Id.",
           "type": "integer",
           "format": "int32"
         },
         "checkedInBy": {
-          "description": "Alias or display name of user",
+          "description": "Alias or display name of user.",
           "$ref": "#/definitions/IdentityRef"
         },
         "comment": {
@@ -15787,32 +16019,32 @@
       }
     },
     "TfvcChangesetSearchCriteria": {
-      "description": "Criteria used in a search for change lists",
+      "description": "Criteria used in a search for change lists.",
       "type": "object",
       "properties": {
         "author": {
-          "description": "Alias or display name of user who made the changes",
+          "description": "Alias or display name of user who made the changes.",
           "type": "string"
         },
         "followRenames": {
-          "description": "Whether or not to follow renames for the given item being queried",
+          "description": "Whether or not to follow renames for the given item being queried.",
           "type": "boolean"
         },
         "fromDate": {
-          "description": "If provided, only include changesets created after this date (string) Think of a better name for this.",
+          "description": "If provided, only include changesets created after this date (string).",
           "type": "string"
         },
         "fromId": {
-          "description": "If provided, only include changesets after this changesetID",
+          "description": "If provided, only include changesets after this changesetID.",
           "type": "integer",
           "format": "int32"
         },
         "includeLinks": {
-          "description": "Whether to include the _links field on the shallow references",
+          "description": "Whether to include the _links field on the shallow references.",
           "type": "boolean"
         },
         "itemPath": {
-          "description": "Path of item to search under",
+          "description": "Path of item to search under.",
           "type": "string"
         },
         "mappings": {
@@ -15822,18 +16054,18 @@
           }
         },
         "toDate": {
-          "description": "If provided, only include changesets created before this date (string) Think of a better name for this.",
+          "description": "If provided, only include changesets created before this date (string).",
           "type": "string"
         },
         "toId": {
-          "description": "If provided, a version descriptor for the latest change list to include",
+          "description": "If provided, a version descriptor for the latest change list to include.",
           "type": "integer",
           "format": "int32"
         }
       }
     },
     "TfvcChangesetsRequestData": {
-      "description": "",
+      "description": "Request body for Get batched changesets.",
       "type": "object",
       "properties": {
         "changesetIds": {
@@ -15845,7 +16077,7 @@
           }
         },
         "commentLength": {
-          "description": "Length of the comment.",
+          "description": "Max length of the comment.",
           "type": "integer",
           "format": "int32"
         },
@@ -15889,7 +16121,7 @@
       }
     },
     "TfvcItem": {
-      "description": "",
+      "description": "Metadata for an item.",
       "type": "object",
       "allOf": [
         {
@@ -15898,10 +16130,12 @@
       ],
       "properties": {
         "changeDate": {
+          "description": "Item changed datetime.",
           "type": "string",
           "format": "date-time"
         },
         "deletionId": {
+          "description": "Greater than 0 if item is deleted.",
           "type": "integer",
           "format": "int32"
         },
@@ -15915,9 +16149,11 @@
           "type": "string"
         },
         "isBranch": {
+          "description": "True if item is a branch.",
           "type": "boolean"
         },
         "isPendingChange": {
+          "description": "True if there is a change pending.",
           "type": "boolean"
         },
         "size": {
@@ -15926,6 +16162,7 @@
           "format": "int64"
         },
         "version": {
+          "description": "Changeset version Id.",
           "type": "integer",
           "format": "int32"
         }
@@ -15936,9 +16173,11 @@
       "type": "object",
       "properties": {
         "path": {
+          "description": "Item path.",
           "type": "string"
         },
         "recursionLevel": {
+          "description": "Defaults to OneLevel.",
           "enum": [
             "none",
             "oneLevel",
@@ -15968,9 +16207,11 @@
           }
         },
         "version": {
+          "description": "Specify the desired version, can be null or empty string only if VersionType is latest or tip.",
           "type": "string"
         },
         "versionOption": {
+          "description": "Defaults to None.",
           "enum": [
             "none",
             "previous",
@@ -15981,20 +16222,21 @@
             "values": [
               {
                 "value": "none",
-                "description": ""
+                "description": "None."
               },
               {
                 "value": "previous",
-                "description": ""
+                "description": "Return the previous version."
               },
               {
                 "value": "useRename",
-                "description": ""
+                "description": "Only usuable with versiontype MergeSource and integer versions, uses RenameSource identifier instead of Merge identifier."
               }
             ]
           }
         },
         "versionType": {
+          "description": "Defaults to Latest.",
           "enum": [
             "none",
             "changeset",
@@ -16010,35 +16252,35 @@
             "values": [
               {
                 "value": "none",
-                "description": ""
+                "description": "Version is treated as a ChangesetId."
               },
               {
                 "value": "changeset",
-                "description": ""
+                "description": "Version is treated as a ChangesetId."
               },
               {
                 "value": "shelveset",
-                "description": ""
+                "description": "Version is treated as a Shelveset name and owner."
               },
               {
                 "value": "change",
-                "description": ""
+                "description": "Version is treated as a Change."
               },
               {
                 "value": "date",
-                "description": ""
+                "description": "Version is treated as a Date."
               },
               {
                 "value": "latest",
-                "description": ""
+                "description": "If Version is defined the Latest of that Version will be used, if no version is defined the latest ChangesetId will be used."
               },
               {
                 "value": "tip",
-                "description": ""
+                "description": "Version will be treated as a Tip, if no version is defined latest will be used."
               },
               {
                 "value": "mergeSource",
-                "description": ""
+                "description": "Version will be treated as a MergeSource."
               }
             ]
           }
@@ -16046,7 +16288,7 @@
       }
     },
     "TfvcItemPreviousHash": {
-      "description": "",
+      "description": "Metadata for an item including the previous hash value for files.",
       "type": "object",
       "allOf": [
         {
@@ -16061,7 +16303,7 @@
       }
     },
     "TfvcItemRequestData": {
-      "description": "",
+      "description": "Request body used by Get Items Batch",
       "type": "object",
       "properties": {
         "includeContentMetadata": {
@@ -16081,7 +16323,7 @@
       }
     },
     "TfvcLabel": {
-      "description": "",
+      "description": "Metadata for a label.",
       "type": "object",
       "allOf": [
         {
@@ -16090,6 +16332,7 @@
       ],
       "properties": {
         "items": {
+          "description": "List of items.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/TfvcItem"
@@ -16098,33 +16341,41 @@
       }
     },
     "TfvcLabelRef": {
-      "description": "",
+      "description": "Metadata for a Label.",
       "type": "object",
       "properties": {
         "_links": {
+          "description": "Collection of reference links.",
           "$ref": "#/definitions/ReferenceLinks"
         },
         "description": {
+          "description": "Label description.",
           "type": "string"
         },
         "id": {
+          "description": "Label Id.",
           "type": "integer",
           "format": "int32"
         },
         "labelScope": {
+          "description": "Label scope.",
           "type": "string"
         },
         "modifiedDate": {
+          "description": "Last modified datetime for the label.",
           "type": "string",
           "format": "date-time"
         },
         "name": {
+          "description": "Label name.",
           "type": "string"
         },
         "owner": {
+          "description": "Label owner.",
           "$ref": "#/definitions/IdentityRef"
         },
         "url": {
+          "description": "Label Url.",
           "type": "string"
         }
       }
@@ -16156,13 +16407,15 @@
       }
     },
     "TfvcMappingFilter": {
-      "description": "",
+      "description": "MappingFilter can be used to include or exclude specific paths.",
       "type": "object",
       "properties": {
         "exclude": {
+          "description": "True if ServerPath should be excluded.",
           "type": "boolean"
         },
         "serverPath": {
+          "description": "Path to be included or excluded.",
           "type": "string"
         }
       }
@@ -16176,41 +16429,45 @@
           "type": "boolean"
         },
         "serverItem": {
-          "description": "The server item of the merge source",
+          "description": "The server item of the merge source.",
           "type": "string"
         },
         "versionFrom": {
-          "description": "Start of the version range",
+          "description": "Start of the version range.",
           "type": "integer",
           "format": "int32"
         },
         "versionTo": {
-          "description": "End of the version range",
+          "description": "End of the version range.",
           "type": "integer",
           "format": "int32"
         }
       }
     },
     "TfvcPolicyFailureInfo": {
-      "description": "",
+      "description": "Policy failure information.",
       "type": "object",
       "properties": {
         "message": {
+          "description": "Policy failure message.",
           "type": "string"
         },
         "policyName": {
+          "description": "Name of the policy that failed.",
           "type": "string"
         }
       }
     },
     "TfvcPolicyOverrideInfo": {
-      "description": "",
+      "description": "Information on the policy override.",
       "type": "object",
       "properties": {
         "comment": {
+          "description": "Overidden policy comment.",
           "type": "string"
         },
         "policyFailures": {
+          "description": "Information on the failed policy that was overridden.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/TfvcPolicyFailureInfo"
@@ -16219,7 +16476,7 @@
       }
     },
     "TfvcShallowBranchRef": {
-      "description": "",
+      "description": "This is the shallow branchref class.",
       "type": "object",
       "properties": {
         "path": {
@@ -16229,7 +16486,7 @@
       }
     },
     "TfvcShelveset": {
-      "description": "This is the deep shelveset class",
+      "description": "Metadata for a shelveset.",
       "type": "object",
       "allOf": [
         {
@@ -16238,21 +16495,25 @@
       ],
       "properties": {
         "changes": {
+          "description": "List of changes.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/TfvcChange"
           }
         },
         "notes": {
+          "description": "List of checkin notes.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/CheckinNote"
           }
         },
         "policyOverride": {
+          "description": "Policy override information if applicable.",
           "$ref": "#/definitions/TfvcPolicyOverrideInfo"
         },
         "workItems": {
+          "description": "List of associated workitems.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/AssociatedWorkItem"
@@ -16261,32 +16522,40 @@
       }
     },
     "TfvcShelvesetRef": {
-      "description": "This is the shallow shelveset class",
+      "description": "Metadata for a shallow shelveset.",
       "type": "object",
       "properties": {
         "_links": {
+          "description": "List of reference links for the shelveset.",
           "$ref": "#/definitions/ReferenceLinks"
         },
         "comment": {
+          "description": "Shelveset comment.",
           "type": "string"
         },
         "commentTruncated": {
+          "description": "Shelveset comment truncated as applicable.",
           "type": "boolean"
         },
         "createdDate": {
+          "description": "Shelveset create date.",
           "type": "string",
           "format": "date-time"
         },
         "id": {
+          "description": "Shelveset Id.",
           "type": "string"
         },
         "name": {
+          "description": "Shelveset name.",
           "type": "string"
         },
         "owner": {
+          "description": "Shelveset Owner.",
           "$ref": "#/definitions/IdentityRef"
         },
         "url": {
+          "description": "Shelveset Url.",
           "type": "string"
         }
       }
@@ -16318,7 +16587,7 @@
           "format": "int32"
         },
         "name": {
-          "description": "Shelveset's name",
+          "description": "Shelveset name",
           "type": "string"
         },
         "owner": {
@@ -16344,10 +16613,11 @@
       }
     },
     "TfvcVersionDescriptor": {
-      "description": "",
+      "description": "Version descriptor properties.",
       "type": "object",
       "properties": {
         "version": {
+          "description": "Version object.",
           "type": "string"
         },
         "versionOption": {
@@ -16361,15 +16631,15 @@
             "values": [
               {
                 "value": "none",
-                "description": ""
+                "description": "None."
               },
               {
                 "value": "previous",
-                "description": ""
+                "description": "Return the previous version."
               },
               {
                 "value": "useRename",
-                "description": ""
+                "description": "Only usuable with versiontype MergeSource and integer versions, uses RenameSource identifier instead of Merge identifier."
               }
             ]
           }
@@ -16390,35 +16660,35 @@
             "values": [
               {
                 "value": "none",
-                "description": ""
+                "description": "Version is treated as a ChangesetId."
               },
               {
                 "value": "changeset",
-                "description": ""
+                "description": "Version is treated as a ChangesetId."
               },
               {
                 "value": "shelveset",
-                "description": ""
+                "description": "Version is treated as a Shelveset name and owner."
               },
               {
                 "value": "change",
-                "description": ""
+                "description": "Version is treated as a Change."
               },
               {
                 "value": "date",
-                "description": ""
+                "description": "Version is treated as a Date."
               },
               {
                 "value": "latest",
-                "description": ""
+                "description": "If Version is defined the Latest of that Version will be used, if no version is defined the latest ChangesetId will be used."
               },
               {
                 "value": "tip",
-                "description": ""
+                "description": "Version will be treated as a Tip, if no version is defined latest will be used."
               },
               {
                 "value": "mergeSource",
-                "description": ""
+                "description": "Version will be treated as a MergeSource."
               }
             ]
           }
@@ -16579,14 +16849,14 @@
     "api-Version": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '5.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '6.0' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     }

@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0-preview"
+    "version": "5.1-preview"
   },
   "host": "dev.azure.com",
   "x-ms-vss-area": "WorkItemTracking",
@@ -54,10 +54,6 @@
       "name": "States"
     },
     {
-      "name": "System Controls",
-      "description": "System controls like Area Path, Iteration Path and Reason can be hidden from work item form using these API(s). In additon to hide them, lables to these controls can also be edited."
-    },
-    {
       "name": "Work Item Types"
     },
     {
@@ -73,7 +69,7 @@
         "tags": [
           "Processes"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "processes",
         "x-ms-vss-method": "CreateNewProcess",
         "x-ms-preview": true,
@@ -131,7 +127,7 @@
         "tags": [
           "Processes"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "processes",
         "x-ms-vss-method": "GetListOfProcesses",
         "x-ms-preview": true,
@@ -206,7 +202,7 @@
         "tags": [
           "Behaviors"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "behaviors",
         "x-ms-vss-method": "CreateProcessBehavior",
         "x-ms-preview": true,
@@ -272,7 +268,7 @@
         "tags": [
           "Behaviors"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "behaviors",
         "x-ms-vss-method": "GetProcessBehaviors",
         "x-ms-preview": true,
@@ -366,7 +362,7 @@
         "tags": [
           "Behaviors"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "behaviors",
         "x-ms-vss-method": "DeleteProcessBehavior",
         "x-ms-preview": true,
@@ -421,7 +417,7 @@
         "tags": [
           "Behaviors"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "behaviors",
         "x-ms-vss-method": "GetProcessBehavior",
         "x-ms-preview": true,
@@ -517,7 +513,7 @@
         "tags": [
           "Behaviors"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "behaviors",
         "x-ms-vss-method": "UpdateProcessBehavior",
         "x-ms-preview": true,
@@ -592,7 +588,7 @@
         "tags": [
           "Work Item Types"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "workItemTypes",
         "x-ms-vss-method": "CreateProcessWorkItemType",
         "x-ms-preview": true,
@@ -658,7 +654,7 @@
         "tags": [
           "Work Item Types"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "workItemTypes",
         "x-ms-vss-method": "GetProcessWorkItemTypes",
         "x-ms-preview": true,
@@ -754,7 +750,7 @@
         "tags": [
           "Work Item Types"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "workItemTypes",
         "x-ms-vss-method": "DeleteProcessWorkItemType",
         "x-ms-preview": true,
@@ -804,7 +800,7 @@
         "tags": [
           "Work Item Types"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "workItemTypes",
         "x-ms-vss-method": "GetProcessWorkItemType",
         "x-ms-preview": true,
@@ -899,7 +895,7 @@
         "tags": [
           "Work Item Types"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "workItemTypes",
         "x-ms-vss-method": "UpdateProcessWorkItemType",
         "x-ms-preview": true,
@@ -974,7 +970,7 @@
         "tags": [
           "Fields"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "fields",
         "x-ms-vss-method": "AddFieldToWorkItemType",
         "x-ms-preview": true,
@@ -1047,7 +1043,7 @@
         "tags": [
           "Fields"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "fields",
         "x-ms-vss-method": "GetAllWorkItemTypeFields",
         "x-ms-preview": true,
@@ -1113,7 +1109,7 @@
         "tags": [
           "Fields"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "fields",
         "x-ms-vss-method": "GetWorkItemTypeField",
         "x-ms-preview": true,
@@ -1153,35 +1149,6 @@
             "type": "string"
           },
           {
-            "in": "query",
-            "name": "$expand",
-            "description": "",
-            "required": false,
-            "type": "string",
-            "enum": [
-              "none",
-              "allowedValues",
-              "all"
-            ],
-            "x-ms-enum": {
-              "name": "ProcessWorkItemTypeFieldsExpandLevel",
-              "values": [
-                {
-                  "value": "none",
-                  "description": "Includes only basic properties of the field."
-                },
-                {
-                  "value": "allowedValues",
-                  "description": "Includes allowed values for the field."
-                },
-                {
-                  "value": "all",
-                  "description": "Includes allowed values and dependent fields of the field."
-                }
-              ]
-            }
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
@@ -1210,7 +1177,7 @@
         "tags": [
           "Fields"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "fields",
         "x-ms-vss-method": "RemoveWorkItemTypeField",
         "x-ms-preview": true,
@@ -1267,7 +1234,7 @@
         "tags": [
           "Fields"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "fields",
         "x-ms-vss-method": "UpdateWorkItemTypeField",
         "x-ms-preview": true,
@@ -1349,7 +1316,7 @@
         "tags": [
           "Layout"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "layout",
         "x-ms-vss-method": "GetFormLayout",
         "x-ms-preview": true,
@@ -1412,7 +1379,7 @@
         "tags": [
           "Controls"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "controls",
         "x-ms-vss-method": "CreateControlInGroup",
         "x-ms-preview": true,
@@ -1494,7 +1461,7 @@
         "tags": [
           "Controls"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "controls",
         "x-ms-vss-method": "MoveControlToGroup",
         "x-ms-preview": true,
@@ -1588,7 +1555,7 @@
         "tags": [
           "Controls"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "controls",
         "x-ms-vss-method": "RemoveControlFromGroup",
         "x-ms-preview": true,
@@ -1657,7 +1624,7 @@
         "tags": [
           "Controls"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "controls",
         "x-ms-vss-method": "UpdateControl",
         "x-ms-preview": true,
@@ -1746,7 +1713,7 @@
         "tags": [
           "Pages"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "pages",
         "x-ms-vss-method": "AddPage",
         "x-ms-preview": true,
@@ -1819,7 +1786,7 @@
         "tags": [
           "Pages"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "pages",
         "x-ms-vss-method": "UpdatePage",
         "x-ms-preview": true,
@@ -1894,7 +1861,7 @@
         "tags": [
           "Pages"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "pages",
         "x-ms-vss-method": "RemovePage",
         "x-ms-preview": true,
@@ -1958,7 +1925,7 @@
         "tags": [
           "Groups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "groups",
         "x-ms-vss-method": "AddGroup",
         "x-ms-preview": true,
@@ -2047,7 +2014,7 @@
         "tags": [
           "Groups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "groups",
         "x-ms-vss-method": "MoveGroupToSection",
         "x-ms-preview": true,
@@ -2148,7 +2115,7 @@
         "tags": [
           "Groups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "groups",
         "x-ms-vss-method": "RemoveGroup",
         "x-ms-preview": true,
@@ -2224,7 +2191,7 @@
         "tags": [
           "Groups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "groups",
         "x-ms-vss-method": "UpdateGroup",
         "x-ms-preview": true,
@@ -2315,231 +2282,12 @@
         }
       }
     },
-    "/{organization}/_apis/work/processes/{processId}/workItemTypes/{witRefName}/layout/systemcontrols": {
-      "get": {
-        "tags": [
-          "System Controls"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "systemControls",
-        "x-ms-vss-method": "GetSystemControls",
-        "x-ms-preview": true,
-        "description": "Gets edited system controls for a work item type in a process. To get all system controls (base + edited) use layout API(s)",
-        "operationId": "System Controls_List",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "processId",
-            "description": "The ID of the process.",
-            "required": true,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "in": "path",
-            "name": "witRefName",
-            "description": "The reference name of the work item type.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Control"
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.work"
-            ]
-          }
-        ],
-        "x-ms-examples": {
-          "GET System Controls": {
-            "$ref": "./httpExamples/SystemControls/GET__control.json"
-          }
-        }
-      }
-    },
-    "/{organization}/_apis/work/processes/{processId}/workItemTypes/{witRefName}/layout/systemcontrols/{controlId}": {
-      "delete": {
-        "tags": [
-          "System Controls"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "systemControls",
-        "x-ms-vss-method": "DeleteSystemControl",
-        "x-ms-preview": true,
-        "description": "Deletes a system control modification on the work item form.",
-        "operationId": "System Controls_Delete",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "processId",
-            "description": "The ID of the process.",
-            "required": true,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "in": "path",
-            "name": "witRefName",
-            "description": "The reference name of the work item type.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "controlId",
-            "description": "The ID of the control.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Control"
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.work_write"
-            ]
-          }
-        ],
-        "x-ms-examples": {
-          "DELETE System Control": {
-            "$ref": "./httpExamples/SystemControls/DELETE__control.json"
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "System Controls"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "systemControls",
-        "x-ms-vss-method": "UpdateSystemControl",
-        "x-ms-preview": true,
-        "description": "Updates/adds a system control on the work item form.",
-        "operationId": "System Controls_Update",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Control"
-            }
-          },
-          {
-            "in": "path",
-            "name": "processId",
-            "description": "The ID of the process.",
-            "required": true,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "in": "path",
-            "name": "witRefName",
-            "description": "The reference name of the work item type.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "controlId",
-            "description": "The ID of the control.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/Control"
-            }
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.work_write"
-            ]
-          }
-        ],
-        "x-ms-examples": {
-          "Update/Add a System Control": {
-            "$ref": "./httpExamples/SystemControls/PATCH__control.json"
-          }
-        }
-      }
-    },
     "/{organization}/_apis/work/processes/{processId}/workItemTypes/{witRefName}/rules": {
       "post": {
         "tags": [
           "Rules"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "rules",
         "x-ms-vss-method": "AddProcessWorkItemTypeRule",
         "x-ms-preview": true,
@@ -2612,7 +2360,7 @@
         "tags": [
           "Rules"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "rules",
         "x-ms-vss-method": "GetProcessWorkItemTypeRules",
         "x-ms-preview": true,
@@ -2678,7 +2426,7 @@
         "tags": [
           "Rules"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "rules",
         "x-ms-vss-method": "DeleteProcessWorkItemTypeRule",
         "x-ms-preview": true,
@@ -2741,7 +2489,7 @@
         "tags": [
           "Rules"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "rules",
         "x-ms-vss-method": "GetProcessWorkItemTypeRule",
         "x-ms-preview": true,
@@ -2810,7 +2558,7 @@
         "tags": [
           "Rules"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "rules",
         "x-ms-vss-method": "UpdateProcessWorkItemTypeRule",
         "x-ms-preview": true,
@@ -2893,7 +2641,7 @@
         "tags": [
           "States"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "states",
         "x-ms-vss-method": "CreateStateDefinition",
         "x-ms-preview": true,
@@ -2966,7 +2714,7 @@
         "tags": [
           "States"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "states",
         "x-ms-vss-method": "GetStateDefinitions",
         "x-ms-preview": true,
@@ -3032,7 +2780,7 @@
         "tags": [
           "States"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "states",
         "x-ms-vss-method": "DeleteStateDefinition",
         "x-ms-preview": true,
@@ -3095,7 +2843,7 @@
         "tags": [
           "States"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "states",
         "x-ms-vss-method": "GetStateDefinition",
         "x-ms-preview": true,
@@ -3164,7 +2912,7 @@
         "tags": [
           "States"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "states",
         "x-ms-vss-method": "HideStateDefinition",
         "x-ms-preview": true,
@@ -3245,7 +2993,7 @@
         "tags": [
           "States"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "states",
         "x-ms-vss-method": "UpdateStateDefinition",
         "x-ms-preview": true,
@@ -3328,7 +3076,7 @@
         "tags": [
           "Work Item Types Behaviors"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "workItemTypesBehaviors",
         "x-ms-vss-method": "AddBehaviorToWorkItemType",
         "x-ms-preview": true,
@@ -3401,7 +3149,7 @@
         "tags": [
           "Work Item Types Behaviors"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "workItemTypesBehaviors",
         "x-ms-vss-method": "GetBehaviorsForWorkItemType",
         "x-ms-preview": true,
@@ -3465,7 +3213,7 @@
         "tags": [
           "Work Item Types Behaviors"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "workItemTypesBehaviors",
         "x-ms-vss-method": "UpdateBehaviorToWorkItemType",
         "x-ms-preview": true,
@@ -3540,7 +3288,7 @@
         "tags": [
           "Work Item Types Behaviors"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "workItemTypesBehaviors",
         "x-ms-vss-method": "GetBehaviorForWorkItemType",
         "x-ms-preview": true,
@@ -3608,7 +3356,7 @@
         "tags": [
           "Work Item Types Behaviors"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "workItemTypesBehaviors",
         "x-ms-vss-method": "RemoveBehaviorFromWorkItemType",
         "x-ms-preview": true,
@@ -3672,7 +3420,7 @@
         "tags": [
           "Processes"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "processes",
         "x-ms-vss-method": "DeleteProcessById",
         "x-ms-preview": true,
@@ -3720,7 +3468,7 @@
         "tags": [
           "Processes"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "processes",
         "x-ms-vss-method": "EditProcess",
         "x-ms-preview": true,
@@ -3786,7 +3534,7 @@
         "tags": [
           "Processes"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "processes",
         "x-ms-vss-method": "GetProcessByItsId",
         "x-ms-preview": true,
@@ -3866,7 +3614,7 @@
         "tags": [
           "Lists"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "lists",
         "x-ms-vss-method": "CreateList",
         "x-ms-preview": true,
@@ -3924,7 +3672,7 @@
         "tags": [
           "Lists"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "lists",
         "x-ms-vss-method": "GetListsMetadata",
         "x-ms-preview": true,
@@ -3975,7 +3723,7 @@
         "tags": [
           "Lists"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "lists",
         "x-ms-vss-method": "DeleteList",
         "x-ms-preview": true,
@@ -4023,7 +3771,7 @@
         "tags": [
           "Lists"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "lists",
         "x-ms-vss-method": "GetList",
         "x-ms-preview": true,
@@ -4077,7 +3825,7 @@
         "tags": [
           "Lists"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "lists",
         "x-ms-vss-method": "UpdateList",
         "x-ms-preview": true,
@@ -4147,7 +3895,7 @@
         "tags": [
           "Groups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "groups",
         "x-ms-vss-method": "MoveGroupToPage",
         "x-ms-preview": true,
@@ -4258,13 +4006,6 @@
       "description": "Class that describes a request to add a field in a work item type.",
       "type": "object",
       "properties": {
-        "allowedValues": {
-          "description": "The list of field allowed values.",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "allowGroups": {
           "description": "Allow setting field value to a group identity. Only applies to identity fields.",
           "type": "boolean"
@@ -5194,13 +4935,6 @@
       "description": "Class that describes a field in a work item type and its properties.",
       "type": "object",
       "properties": {
-        "allowedValues": {
-          "description": "The list of field allowed values.",
-          "type": "array",
-          "items": {
-            "type": "object"
-          }
-        },
         "allowGroups": {
           "description": "Allow setting field value to a group identity. Only applies to identity fields.",
           "type": "boolean"
@@ -5382,9 +5116,7 @@
             "copyFromField",
             "setValueToEmpty",
             "copyFromServerClock",
-            "copyFromServerCurrentUser",
-            "hideTargetField",
-            "disallowValue"
+            "copyFromServerCurrentUser"
           ],
           "x-ms-enum": {
             "name": "RuleActionType",
@@ -5440,14 +5172,6 @@
               {
                 "value": "copyFromServerCurrentUser",
                 "description": "Use the current user to set the value of the target field."
-              },
-              {
-                "value": "hideTargetField",
-                "description": "Hides target field from the form. This is a server side only action."
-              },
-              {
-                "value": "disallowValue",
-                "description": "Disallows a field from being set to a specific value."
               }
             ]
           }
@@ -5493,9 +5217,7 @@
             "whenStateChangedFromAndTo",
             "whenWorkItemIsCreated",
             "whenValueIsDefined",
-            "whenValueIsNotDefined",
-            "whenCurrentUserIsMemberOfGroup",
-            "whenCurrentUserIsNotMemberOfGroup"
+            "whenValueIsNotDefined"
           ],
           "x-ms-enum": {
             "name": "RuleConditionType",
@@ -5538,14 +5260,6 @@
               },
               {
                 "value": "whenValueIsNotDefined",
-                "description": ""
-              },
-              {
-                "value": "whenCurrentUserIsMemberOfGroup",
-                "description": ""
-              },
-              {
-                "value": "whenCurrentUserIsNotMemberOfGroup",
                 "description": ""
               }
             ]
@@ -5639,13 +5353,6 @@
       "description": "Class to describe a request that updates a field's properties in a work item type.",
       "type": "object",
       "properties": {
-        "allowedValues": {
-          "description": "The list of field allowed values.",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "allowGroups": {
           "description": "Allow setting field value to a group identity. Only applies to identity fields.",
           "type": "boolean"
@@ -5983,14 +5690,14 @@
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.2": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.2' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.2' to use this version of the api.",
       "required": true,
       "type": "string"
     }

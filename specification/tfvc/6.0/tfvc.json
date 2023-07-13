@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0"
+    "version": "5.1"
   },
   "host": "dev.azure.com",
   "x-ms-vss-area": "Tfvc",
@@ -46,7 +46,7 @@
         "tags": [
           "Changesets"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "changesetChanges",
         "x-ms-vss-method": "GetChangesetChanges",
         "description": "Retrieve Tfvc changes for a given changeset.",
@@ -88,13 +88,6 @@
             "format": "int32"
           },
           {
-            "in": "query",
-            "name": "continuationToken",
-            "description": "Return the next page of results. Default: null",
-            "required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version"
           }
         ],
@@ -115,12 +108,7 @@
               "vso.code"
             ]
           }
-        ],
-        "x-ms-examples": {
-          "GET the Tfvc changes for a given changeset": {
-            "$ref": "./httpExamples/ChangesetChanges/GET__tfvc_changesetChanges.json"
-          }
-        }
+        ]
       }
     },
     "/{organization}/_apis/tfvc/changesets/{id}/workItems": {
@@ -128,7 +116,7 @@
         "tags": [
           "Changesets"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "changesetWorkItems",
         "x-ms-vss-method": "GetChangesetWorkItems",
         "description": "Retrieves the work items associated with a particular changeset.",
@@ -147,7 +135,7 @@
           {
             "in": "path",
             "name": "id",
-            "description": "ID of the changeset.",
+            "description": "ID of the changeset. Default: null",
             "required": true,
             "x-ms-required": false,
             "type": "integer",
@@ -174,12 +162,7 @@
               "vso.code"
             ]
           }
-        ],
-        "x-ms-examples": {
-          "GET the work items associated with a changeset": {
-            "$ref": "./httpExamples/ChangesetWorkItems/GET__tfvc_changesetWorkItems.json"
-          }
-        }
+        ]
       }
     },
     "/{organization}/_apis/tfvc/changesetsbatch": {
@@ -187,7 +170,7 @@
         "tags": [
           "Changesets"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "changesetsBatch",
         "x-ms-vss-method": "GetBatchedChangesets",
         "description": "Returns changesets for a given list of changeset Ids.",
@@ -236,12 +219,7 @@
               "vso.code"
             ]
           }
-        ],
-        "x-ms-examples": {
-          "Returns the Tfvc changes for a given set of changes": {
-            "$ref": "./httpExamples/ChangesetsBatch/POST__tfvc_changesetsBatched.json"
-          }
-        }
+        ]
       }
     },
     "/{organization}/_apis/tfvc/labels/{labelId}/items": {
@@ -249,7 +227,7 @@
         "tags": [
           "Labels"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "labelItems",
         "x-ms-vss-method": "GetLabelItems",
         "description": "Get items under a label.",
@@ -325,7 +303,7 @@
         "tags": [
           "Shelvesets"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "shelvesets",
         "x-ms-vss-method": "GetShelveset",
         "description": "Get a single deep shelveset.",
@@ -350,13 +328,6 @@
           },
           {
             "in": "query",
-            "name": "requestData.includeDetails",
-            "description": "Whether to include policyOverride and notes Only applies when requesting a single deep shelveset",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "requestData.includeLinks",
             "description": "Whether to include the _links field on the shallow references. Does not apply when requesting a single deep shelveset object. Links will always be included in the deep shelveset.",
             "required": false,
@@ -366,6 +337,13 @@
             "in": "query",
             "name": "requestData.includeWorkItems",
             "description": "Whether to include workItems",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "requestData.includeDetails",
+            "description": "Whether to include policyOverride and notes Only applies when requesting a single deep shelveset",
             "required": false,
             "type": "boolean"
           },
@@ -387,15 +365,15 @@
           },
           {
             "in": "query",
-            "name": "requestData.name",
-            "description": "Shelveset name",
+            "name": "requestData.owner",
+            "description": "Owner's ID. Could be a name or a guid.",
             "required": false,
             "type": "string"
           },
           {
             "in": "query",
-            "name": "requestData.owner",
-            "description": "Owner's ID. Could be a name or a guid.",
+            "name": "requestData.name",
+            "description": "Shelveset's name",
             "required": false,
             "type": "string"
           },
@@ -419,20 +397,26 @@
           }
         ],
         "x-ms-examples": {
-          "GET a specific Shelveset.": {
+          "Basic example": {
+            "$ref": "./httpExamples/shelvesets/GET__tfvc_shelvesets.json"
+          },
+          "With maxCommentLength": {
+            "$ref": "./httpExamples/shelvesets/GET__tfvc_shelvesets_maxCommentLength-_maxCommentLength_.json"
+          },
+          "Owner": {
+            "$ref": "./httpExamples/shelvesets/GET__tfvc_shelvesets_owner-_owner_.json"
+          },
+          "ShelvesetId": {
             "$ref": "./httpExamples/shelvesets/GET__tfvc_shelvesets__shelvesetId_.json"
           },
-          "GET a specific Shelveset with associated changes.": {
-            "$ref": "./httpExamples/shelvesets/GET__tfvc_shelvesets__shelvesetId__maxChangeCount-100.json"
-          },
-          "GET a specific Shelveset with associated workitems.": {
-            "$ref": "./httpExamples/shelvesets/GET__tfvc_shelvesets__shelvesetId__includeWorkItems-true.json"
-          },
-          "GET a specific Shelveset with details.": {
+          "IncludeDetails": {
             "$ref": "./httpExamples/shelvesets/GET__tfvc_shelvesets__shelvesetId__includeDetails-true.json"
           },
-          "GET a specific Shelveset with a comment lenght limit.": {
+          "Shelveset by Id with maxCommentLength": {
             "$ref": "./httpExamples/shelvesets/GET__tfvc_shelvesets__shelvesetId__maxCommentLength-_maxCommentLength_.json"
+          },
+          "top and skip": {
+            "$ref": "./httpExamples/shelvesets/GET__tfvc_shelvesets__top-_top___skip-_skip_.json"
           }
         }
       }
@@ -442,7 +426,7 @@
         "tags": [
           "Shelvesets"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "shelvesetChanges",
         "x-ms-vss-method": "GetShelvesetChanges",
         "description": "Get changes included in a shelveset.",
@@ -504,11 +488,8 @@
           }
         ],
         "x-ms-examples": {
-          "GET a list of changesets for a ShelvesetId.": {
-            "$ref": "./httpExamples/ShelvesetChanges/GET__tfvc_shelvesetChanges__shelvesetId.json"
-          },
-          "GET a list of changesets for a ShelvesetId with top and skip.": {
-            "$ref": "./httpExamples/ShelvesetChanges/GET__tfvc_shelvesetChanges__shelvesetId__top-_top___skip-_skip.json"
+          "With changes": {
+            "$ref": "./httpExamples/ShelvesetChanges/GET__tfvc_shelvesets__shelvesetId__maxChangeCount-100.json"
           }
         }
       }
@@ -518,7 +499,7 @@
         "tags": [
           "Shelvesets"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "shelvesetWorkItems",
         "x-ms-vss-method": "GetShelvesetWorkItems",
         "description": "Get work items associated with a shelveset.",
@@ -564,8 +545,8 @@
           }
         ],
         "x-ms-examples": {
-          "GET a list of workitems for a ShelvesetId.": {
-            "$ref": "./httpExamples/ShelvesetWorkItems/GET__tfvc_shelvesetWorkItems__shelvesetId.json"
+          "Example with workItems": {
+            "$ref": "./httpExamples/ShelvesetWorkItems/GET__tfvc_shelvesets__shelvesetId__includeWorkItems-true.json"
           }
         }
       }
@@ -575,7 +556,7 @@
         "tags": [
           "Branches"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "branches",
         "x-ms-vss-method": "GetBranchRefs",
         "description": "Get branch hierarchies below the specified scopePath",
@@ -641,18 +622,7 @@
               "vso.code"
             ]
           }
-        ],
-        "x-ms-examples": {
-          "GET a list of branch refs": {
-            "$ref": "./httpExamples/Branches/GET__tfvc_branchRefs.json"
-          },
-          "GET a list of branch refs including deleted": {
-            "$ref": "./httpExamples/Branches/GET__tfvc_branchRefs_includeDeleted.json"
-          },
-          "GET a list of branch refs with links": {
-            "$ref": "./httpExamples/Branches/GET__tfvc_branchRefs_includeLinks.json"
-          }
-        }
+        ]
       }
     },
     "/{organization}/{project}/_apis/tfvc/changesets": {
@@ -660,7 +630,7 @@
         "tags": [
           "Changesets"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "changesets",
         "x-ms-vss-method": "CreateChangeset",
         "description": "Create a new changeset.\n\nAccepts TfvcChangeset as JSON body",
@@ -734,7 +704,7 @@
         "tags": [
           "Changesets"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "changesets",
         "x-ms-vss-method": "GetChangesets",
         "description": "Retrieve Tfvc Changesets\n\nNote: This is a new version of the GetChangesets API that doesn't expose the unneeded queryParams\npresent in the 1.0 version of the API.",
@@ -791,49 +761,6 @@
           },
           {
             "in": "query",
-            "name": "searchCriteria.author",
-            "description": "Alias or display name of user who made the changes.",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.followRenames",
-            "description": "Whether or not to follow renames for the given item being queried.",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.fromDate",
-            "description": "If provided, only include changesets created after this date (string).",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.fromId",
-            "description": "If provided, only include changesets after this changesetID.",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.includeLinks",
-            "description": "Whether to include the _links field on the shallow references.",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.itemPath",
-            "description": "Path of item to search under.",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
             "name": "searchCriteria.mappings",
             "description": "Following criteria available (.itemPath, .version, .versionType, .versionOption, .author, .fromId, .toId, .fromDate, .toDate) Default: null",
             "required": false,
@@ -846,18 +773,61 @@
           },
           {
             "in": "query",
+            "name": "searchCriteria.includeLinks",
+            "description": "Whether to include the _links field on the shallow references",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.followRenames",
+            "description": "Whether or not to follow renames for the given item being queried",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.toId",
+            "description": "If provided, a version descriptor for the latest change list to include",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.fromId",
+            "description": "If provided, only include changesets after this changesetID",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
             "name": "searchCriteria.toDate",
-            "description": "If provided, only include changesets created before this date (string).",
+            "description": "If provided, only include changesets created before this date (string) Think of a better name for this.",
             "required": false,
             "type": "string"
           },
           {
             "in": "query",
-            "name": "searchCriteria.toId",
-            "description": "If provided, a version descriptor for the latest change list to include.",
+            "name": "searchCriteria.fromDate",
+            "description": "If provided, only include changesets created after this date (string) Think of a better name for this.",
             "required": false,
-            "type": "integer",
-            "format": "int32"
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.author",
+            "description": "Alias or display name of user who made the changes",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.itemPath",
+            "description": "Path of item to search under",
+            "required": false,
+            "type": "string"
           },
           {
             "$ref": "#/parameters/api-Version"
@@ -914,7 +884,7 @@
         "tags": [
           "Changesets"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "changesets",
         "x-ms-vss-method": "GetChangeset",
         "description": "Retrieve a Tfvc Changeset",
@@ -1008,49 +978,6 @@
           },
           {
             "in": "query",
-            "name": "searchCriteria.author",
-            "description": "Alias or display name of user who made the changes.",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.followRenames",
-            "description": "Whether or not to follow renames for the given item being queried.",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.fromDate",
-            "description": "If provided, only include changesets created after this date (string).",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.fromId",
-            "description": "If provided, only include changesets after this changesetID.",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.includeLinks",
-            "description": "Whether to include the _links field on the shallow references.",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "searchCriteria.itemPath",
-            "description": "Path of item to search under.",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
             "name": "searchCriteria.mappings",
             "description": "Following criteria available (.itemPath, .version, .versionType, .versionOption, .author, .fromId, .toId, .fromDate, .toDate) Default: null",
             "required": false,
@@ -1063,18 +990,61 @@
           },
           {
             "in": "query",
+            "name": "searchCriteria.includeLinks",
+            "description": "Whether to include the _links field on the shallow references",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.followRenames",
+            "description": "Whether or not to follow renames for the given item being queried",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.toId",
+            "description": "If provided, a version descriptor for the latest change list to include",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.fromId",
+            "description": "If provided, only include changesets after this changesetID",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
             "name": "searchCriteria.toDate",
-            "description": "If provided, only include changesets created before this date (string).",
+            "description": "If provided, only include changesets created before this date (string) Think of a better name for this.",
             "required": false,
             "type": "string"
           },
           {
             "in": "query",
-            "name": "searchCriteria.toId",
-            "description": "If provided, a version descriptor for the latest change list to include.",
+            "name": "searchCriteria.fromDate",
+            "description": "If provided, only include changesets created after this date (string) Think of a better name for this.",
             "required": false,
-            "type": "integer",
-            "format": "int32"
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.author",
+            "description": "Alias or display name of user who made the changes",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "query",
+            "name": "searchCriteria.itemPath",
+            "description": "Path of item to search under",
+            "required": false,
+            "type": "string"
           },
           {
             "$ref": "#/parameters/api-Version"
@@ -1116,7 +1086,7 @@
         "tags": [
           "Items"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "itemBatch",
         "x-ms-vss-method": "GetItemsBatch",
         "description": "Post for retrieving a set of items given a list of paths or a long path. Allows for specifying the recursionLevel and version descriptors for each path.",
@@ -1187,7 +1157,7 @@
         "tags": [
           "Items"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "items",
         "x-ms-vss-method": "GetItems",
         "description": "Get a list of Tfvc items",
@@ -1262,38 +1232,9 @@
           {
             "in": "query",
             "name": "versionDescriptor.version",
-            "description": "Version object.",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "versionDescriptor.versionOption",
             "description": "",
             "required": false,
-            "type": "string",
-            "enum": [
-              "none",
-              "previous",
-              "useRename"
-            ],
-            "x-ms-enum": {
-              "name": "TfvcVersionOption",
-              "values": [
-                {
-                  "value": "none",
-                  "description": "None."
-                },
-                {
-                  "value": "previous",
-                  "description": "Return the previous version."
-                },
-                {
-                  "value": "useRename",
-                  "description": "Only usuable with versiontype MergeSource and integer versions, uses RenameSource identifier instead of Merge identifier."
-                }
-              ]
-            }
+            "type": "string"
           },
           {
             "in": "query",
@@ -1316,35 +1257,64 @@
               "values": [
                 {
                   "value": "none",
-                  "description": "Version is treated as a ChangesetId."
+                  "description": ""
                 },
                 {
                   "value": "changeset",
-                  "description": "Version is treated as a ChangesetId."
+                  "description": ""
                 },
                 {
                   "value": "shelveset",
-                  "description": "Version is treated as a Shelveset name and owner."
+                  "description": ""
                 },
                 {
                   "value": "change",
-                  "description": "Version is treated as a Change."
+                  "description": ""
                 },
                 {
                   "value": "date",
-                  "description": "Version is treated as a Date."
+                  "description": ""
                 },
                 {
                   "value": "latest",
-                  "description": "If Version is defined the Latest of that Version will be used, if no version is defined the latest ChangesetId will be used."
+                  "description": ""
                 },
                 {
                   "value": "tip",
-                  "description": "Version will be treated as a Tip, if no version is defined latest will be used."
+                  "description": ""
                 },
                 {
                   "value": "mergeSource",
-                  "description": "Version will be treated as a MergeSource."
+                  "description": ""
+                }
+              ]
+            }
+          },
+          {
+            "in": "query",
+            "name": "versionDescriptor.versionOption",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "none",
+              "previous",
+              "useRename"
+            ],
+            "x-ms-enum": {
+              "name": "TfvcVersionOption",
+              "values": [
+                {
+                  "value": "none",
+                  "description": ""
+                },
+                {
+                  "value": "previous",
+                  "description": ""
+                },
+                {
+                  "value": "useRename",
+                  "description": ""
                 }
               ]
             }
@@ -1389,7 +1359,7 @@
         "tags": [
           "Labels"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "labels",
         "x-ms-vss-method": "GetLabels",
         "description": "Get a collection of shallow label references.",
@@ -1422,6 +1392,14 @@
           },
           {
             "in": "query",
+            "name": "requestData.maxItemCount",
+            "description": "labelScope, name, owner, and itemLabelFilter",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
             "name": "requestData.itemLabelFilter",
             "description": "labelScope, name, owner, and itemLabelFilter",
             "required": false,
@@ -1429,18 +1407,10 @@
           },
           {
             "in": "query",
-            "name": "requestData.labelScope",
+            "name": "requestData.owner",
             "description": "labelScope, name, owner, and itemLabelFilter",
             "required": false,
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "requestData.maxItemCount",
-            "description": "labelScope, name, owner, and itemLabelFilter",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -1451,7 +1421,7 @@
           },
           {
             "in": "query",
-            "name": "requestData.owner",
+            "name": "requestData.labelScope",
             "description": "labelScope, name, owner, and itemLabelFilter",
             "required": false,
             "type": "string"
@@ -1518,7 +1488,7 @@
         "tags": [
           "Labels"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "labels",
         "x-ms-vss-method": "GetLabel",
         "description": "Get a single deep label.",
@@ -1558,6 +1528,14 @@
           },
           {
             "in": "query",
+            "name": "requestData.maxItemCount",
+            "description": "maxItemCount",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
             "name": "requestData.itemLabelFilter",
             "description": "maxItemCount",
             "required": false,
@@ -1565,18 +1543,10 @@
           },
           {
             "in": "query",
-            "name": "requestData.labelScope",
+            "name": "requestData.owner",
             "description": "maxItemCount",
             "required": false,
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "requestData.maxItemCount",
-            "description": "maxItemCount",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
           },
           {
             "in": "query",
@@ -1587,7 +1557,7 @@
           },
           {
             "in": "query",
-            "name": "requestData.owner",
+            "name": "requestData.labelScope",
             "description": "maxItemCount",
             "required": false,
             "type": "string"
@@ -1628,7 +1598,7 @@
         "tags": [
           "Shelvesets"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "shelvesets",
         "x-ms-vss-method": "GetShelvesets",
         "description": "Return a collection of shallow shelveset references.",
@@ -1646,13 +1616,6 @@
           },
           {
             "in": "query",
-            "name": "requestData.includeDetails",
-            "description": "Whether to include policyOverride and notes Only applies when requesting a single deep shelveset",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "query",
             "name": "requestData.includeLinks",
             "description": "Whether to include the _links field on the shallow references. Does not apply when requesting a single deep shelveset object. Links will always be included in the deep shelveset.",
             "required": false,
@@ -1662,6 +1625,13 @@
             "in": "query",
             "name": "requestData.includeWorkItems",
             "description": "Whether to include workItems",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "in": "query",
+            "name": "requestData.includeDetails",
+            "description": "Whether to include policyOverride and notes Only applies when requesting a single deep shelveset",
             "required": false,
             "type": "boolean"
           },
@@ -1683,15 +1653,15 @@
           },
           {
             "in": "query",
-            "name": "requestData.name",
-            "description": "Shelveset name",
+            "name": "requestData.owner",
+            "description": "Owner's ID. Could be a name or a guid.",
             "required": false,
             "type": "string"
           },
           {
             "in": "query",
-            "name": "requestData.owner",
-            "description": "Owner's ID. Could be a name or a guid.",
+            "name": "requestData.name",
+            "description": "Shelveset's name",
             "required": false,
             "type": "string"
           },
@@ -1734,17 +1704,14 @@
           }
         ],
         "x-ms-examples": {
-          "GET a list of shelveset refs.": {
-            "$ref": "./httpExamples/shelvesets/GET__tfvc_shelvesets_list.json"
+          "ShelvesetId and Changes": {
+            "$ref": "./httpExamples/shelvesets/GET__tfvc_shelvesets__shelvesetId__changes.json"
           },
-          "GET a list of shelveset refs with top and skip.": {
-            "$ref": "./httpExamples/shelvesets/GET__tfvc_shelvesets_list_top-_top___skip-_skip_.json"
+          "top and skip": {
+            "$ref": "./httpExamples/shelvesets/GET__tfvc_shelvesets__shelvesetId__changes__top-_top___skip-_skip_.json"
           },
-          "GET a list of shelveset refs with a max comment length.": {
-            "$ref": "./httpExamples/shelvesets/GET__tfvc_shelvesets_list_maxCommentLength-_maxCommentLength_.json"
-          },
-          "GET a list of shelveset refs for a specific Owner.": {
-            "$ref": "./httpExamples/shelvesets/GET__tfvc_shelvesets_list_owner-_owner_.json"
+          "workItems": {
+            "$ref": "./httpExamples/shelvesets/GET__tfvc_shelvesets__shelvesetId__workitems.json"
           }
         }
       }
@@ -1754,7 +1721,7 @@
         "tags": [
           "Branches"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "branches",
         "x-ms-vss-method": "GetBranch",
         "description": "Get a single branch hierarchy at the given path with parents or children as specified.",
@@ -1839,7 +1806,7 @@
         "tags": [
           "Branches"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "branches",
         "x-ms-vss-method": "GetBranches",
         "description": "Get a collection of branch roots -- first-level children, branches with no parents.",
@@ -1931,7 +1898,7 @@
         "tags": [
           "Items"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "items",
         "x-ms-vss-method": "GetItem",
         "description": "Get Item Metadata and/or Content for a single item. The download parameter is to indicate whether the content should be available as a download or just sent as a stream in the response. Doesn't apply to zipped content which is always returned as a download.",
@@ -2023,38 +1990,9 @@
           {
             "in": "query",
             "name": "versionDescriptor.version",
-            "description": "Version object.",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "versionDescriptor.versionOption",
             "description": "Version descriptor.  Default is null.",
             "required": false,
-            "type": "string",
-            "enum": [
-              "none",
-              "previous",
-              "useRename"
-            ],
-            "x-ms-enum": {
-              "name": "TfvcVersionOption",
-              "values": [
-                {
-                  "value": "none",
-                  "description": "None."
-                },
-                {
-                  "value": "previous",
-                  "description": "Return the previous version."
-                },
-                {
-                  "value": "useRename",
-                  "description": "Only usuable with versiontype MergeSource and integer versions, uses RenameSource identifier instead of Merge identifier."
-                }
-              ]
-            }
+            "type": "string"
           },
           {
             "in": "query",
@@ -2077,35 +2015,64 @@
               "values": [
                 {
                   "value": "none",
-                  "description": "Version is treated as a ChangesetId."
+                  "description": ""
                 },
                 {
                   "value": "changeset",
-                  "description": "Version is treated as a ChangesetId."
+                  "description": ""
                 },
                 {
                   "value": "shelveset",
-                  "description": "Version is treated as a Shelveset name and owner."
+                  "description": ""
                 },
                 {
                   "value": "change",
-                  "description": "Version is treated as a Change."
+                  "description": ""
                 },
                 {
                   "value": "date",
-                  "description": "Version is treated as a Date."
+                  "description": ""
                 },
                 {
                   "value": "latest",
-                  "description": "If Version is defined the Latest of that Version will be used, if no version is defined the latest ChangesetId will be used."
+                  "description": ""
                 },
                 {
                   "value": "tip",
-                  "description": "Version will be treated as a Tip, if no version is defined latest will be used."
+                  "description": ""
                 },
                 {
                   "value": "mergeSource",
-                  "description": "Version will be treated as a MergeSource."
+                  "description": ""
+                }
+              ]
+            }
+          },
+          {
+            "in": "query",
+            "name": "versionDescriptor.versionOption",
+            "description": "Version descriptor.  Default is null.",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "none",
+              "previous",
+              "useRename"
+            ],
+            "x-ms-enum": {
+              "name": "TfvcVersionOption",
+              "values": [
+                {
+                  "value": "none",
+                  "description": ""
+                },
+                {
+                  "value": "previous",
+                  "description": ""
+                },
+                {
+                  "value": "useRename",
+                  "description": ""
                 }
               ]
             }
@@ -2135,12 +2102,7 @@
               "vso.code"
             ]
           }
-        ],
-        "x-ms-examples": {
-          "GET item metadata and/or content for a single item.": {
-            "$ref": "./httpExamples/Items/GET__tfvc_items_path.json"
-          }
-        }
+        ]
       }
     }
   },
@@ -2669,7 +2631,7 @@
       }
     },
     "TfvcBranch": {
-      "description": "Class representing a branch object.",
+      "description": "",
       "type": "object",
       "allOf": [
         {
@@ -2705,7 +2667,7 @@
       }
     },
     "TfvcBranchMapping": {
-      "description": "A branch mapping.",
+      "description": "",
       "type": "object",
       "properties": {
         "depth": {
@@ -2723,7 +2685,7 @@
       }
     },
     "TfvcBranchRef": {
-      "description": "Metadata for a branchref.",
+      "description": "",
       "type": "object",
       "allOf": [
         {
@@ -2741,7 +2703,7 @@
           "format": "date-time"
         },
         "description": {
-          "description": "Branch description.",
+          "description": "Description of the branch.",
           "type": "string"
         },
         "isDeleted": {
@@ -2759,7 +2721,7 @@
       }
     },
     "TfvcChange": {
-      "description": "A change.",
+      "description": "",
       "type": "object",
       "allOf": [
         {
@@ -2782,7 +2744,7 @@
       }
     },
     "TfvcChangeset": {
-      "description": "A collection of changes.",
+      "description": "",
       "type": "object",
       "allOf": [
         {
@@ -2791,7 +2753,7 @@
       ],
       "properties": {
         "accountId": {
-          "description": "Changeset Account Id also known as Organization Id.",
+          "description": "Account Id of the changeset.",
           "type": "string",
           "format": "uuid"
         },
@@ -2803,19 +2765,19 @@
           }
         },
         "checkinNotes": {
-          "description": "List of Checkin Notes for the changeset.",
+          "description": "Checkin Notes for the changeset.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/CheckinNote"
           }
         },
         "collectionId": {
-          "description": "Changeset collection Id.",
+          "description": "Collection Id of the changeset.",
           "type": "string",
           "format": "uuid"
         },
         "hasMoreChanges": {
-          "description": "True if more changes are available.",
+          "description": "Are more changes available.",
           "type": "boolean"
         },
         "policyOverride": {
@@ -2840,7 +2802,7 @@
       }
     },
     "TfvcChangesetRef": {
-      "description": "Metadata for a changeset.",
+      "description": "",
       "type": "object",
       "properties": {
         "_links": {
@@ -2848,16 +2810,16 @@
           "$ref": "#/definitions/ReferenceLinks"
         },
         "author": {
-          "description": "Alias or display name of user.",
+          "description": "Alias or display name of user",
           "$ref": "#/definitions/IdentityRef"
         },
         "changesetId": {
-          "description": "Changeset Id.",
+          "description": "Id of the changeset.",
           "type": "integer",
           "format": "int32"
         },
         "checkedInBy": {
-          "description": "Alias or display name of user.",
+          "description": "Alias or display name of user",
           "$ref": "#/definitions/IdentityRef"
         },
         "comment": {
@@ -2880,32 +2842,32 @@
       }
     },
     "TfvcChangesetSearchCriteria": {
-      "description": "Criteria used in a search for change lists.",
+      "description": "Criteria used in a search for change lists",
       "type": "object",
       "properties": {
         "author": {
-          "description": "Alias or display name of user who made the changes.",
+          "description": "Alias or display name of user who made the changes",
           "type": "string"
         },
         "followRenames": {
-          "description": "Whether or not to follow renames for the given item being queried.",
+          "description": "Whether or not to follow renames for the given item being queried",
           "type": "boolean"
         },
         "fromDate": {
-          "description": "If provided, only include changesets created after this date (string).",
+          "description": "If provided, only include changesets created after this date (string) Think of a better name for this.",
           "type": "string"
         },
         "fromId": {
-          "description": "If provided, only include changesets after this changesetID.",
+          "description": "If provided, only include changesets after this changesetID",
           "type": "integer",
           "format": "int32"
         },
         "includeLinks": {
-          "description": "Whether to include the _links field on the shallow references.",
+          "description": "Whether to include the _links field on the shallow references",
           "type": "boolean"
         },
         "itemPath": {
-          "description": "Path of item to search under.",
+          "description": "Path of item to search under",
           "type": "string"
         },
         "mappings": {
@@ -2915,18 +2877,18 @@
           }
         },
         "toDate": {
-          "description": "If provided, only include changesets created before this date (string).",
+          "description": "If provided, only include changesets created before this date (string) Think of a better name for this.",
           "type": "string"
         },
         "toId": {
-          "description": "If provided, a version descriptor for the latest change list to include.",
+          "description": "If provided, a version descriptor for the latest change list to include",
           "type": "integer",
           "format": "int32"
         }
       }
     },
     "TfvcChangesetsRequestData": {
-      "description": "Request body for Get batched changesets.",
+      "description": "",
       "type": "object",
       "properties": {
         "changesetIds": {
@@ -2938,7 +2900,7 @@
           }
         },
         "commentLength": {
-          "description": "Max length of the comment.",
+          "description": "Length of the comment.",
           "type": "integer",
           "format": "int32"
         },
@@ -2949,7 +2911,7 @@
       }
     },
     "TfvcItem": {
-      "description": "Metadata for an item.",
+      "description": "",
       "type": "object",
       "allOf": [
         {
@@ -2958,12 +2920,10 @@
       ],
       "properties": {
         "changeDate": {
-          "description": "Item changed datetime.",
           "type": "string",
           "format": "date-time"
         },
         "deletionId": {
-          "description": "Greater than 0 if item is deleted.",
           "type": "integer",
           "format": "int32"
         },
@@ -2977,11 +2937,9 @@
           "type": "string"
         },
         "isBranch": {
-          "description": "True if item is a branch.",
           "type": "boolean"
         },
         "isPendingChange": {
-          "description": "True if there is a change pending.",
           "type": "boolean"
         },
         "size": {
@@ -2990,7 +2948,6 @@
           "format": "int64"
         },
         "version": {
-          "description": "Changeset version Id.",
           "type": "integer",
           "format": "int32"
         }
@@ -3001,11 +2958,9 @@
       "type": "object",
       "properties": {
         "path": {
-          "description": "Item path.",
           "type": "string"
         },
         "recursionLevel": {
-          "description": "Defaults to OneLevel.",
           "enum": [
             "none",
             "oneLevel",
@@ -3035,11 +2990,9 @@
           }
         },
         "version": {
-          "description": "Specify the desired version, can be null or empty string only if VersionType is latest or tip.",
           "type": "string"
         },
         "versionOption": {
-          "description": "Defaults to None.",
           "enum": [
             "none",
             "previous",
@@ -3050,21 +3003,20 @@
             "values": [
               {
                 "value": "none",
-                "description": "None."
+                "description": ""
               },
               {
                 "value": "previous",
-                "description": "Return the previous version."
+                "description": ""
               },
               {
                 "value": "useRename",
-                "description": "Only usuable with versiontype MergeSource and integer versions, uses RenameSource identifier instead of Merge identifier."
+                "description": ""
               }
             ]
           }
         },
         "versionType": {
-          "description": "Defaults to Latest.",
           "enum": [
             "none",
             "changeset",
@@ -3080,35 +3032,35 @@
             "values": [
               {
                 "value": "none",
-                "description": "Version is treated as a ChangesetId."
+                "description": ""
               },
               {
                 "value": "changeset",
-                "description": "Version is treated as a ChangesetId."
+                "description": ""
               },
               {
                 "value": "shelveset",
-                "description": "Version is treated as a Shelveset name and owner."
+                "description": ""
               },
               {
                 "value": "change",
-                "description": "Version is treated as a Change."
+                "description": ""
               },
               {
                 "value": "date",
-                "description": "Version is treated as a Date."
+                "description": ""
               },
               {
                 "value": "latest",
-                "description": "If Version is defined the Latest of that Version will be used, if no version is defined the latest ChangesetId will be used."
+                "description": ""
               },
               {
                 "value": "tip",
-                "description": "Version will be treated as a Tip, if no version is defined latest will be used."
+                "description": ""
               },
               {
                 "value": "mergeSource",
-                "description": "Version will be treated as a MergeSource."
+                "description": ""
               }
             ]
           }
@@ -3116,7 +3068,7 @@
       }
     },
     "TfvcItemRequestData": {
-      "description": "Request body used by Get Items Batch",
+      "description": "",
       "type": "object",
       "properties": {
         "includeContentMetadata": {
@@ -3136,7 +3088,7 @@
       }
     },
     "TfvcLabel": {
-      "description": "Metadata for a label.",
+      "description": "",
       "type": "object",
       "allOf": [
         {
@@ -3145,7 +3097,6 @@
       ],
       "properties": {
         "items": {
-          "description": "List of items.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/TfvcItem"
@@ -3154,41 +3105,33 @@
       }
     },
     "TfvcLabelRef": {
-      "description": "Metadata for a Label.",
+      "description": "",
       "type": "object",
       "properties": {
         "_links": {
-          "description": "Collection of reference links.",
           "$ref": "#/definitions/ReferenceLinks"
         },
         "description": {
-          "description": "Label description.",
           "type": "string"
         },
         "id": {
-          "description": "Label Id.",
           "type": "integer",
           "format": "int32"
         },
         "labelScope": {
-          "description": "Label scope.",
           "type": "string"
         },
         "modifiedDate": {
-          "description": "Last modified datetime for the label.",
           "type": "string",
           "format": "date-time"
         },
         "name": {
-          "description": "Label name.",
           "type": "string"
         },
         "owner": {
-          "description": "Label owner.",
           "$ref": "#/definitions/IdentityRef"
         },
         "url": {
-          "description": "Label Url.",
           "type": "string"
         }
       }
@@ -3220,15 +3163,13 @@
       }
     },
     "TfvcMappingFilter": {
-      "description": "MappingFilter can be used to include or exclude specific paths.",
+      "description": "",
       "type": "object",
       "properties": {
         "exclude": {
-          "description": "True if ServerPath should be excluded.",
           "type": "boolean"
         },
         "serverPath": {
-          "description": "Path to be included or excluded.",
           "type": "string"
         }
       }
@@ -3242,45 +3183,41 @@
           "type": "boolean"
         },
         "serverItem": {
-          "description": "The server item of the merge source.",
+          "description": "The server item of the merge source",
           "type": "string"
         },
         "versionFrom": {
-          "description": "Start of the version range.",
+          "description": "Start of the version range",
           "type": "integer",
           "format": "int32"
         },
         "versionTo": {
-          "description": "End of the version range.",
+          "description": "End of the version range",
           "type": "integer",
           "format": "int32"
         }
       }
     },
     "TfvcPolicyFailureInfo": {
-      "description": "Policy failure information.",
+      "description": "",
       "type": "object",
       "properties": {
         "message": {
-          "description": "Policy failure message.",
           "type": "string"
         },
         "policyName": {
-          "description": "Name of the policy that failed.",
           "type": "string"
         }
       }
     },
     "TfvcPolicyOverrideInfo": {
-      "description": "Information on the policy override.",
+      "description": "",
       "type": "object",
       "properties": {
         "comment": {
-          "description": "Overidden policy comment.",
           "type": "string"
         },
         "policyFailures": {
-          "description": "Information on the failed policy that was overridden.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/TfvcPolicyFailureInfo"
@@ -3289,7 +3226,7 @@
       }
     },
     "TfvcShallowBranchRef": {
-      "description": "This is the shallow branchref class.",
+      "description": "",
       "type": "object",
       "properties": {
         "path": {
@@ -3299,7 +3236,7 @@
       }
     },
     "TfvcShelveset": {
-      "description": "Metadata for a shelveset.",
+      "description": "This is the deep shelveset class",
       "type": "object",
       "allOf": [
         {
@@ -3308,25 +3245,21 @@
       ],
       "properties": {
         "changes": {
-          "description": "List of changes.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/TfvcChange"
           }
         },
         "notes": {
-          "description": "List of checkin notes.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/CheckinNote"
           }
         },
         "policyOverride": {
-          "description": "Policy override information if applicable.",
           "$ref": "#/definitions/TfvcPolicyOverrideInfo"
         },
         "workItems": {
-          "description": "List of associated workitems.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/AssociatedWorkItem"
@@ -3335,40 +3268,32 @@
       }
     },
     "TfvcShelvesetRef": {
-      "description": "Metadata for a shallow shelveset.",
+      "description": "This is the shallow shelveset class",
       "type": "object",
       "properties": {
         "_links": {
-          "description": "List of reference links for the shelveset.",
           "$ref": "#/definitions/ReferenceLinks"
         },
         "comment": {
-          "description": "Shelveset comment.",
           "type": "string"
         },
         "commentTruncated": {
-          "description": "Shelveset comment truncated as applicable.",
           "type": "boolean"
         },
         "createdDate": {
-          "description": "Shelveset create date.",
           "type": "string",
           "format": "date-time"
         },
         "id": {
-          "description": "Shelveset Id.",
           "type": "string"
         },
         "name": {
-          "description": "Shelveset name.",
           "type": "string"
         },
         "owner": {
-          "description": "Shelveset Owner.",
           "$ref": "#/definitions/IdentityRef"
         },
         "url": {
-          "description": "Shelveset Url.",
           "type": "string"
         }
       }
@@ -3400,7 +3325,7 @@
           "format": "int32"
         },
         "name": {
-          "description": "Shelveset name",
+          "description": "Shelveset's name",
           "type": "string"
         },
         "owner": {
@@ -3426,11 +3351,10 @@
       }
     },
     "TfvcVersionDescriptor": {
-      "description": "Version descriptor properties.",
+      "description": "",
       "type": "object",
       "properties": {
         "version": {
-          "description": "Version object.",
           "type": "string"
         },
         "versionOption": {
@@ -3444,15 +3368,15 @@
             "values": [
               {
                 "value": "none",
-                "description": "None."
+                "description": ""
               },
               {
                 "value": "previous",
-                "description": "Return the previous version."
+                "description": ""
               },
               {
                 "value": "useRename",
-                "description": "Only usuable with versiontype MergeSource and integer versions, uses RenameSource identifier instead of Merge identifier."
+                "description": ""
               }
             ]
           }
@@ -3473,35 +3397,35 @@
             "values": [
               {
                 "value": "none",
-                "description": "Version is treated as a ChangesetId."
+                "description": ""
               },
               {
                 "value": "changeset",
-                "description": "Version is treated as a ChangesetId."
+                "description": ""
               },
               {
                 "value": "shelveset",
-                "description": "Version is treated as a Shelveset name and owner."
+                "description": ""
               },
               {
                 "value": "change",
-                "description": "Version is treated as a Change."
+                "description": ""
               },
               {
                 "value": "date",
-                "description": "Version is treated as a Date."
+                "description": ""
               },
               {
                 "value": "latest",
-                "description": "If Version is defined the Latest of that Version will be used, if no version is defined the latest ChangesetId will be used."
+                "description": ""
               },
               {
                 "value": "tip",
-                "description": "Version will be treated as a Tip, if no version is defined latest will be used."
+                "description": ""
               },
               {
                 "value": "mergeSource",
-                "description": "Version will be treated as a MergeSource."
+                "description": ""
               }
             ]
           }
@@ -3572,14 +3496,14 @@
     "api-Version": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     }

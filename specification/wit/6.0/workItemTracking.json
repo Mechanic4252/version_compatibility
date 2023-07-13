@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0"
+    "version": "5.1"
   },
   "host": "dev.azure.com",
   "x-ms-vss-area": "WorkItemTracking",
@@ -52,9 +52,6 @@
       "description": "This controller version exists to support returning project scoped urls for fields"
     },
     {
-      "name": "Project Process Migration"
-    },
-    {
       "name": "Queries",
       "description": "The queries in a team project are organized in folders.\n\nA sample structure of queries and folders might appear as shown here.\n\n* **My Queries**\n* **Shared Queries**\n  * Feedback (Query)\n    * **Current Sprint**\n      * Blocked Tasks (Query)\n      * Open Impediments (Query)\n      * Test Cases (Query)\n      * Unfinished Work (Query)\n      * Work in Progress (Query)"
     },
@@ -72,9 +69,6 @@
     {
       "name": "Revisions",
       "description": "This controller version exists to support returning identity values and project scoped urls for work items"
-    },
-    {
-      "name": "Tags"
     },
     {
       "name": "Templates"
@@ -131,7 +125,7 @@
         "tags": [
           "Artifact Link Types"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "artifactLinkTypes",
         "x-ms-vss-method": "GetWorkArtifactLinkTypes",
         "x-ms-preview": true,
@@ -182,7 +176,7 @@
         "tags": [
           "Work Item Icons"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItemIcons",
         "x-ms-vss-method": "GetWorkItemIcons",
         "description": "Get a list of all work item icons.",
@@ -214,13 +208,6 @@
             }
           }
         },
-        "security": [
-          {
-            "oauth2": [
-              "vso.work"
-            ]
-          }
-        ],
         "x-ms-examples": {
           "Get work item icons": {
             "$ref": "./httpExamples/workItemIcons/GET__workitem_icons.json"
@@ -233,7 +220,7 @@
         "tags": [
           "Work Item Icons"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItemIcons",
         "x-ms-vss-method": "GetWorkItemIcon",
         "description": "Get a work item icon given the friendly name and icon color.",
@@ -286,13 +273,6 @@
             }
           }
         },
-        "security": [
-          {
-            "oauth2": [
-              "vso.work"
-            ]
-          }
-        ],
         "x-ms-examples": {
           "Get work item icon": {
             "$ref": "./httpExamples/workItemIcons/GET__workitem_icon.json"
@@ -305,7 +285,7 @@
         "tags": [
           "Work Item Relation Types"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItemRelationTypes",
         "x-ms-vss-method": "GetRelationTypes",
         "description": "Gets the work item relation types.",
@@ -355,7 +335,7 @@
         "tags": [
           "Work Item Relation Types"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItemRelationTypes",
         "x-ms-vss-method": "GetRelationType",
         "description": "Gets the work item relation type definition.",
@@ -409,7 +389,7 @@
         "tags": [
           "Work Item Transitions"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "workItemTransitions",
         "x-ms-vss-method": "GetWorkItemNextStatesOnCheckinAction",
         "x-ms-preview": true,
@@ -456,13 +436,6 @@
             }
           }
         },
-        "security": [
-          {
-            "oauth2": [
-              "vso.work"
-            ]
-          }
-        ],
         "x-ms-examples": {
           "Get next state on a work item": {
             "$ref": "./httpExamples/workItemTransitions/GET_wit_workItemTransitions.json"
@@ -475,7 +448,7 @@
         "tags": [
           "Account My Work Recent Activity"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "accountMyWorkRecentActivity",
         "x-ms-vss-method": "GetRecentActivityData",
         "x-ms-preview": true,
@@ -521,7 +494,7 @@
         "tags": [
           "Artifact Uri Query"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "artifactUriQuery",
         "x-ms-vss-method": "QueryWorkItemsForArtifactUris",
         "x-ms-preview": true,
@@ -589,7 +562,7 @@
         "tags": [
           "Attachments"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "attachments",
         "x-ms-vss-method": "CreateAttachment",
         "description": "Uploads an attachment.\n\nOn accounts with higher attachment upload limits (>130MB), you will need to use chunked upload.\nTo upload an attachment in multiple chunks, you first need to [**Start a Chunked Upload**](#start_a_chunked_upload) and then follow the example from the **Upload Chunk** section.",
@@ -684,7 +657,7 @@
         "tags": [
           "Attachments"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "attachments",
         "x-ms-vss-method": "GetAttachment",
         "description": "Downloads an attachment.",
@@ -767,7 +740,7 @@
         "tags": [
           "Attachments"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "attachments",
         "x-ms-vss-method": "UploadAttachment",
         "description": "Uploads an attachment chunk.\n\nBefore performing [**Upload a Chunk**](#upload_a_chunk), make sure to have an attachment id returned in **Start a Chunked Upload** example on **Create** section. Specify the byte range of the chunk using Content-Length. For example: \"Content - Length\": \"bytes 0 - 39999 / 50000\" for the first 40000 bytes of a 50000 byte file.",
@@ -857,7 +830,7 @@
         "tags": [
           "Classification Nodes"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "classificationNodes",
         "x-ms-vss-method": "GetRootNodes",
         "description": "Gets root classification nodes under the project.",
@@ -917,7 +890,7 @@
         "tags": [
           "Classification Nodes"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "classificationNodes",
         "x-ms-vss-method": "CreateOrUpdateClassificationNode",
         "description": "Create new or update an existing classification node.",
@@ -1022,7 +995,7 @@
         "tags": [
           "Classification Nodes"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "classificationNodes",
         "x-ms-vss-method": "DeleteClassificationNode",
         "description": "Delete an existing classification node.",
@@ -1111,7 +1084,7 @@
         "tags": [
           "Classification Nodes"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "classificationNodes",
         "x-ms-vss-method": "GetClassificationNode",
         "description": "Gets the classification node for a given node path.",
@@ -1206,7 +1179,7 @@
         "tags": [
           "Classification Nodes"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "classificationNodes",
         "x-ms-vss-method": "UpdateClassificationNode",
         "description": "Update an existing classification node.",
@@ -1310,7 +1283,7 @@
         "tags": [
           "Fields"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "fields",
         "x-ms-vss-method": "CreateField",
         "description": "Create a new field.",
@@ -1375,10 +1348,10 @@
         "tags": [
           "Fields"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "fields",
         "x-ms-vss-method": "GetFields",
-        "description": "Returns information for all fields. The project ID/name parameter is optional.",
+        "description": "Returns information for all fields.",
         "operationId": "Fields_List",
         "produces": [
           "application/json"
@@ -1407,8 +1380,7 @@
             "type": "string",
             "enum": [
               "none",
-              "extensionFields",
-              "includeDeleted"
+              "extensionFields"
             ],
             "x-ms-enum": {
               "name": "GetFieldsExpand",
@@ -1420,10 +1392,6 @@
                 {
                   "value": "extensionFields",
                   "description": "Adds extension fields to the response."
-                },
-                {
-                  "value": "includeDeleted",
-                  "description": "Includes fields that have been deleted."
                 }
               ]
             }
@@ -1462,10 +1430,10 @@
         "tags": [
           "Fields"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "fields",
         "x-ms-vss-method": "DeleteField",
-        "description": "Deletes the field. To undelete a filed, see \"Update Field\" API.",
+        "description": "Deletes the field.",
         "operationId": "Fields_Delete",
         "parameters": [
           {
@@ -1504,7 +1472,7 @@
         "tags": [
           "Fields"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "fields",
         "x-ms-vss-method": "GetField",
         "description": "Gets information on a specific field.",
@@ -1559,133 +1527,6 @@
             "$ref": "./httpExamples/fields/GET__wit_fields__fieldName_.json"
           }
         }
-      },
-      "patch": {
-        "tags": [
-          "Fields"
-        ],
-        "x-ms-docs-override-version": "6.0",
-        "x-ms-vss-resource": "fields",
-        "x-ms-vss-method": "UpdateField",
-        "description": "Update a field.",
-        "operationId": "Fields_Update",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Payload contains desired value of the field's properties",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/UpdateWorkItemField"
-            }
-          },
-          {
-            "in": "path",
-            "name": "fieldNameOrRefName",
-            "description": "Name/reference name of the field to be updated",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/WorkItemField"
-            }
-          }
-        },
-        "x-ms-examples": {
-          "Undelete a field": {
-            "$ref": "./httpExamples/fields/UPDATE_wit_fields_UndeleteField.json"
-          }
-        }
-      }
-    },
-    "/{organization}/{project}/_apis/wit/projectprocessmigration": {
-      "post": {
-        "tags": [
-          "Project Process Migration"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "projectProcessMigration",
-        "x-ms-vss-method": "MigrateProjectsProcess",
-        "x-ms-preview": true,
-        "description": "Migrates a project to a different process within the same OOB type. For example, you can only migrate a project from agile/custom-agile to agile/custom-agile.",
-        "operationId": "Project Process Migration_Migrate Projects Process",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/ProcessIdModel"
-            }
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/ProcessMigrationResultModel"
-            }
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.work_write"
-            ]
-          }
-        ]
       }
     },
     "/{organization}/{project}/_apis/wit/queries": {
@@ -1693,7 +1534,7 @@
         "tags": [
           "Queries"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "queries",
         "x-ms-vss-method": "GetQueries",
         "description": "Gets the root queries and their children",
@@ -1813,7 +1654,7 @@
         "tags": [
           "Queries"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "queries",
         "x-ms-vss-method": "CreateQuery",
         "description": "Creates a query, or moves a query.\n\nLearn more about Work Item Query Language (WIQL) syntax [here](https://docs.microsoft.com/en-us/vsts/collaborate/wiql-syntax?toc=/vsts/work/track/toc.json&bc=/vsts/work/track/breadcrumb/toc.json&view=vsts).",
@@ -1897,7 +1738,7 @@
         "tags": [
           "Queries"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "queries",
         "x-ms-vss-method": "DeleteQuery",
         "description": "Delete a query or a folder. This deletes any permission change on the deleted query or folder and any of its descendants if it is a folder. It is important to note that the deleted permission changes cannot be recovered upon undeleting the query or folder.",
@@ -1953,7 +1794,7 @@
         "tags": [
           "Queries"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "queries",
         "x-ms-vss-method": "GetQuery",
         "description": "Retrieves an individual query and its children",
@@ -2084,7 +1925,7 @@
         "tags": [
           "Queries"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "queries",
         "x-ms-vss-method": "UpdateQuery",
         "description": "Update a query or a folder. This allows you to update, rename and move queries and folders.",
@@ -2173,7 +2014,7 @@
         "tags": [
           "Queries"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "queriesBatch",
         "x-ms-vss-method": "GetQueriesBatch",
         "description": "Gets a list of queries by ids (Maximum 1000)",
@@ -2242,7 +2083,7 @@
         "tags": [
           "Recyclebin"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "recyclebin",
         "x-ms-vss-method": "GetDeletedWorkItemShallowReferences",
         "description": "Gets a list of the IDs and the URLs of the deleted the work items in the Recycle Bin.",
@@ -2284,7 +2125,7 @@
         "security": [
           {
             "oauth2": [
-              "vso.work"
+              "vso.work_write"
             ]
           }
         ],
@@ -2300,7 +2141,7 @@
         "tags": [
           "Recyclebin"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "recyclebin",
         "x-ms-vss-method": "DestroyWorkItem",
         "description": "Destroys the specified work item permanently from the Recycle Bin. This action can not be undone.",
@@ -2355,7 +2196,7 @@
         "tags": [
           "Recyclebin"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "recyclebin",
         "x-ms-vss-method": "GetDeletedWorkItem",
         "description": "Gets a deleted work item from Recycle Bin.",
@@ -2402,7 +2243,7 @@
         "security": [
           {
             "oauth2": [
-              "vso.work"
+              "vso.work_write"
             ]
           }
         ],
@@ -2416,7 +2257,7 @@
         "tags": [
           "Recyclebin"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "recyclebin",
         "x-ms-vss-method": "RestoreWorkItem",
         "description": "Restores the deleted work item from Recycle Bin.",
@@ -2491,7 +2332,7 @@
         "tags": [
           "Reporting Work Item Links"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItemLinks",
         "x-ms-vss-method": "GetReportingLinksByLinkType",
         "description": "Get a batch of work item links",
@@ -2577,7 +2418,7 @@
         "tags": [
           "Reporting Work Item Revisions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItemRevisions",
         "x-ms-vss-method": "ReadReportingRevisionsGet",
         "description": "Get a batch of work item revisions with the option of including deleted items",
@@ -2731,7 +2572,7 @@
         "tags": [
           "Reporting Work Item Revisions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItemRevisions",
         "x-ms-vss-method": "ReadReportingRevisionsPost",
         "description": "Get a batch of work item revisions. This request may be used if your list of fields is large enough that it may run the URL over the length limit.",
@@ -2837,7 +2678,7 @@
         "tags": [
           "Work Item Revisions Discussions"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "workItemRevisionsDiscussions",
         "x-ms-vss-method": "ReadReportingDiscussions",
         "x-ms-preview": true,
@@ -2898,258 +2739,12 @@
         ]
       }
     },
-    "/{organization}/{project}/_apis/wit/tags": {
-      "get": {
-        "tags": [
-          "Tags"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "tags",
-        "x-ms-vss-method": "GetTags",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Tags_List",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/WorkItemTagDefinition"
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.work"
-            ]
-          }
-        ],
-        "x-ms-examples": {
-          "List of work item tags": {
-            "$ref": "./httpExamples/tags/GET__list_of_wit_tags.json"
-          }
-        }
-      }
-    },
-    "/{organization}/{project}/_apis/wit/tags/{tagIdOrName}": {
-      "delete": {
-        "tags": [
-          "Tags"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "tags",
-        "x-ms-vss-method": "DeleteTag",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Tags_Delete",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "tagIdOrName",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation"
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.work_write"
-            ]
-          }
-        ],
-        "x-ms-examples": {
-          "Delete a work item tag": {
-            "$ref": "./httpExamples/tags/DELETE__wit_tag.json"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Tags"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "tags",
-        "x-ms-vss-method": "GetTag",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Tags_Get",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "tagIdOrName",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/WorkItemTagDefinition"
-            }
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.work"
-            ]
-          }
-        ],
-        "x-ms-examples": {
-          "Get a work item tag": {
-            "$ref": "./httpExamples/tags/GET__wit_tag.json"
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Tags"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "tags",
-        "x-ms-vss-method": "UpdateTag",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Tags_Update",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/WorkItemTagDefinition"
-            }
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "tagIdOrName",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/WorkItemTagDefinition"
-            }
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.work_write"
-            ]
-          }
-        ],
-        "x-ms-examples": {
-          "Update a work item tag": {
-            "$ref": "./httpExamples/tags/PATCH__wit_tag.json"
-          }
-        }
-      }
-    },
     "/{organization}/{project}/_apis/wit/workitems": {
       "get": {
         "tags": [
           "Work Items"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItems",
         "x-ms-vss-method": "GetWorkItems",
         "description": "Returns a list of work items (Maximum 200)",
@@ -3312,7 +2907,7 @@
         "tags": [
           "Work Items"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItems",
         "x-ms-vss-method": "CreateWorkItem",
         "description": "Creates a single work item.",
@@ -3443,7 +3038,7 @@
         "tags": [
           "Work Items"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItems",
         "x-ms-vss-method": "GetWorkItemTemplate",
         "description": "Returns a single work item from a template.",
@@ -3558,7 +3153,7 @@
         "tags": [
           "Work Items"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItems",
         "x-ms-vss-method": "DeleteWorkItem",
         "description": "Deletes the specified work item and sends it to the Recycle Bin, so that it can be restored back, if required. Optionally, if the destroy parameter has been set to true, it destroys the work item permanently. WARNING: If the destroy parameter is set to true, work items deleted by this command will NOT go to recycle-bin and there is no way to restore/recover them after deletion. It is recommended NOT to use this parameter. If you do, please use this parameter with extreme caution.",
@@ -3626,7 +3221,7 @@
         "tags": [
           "Work Items"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItems",
         "x-ms-vss-method": "GetWorkItem",
         "description": "Returns a single work item.",
@@ -3745,7 +3340,7 @@
         "tags": [
           "Work Items"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItems",
         "x-ms-vss-method": "UpdateWorkItem",
         "description": "Updates a single work item.",
@@ -3925,7 +3520,7 @@
         "tags": [
           "Revisions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "revisions",
         "x-ms-vss-method": "GetRevisions",
         "description": "Returns the list of fully hydrated work item revisions, paged.",
@@ -4052,7 +3647,7 @@
         "tags": [
           "Revisions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "revisions",
         "x-ms-vss-method": "GetRevision",
         "description": "Returns a fully hydrated work item for the requested revision",
@@ -4165,7 +3760,7 @@
         "tags": [
           "Updates"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "updates",
         "x-ms-vss-method": "GetUpdates",
         "description": "Returns a the deltas between work item revisions",
@@ -4253,7 +3848,7 @@
         "tags": [
           "Updates"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "updates",
         "x-ms-vss-method": "GetUpdate",
         "description": "Returns a single update for a work item",
@@ -4327,7 +3922,7 @@
         "tags": [
           "Comments"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.3",
         "x-ms-vss-resource": "comments",
         "x-ms-vss-method": "AddComment",
         "x-ms-preview": true,
@@ -4400,7 +3995,7 @@
         "tags": [
           "Comments"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.3",
         "x-ms-vss-resource": "comments",
         "x-ms-vss-method": "GetCommentsBatch",
         "x-ms-preview": true,
@@ -4456,6 +4051,7 @@
             "enum": [
               "none",
               "reactions",
+              "mentions",
               "renderedText",
               "renderedTextOnly",
               "all"
@@ -4470,6 +4066,10 @@
                 {
                   "value": "reactions",
                   "description": "Include comment reactions."
+                },
+                {
+                  "value": "mentions",
+                  "description": "Include comment mentions."
                 },
                 {
                   "value": "renderedText",
@@ -4517,7 +4117,7 @@
         "tags": [
           "Comments"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.3",
         "x-ms-vss-resource": "comments",
         "x-ms-vss-method": "DeleteComment",
         "x-ms-preview": true,
@@ -4580,7 +4180,7 @@
         "tags": [
           "Comments"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.3",
         "x-ms-vss-resource": "comments",
         "x-ms-vss-method": "GetComment",
         "x-ms-preview": true,
@@ -4636,6 +4236,7 @@
             "enum": [
               "none",
               "reactions",
+              "mentions",
               "renderedText",
               "renderedTextOnly",
               "all"
@@ -4650,6 +4251,10 @@
                 {
                   "value": "reactions",
                   "description": "Include comment reactions."
+                },
+                {
+                  "value": "mentions",
+                  "description": "Include comment mentions."
                 },
                 {
                   "value": "renderedText",
@@ -4695,7 +4300,7 @@
         "tags": [
           "Comments"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.3",
         "x-ms-vss-resource": "comments",
         "x-ms-vss-method": "UpdateComment",
         "x-ms-preview": true,
@@ -4778,7 +4383,7 @@
         "tags": [
           "Comments Reactions"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "commentsReactions",
         "x-ms-vss-method": "GetCommentReactions",
         "x-ms-preview": true,
@@ -4847,7 +4452,7 @@
         "tags": [
           "Comments Reactions"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "commentsReactions",
         "x-ms-vss-method": "CreateCommentReaction",
         "x-ms-preview": true,
@@ -4942,20 +4547,13 @@
               "$ref": "#/definitions/CommentReaction"
             }
           }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.work_write"
-            ]
-          }
-        ]
+        }
       },
       "delete": {
         "tags": [
           "Comments Reactions"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "commentsReactions",
         "x-ms-vss-method": "DeleteCommentReaction",
         "x-ms-preview": true,
@@ -5065,7 +4663,7 @@
         "tags": [
           "Comment Reactions Engaged Users"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "commentReactionsEngagedUsers",
         "x-ms-vss-method": "GetEngagedUsers",
         "x-ms-preview": true,
@@ -5194,7 +4792,7 @@
         "tags": [
           "Comments Versions"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "commentsVersions",
         "x-ms-vss-method": "GetCommentVersions",
         "x-ms-preview": true,
@@ -5263,7 +4861,7 @@
         "tags": [
           "Comments Versions"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "commentsVersions",
         "x-ms-vss-method": "GetCommentVersion",
         "x-ms-preview": true,
@@ -5337,7 +4935,7 @@
         "tags": [
           "Work Items"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItemsBatch",
         "x-ms-vss-method": "GetWorkItemsBatch",
         "description": "Gets work items for a list of work item ids (Maximum 200)",
@@ -5407,7 +5005,7 @@
         "tags": [
           "Work Item Type Categories"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItemTypeCategories",
         "x-ms-vss-method": "GetWorkItemTypeCategories",
         "description": "Get all work item type categories.",
@@ -5464,7 +5062,7 @@
         "tags": [
           "Work Item Type Categories"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItemTypeCategories",
         "x-ms-vss-method": "GetWorkItemTypeCategory",
         "description": "Get specific work item type category by name.",
@@ -5525,7 +5123,7 @@
         "tags": [
           "Work Item Types"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItemTypes",
         "x-ms-vss-method": "GetWorkItemTypes",
         "description": "Returns the list of work item types",
@@ -5582,7 +5180,7 @@
         "tags": [
           "Work Item Types"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItemTypes",
         "x-ms-vss-method": "GetWorkItemType",
         "description": "Returns a work item type definition.",
@@ -5643,7 +5241,7 @@
         "tags": [
           "Work Item Types Field"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItemTypesField",
         "x-ms-vss-method": "GetWorkItemTypeFieldsWithReferences",
         "description": "Get a list of fields for a work item type with detailed references.",
@@ -5744,7 +5342,7 @@
         "tags": [
           "Work Item Types Field"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "workItemTypesField",
         "x-ms-vss-method": "GetWorkItemTypeFieldWithReferences",
         "description": "Get a field for a work item type with detailed references.",
@@ -5849,7 +5447,7 @@
         "tags": [
           "Work Item Type States"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "workItemTypeStates",
         "x-ms-vss-method": "GetWorkItemTypeStates",
         "x-ms-preview": true,
@@ -5914,7 +5512,7 @@
         "tags": [
           "Templates"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "templates",
         "x-ms-vss-method": "CreateTemplate",
         "x-ms-preview": true,
@@ -5986,7 +5584,7 @@
         "tags": [
           "Templates"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "templates",
         "x-ms-vss-method": "GetTemplates",
         "x-ms-preview": true,
@@ -6058,7 +5656,7 @@
         "tags": [
           "Templates"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "templates",
         "x-ms-vss-method": "DeleteTemplate",
         "x-ms-preview": true,
@@ -6115,7 +5713,7 @@
         "tags": [
           "Templates"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "templates",
         "x-ms-vss-method": "GetTemplate",
         "x-ms-preview": true,
@@ -6183,7 +5781,7 @@
         "tags": [
           "Templates"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "templates",
         "x-ms-vss-method": "ReplaceTemplate",
         "x-ms-preview": true,
@@ -6265,7 +5863,7 @@
         "tags": [
           "Wiql"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "wiql",
         "x-ms-vss-method": "QueryByWiql",
         "description": "Gets the results of the query given its WIQL.",
@@ -6355,7 +5953,7 @@
         "tags": [
           "Wiql"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "wiql",
         "x-ms-vss-method": "QueryById",
         "description": "Gets the results of the query given the query ID.",
@@ -6433,7 +6031,7 @@
         "tags": [
           "Wiql"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "wiql",
         "x-ms-vss-method": "QueryById",
         "description": "Gets the results of the query given the query ID.",
@@ -6521,7 +6119,7 @@
         "tags": [
           "Classification Nodes"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "classificationNodes",
         "x-ms-vss-method": "GetClassificationNodes",
         "description": "Gets root classification nodes or list of classification nodes for a given list of nodes ids, for a given project. In case ids parameter is supplied you will  get list of classification nodes for those ids. Otherwise you will get root classification nodes for this project.",
@@ -6633,7 +6231,7 @@
         "tags": [
           "Queries"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "queries",
         "x-ms-vss-method": "SearchQueries",
         "description": "Searches all queries the user has access to in the current project",
@@ -6743,7 +6341,7 @@
         "tags": [
           "Recyclebin"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "recyclebin",
         "x-ms-vss-method": "GetDeletedWorkItems",
         "description": "Gets the work items from the recycle bin, whose IDs have been specified in the parameters",
@@ -6793,7 +6391,7 @@
         "security": [
           {
             "oauth2": [
-              "vso.work"
+              "vso.work_write"
             ]
           }
         ],
@@ -6809,7 +6407,7 @@
         "tags": [
           "Comments"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.3",
         "x-ms-vss-resource": "comments",
         "x-ms-vss-method": "GetComments",
         "x-ms-preview": true,
@@ -6872,6 +6470,7 @@
             "enum": [
               "none",
               "reactions",
+              "mentions",
               "renderedText",
               "renderedTextOnly",
               "all"
@@ -6886,6 +6485,10 @@
                 {
                   "value": "reactions",
                   "description": "Include comment reactions."
+                },
+                {
+                  "value": "mentions",
+                  "description": "Include comment mentions."
                 },
                 {
                   "value": "renderedText",
@@ -7467,92 +7070,6 @@
         }
       }
     },
-    "ExternalDeployment": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "artifactId": {
-          "type": "string",
-          "format": "uuid"
-        },
-        "createdBy": {
-          "type": "string",
-          "format": "uuid"
-        },
-        "description": {
-          "type": "string"
-        },
-        "displayName": {
-          "type": "string"
-        },
-        "environment": {
-          "$ref": "#/definitions/ExternalEnvironment"
-        },
-        "group": {
-          "type": "string"
-        },
-        "pipeline": {
-          "$ref": "#/definitions/ExternalPipeline"
-        },
-        "relatedWorkItemIds": {
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "runId": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "sequenceNumber": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "status": {
-          "type": "string"
-        },
-        "statusDate": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "url": {
-          "type": "string"
-        }
-      }
-    },
-    "ExternalEnvironment": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "displayName": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "type": {
-          "type": "string"
-        }
-      }
-    },
-    "ExternalPipeline": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "displayName": {
-          "type": "string"
-        },
-        "id": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "url": {
-          "type": "string"
-        }
-      }
-    },
     "FieldDependentRule": {
       "description": "Describes a list of dependent fields for a rule.",
       "type": "object",
@@ -7567,6 +7084,40 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/WorkItemFieldReference"
+          }
+        }
+      }
+    },
+    "FieldsToEvaluate": {
+      "description": "Describes a set fields for rule evaluation.",
+      "type": "object",
+      "properties": {
+        "fields": {
+          "description": "List of fields to evaluate.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fieldUpdates": {
+          "description": "Updated field values to evaluate.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "fieldValues": {
+          "description": "Initial field values.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "rulesFrom": {
+          "description": "URL of the work item type for which the rules need to be executed.",
+          "type": "array",
+          "items": {
+            "type": "string"
           }
         }
       }
@@ -7746,33 +7297,6 @@
         "url": {
           "description": "Link url.",
           "type": "string"
-        }
-      }
-    },
-    "ProcessIdModel": {
-      "description": "Stores process ID.",
-      "type": "object",
-      "properties": {
-        "typeId": {
-          "description": "The ID of the process.",
-          "type": "string",
-          "format": "uuid"
-        }
-      }
-    },
-    "ProcessMigrationResultModel": {
-      "description": "Stores project ID and its process ID.",
-      "type": "object",
-      "properties": {
-        "processId": {
-          "description": "The ID of the process.",
-          "type": "string",
-          "format": "uuid"
-        },
-        "projectId": {
-          "description": "The ID of the project.",
-          "type": "string",
-          "format": "uuid"
         }
       }
     },
@@ -8218,16 +7742,6 @@
         }
       }
     },
-    "UpdateWorkItemField": {
-      "description": "Describes an update request for a work item field.",
-      "type": "object",
-      "properties": {
-        "isDeleted": {
-          "description": "Indicates whether the user wants to restore the field.",
-          "type": "boolean"
-        }
-      }
-    },
     "VssJsonCollectionWrapper": {
       "description": "This class is used to serialized collections as a single JSON object on the wire, to avoid serializing JSON arrays directly to the client, which can be a security hole",
       "type": "object",
@@ -8664,10 +8178,6 @@
         "description": {
           "description": "The description of the field.",
           "type": "string"
-        },
-        "isDeleted": {
-          "description": "Indicates whether this field is deleted.",
-          "type": "boolean"
         },
         "isIdentity": {
           "description": "Indicates whether this field is an identity field.",
@@ -9213,22 +8723,6 @@
         }
       }
     },
-    "WorkItemTagDefinition": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string",
-          "format": "uuid"
-        },
-        "name": {
-          "type": "string"
-        },
-        "url": {
-          "type": "string"
-        }
-      }
-    },
     "WorkItemTemplate": {
       "description": "Describes a work item template.",
       "type": "object",
@@ -9671,28 +9165,28 @@
     "api-Version": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.2": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.2' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.2' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.3": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.3' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.3' to use this version of the api.",
       "required": true,
       "type": "string"
     }

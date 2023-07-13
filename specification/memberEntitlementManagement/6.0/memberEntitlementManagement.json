@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0-preview"
+    "version": "5.1-preview"
   },
   "host": "vsaex.dev.azure.com",
   "x-ms-vss-area": "MemberEntitlementManagement",
@@ -21,7 +21,7 @@
   "tags": [
     {
       "name": "Group Entitlements",
-      "description": "APIs to manage Group Licensing Rules."
+      "description": "APIs to manage Group Entitlements."
     },
     {
       "name": "Members",
@@ -45,7 +45,7 @@
         "tags": [
           "Group Entitlements"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "groupEntitlements",
         "x-ms-vss-method": "AddGroupEntitlement",
         "x-ms-preview": true,
@@ -127,7 +127,7 @@
         "tags": [
           "Group Entitlements"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "groupEntitlements",
         "x-ms-vss-method": "GetGroupEntitlements",
         "x-ms-preview": true,
@@ -178,7 +178,7 @@
         "tags": [
           "Group Entitlements"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "groupEntitlements",
         "x-ms-vss-method": "DeleteGroupEntitlement",
         "x-ms-preview": true,
@@ -258,7 +258,7 @@
         "tags": [
           "Group Entitlements"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "groupEntitlements",
         "x-ms-vss-method": "GetGroupEntitlement",
         "x-ms-preview": true,
@@ -312,7 +312,7 @@
         "tags": [
           "Group Entitlements"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "groupEntitlements",
         "x-ms-vss-method": "UpdateGroupEntitlement",
         "x-ms-preview": true,
@@ -404,7 +404,7 @@
         "tags": [
           "Members"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "members",
         "x-ms-vss-method": "GetGroupMembers",
         "x-ms-preview": true,
@@ -470,7 +470,7 @@
         "tags": [
           "Members"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "members",
         "x-ms-vss-method": "AddMemberToGroup",
         "x-ms-preview": true,
@@ -514,7 +514,7 @@
         "tags": [
           "Members"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "members",
         "x-ms-vss-method": "RemoveMemberFromGroup",
         "x-ms-preview": true,
@@ -567,7 +567,7 @@
         "tags": [
           "User Entitlements"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "userEntitlements",
         "x-ms-vss-method": "AddUserEntitlement",
         "x-ms-preview": true,
@@ -597,7 +597,7 @@
             }
           },
           {
-            "$ref": "#/parameters/api-Version-preview.3"
+            "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
         "responses": {
@@ -625,12 +625,12 @@
         "tags": [
           "User Entitlements"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "userEntitlements",
-        "x-ms-vss-method": "SearchUserEntitlements",
+        "x-ms-vss-method": "GetUserEntitlements",
         "x-ms-preview": true,
-        "description": "Get a paged set of user entitlements matching the filter and sort criteria built with properties that match the select input.",
-        "operationId": "User Entitlements_Search User Entitlements",
+        "description": "Get a paged set of user entitlements matching the filter criteria. If no filter is is passed, a page from all the account users is returned.",
+        "operationId": "User Entitlements_Get User Entitlements",
         "produces": [
           "application/json"
         ],
@@ -644,66 +644,36 @@
           },
           {
             "in": "query",
-            "name": "continuationToken",
-            "description": "Continuation token for getting the next page of data set. If null is passed, gets the first page.",
+            "name": "top",
+            "description": "Maximum number of the user entitlements to return. Max value is 10000. Default value is 100",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "skip",
+            "description": "Offset: Number of records to skip. Default value is 0",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "query",
+            "name": "filter",
+            "description": "Comma (\",\") separated list of properties and their values to filter on. Currently, the API only supports filtering by ExtensionId. An example parameter would be filter=extensionId eq search.",
             "required": false,
             "type": "string"
           },
           {
             "in": "query",
-            "name": "select",
-            "description": "Comma (\",\") separated list of properties to select in the result entitlements. names of the properties are - 'Projects, 'Extensions' and 'Grouprules'.",
-            "required": false,
-            "type": "string",
-            "enum": [
-              "license",
-              "extensions",
-              "projects",
-              "groupRules",
-              "all"
-            ],
-            "x-ms-enum": {
-              "name": "UserEntitlementProperty",
-              "values": [
-                {
-                  "value": "license",
-                  "description": ""
-                },
-                {
-                  "value": "extensions",
-                  "description": ""
-                },
-                {
-                  "value": "projects",
-                  "description": ""
-                },
-                {
-                  "value": "groupRules",
-                  "description": ""
-                },
-                {
-                  "value": "all",
-                  "description": ""
-                }
-              ]
-            }
-          },
-          {
-            "in": "query",
-            "name": "$filter",
-            "description": "Equality operators relating to searching user entitlements seperated by and clauses. Valid filters include: licenseId, licenseStatus, userType, and name. licenseId: filters based on license assignment using license names. i.e. licenseId eq 'Account-Stakeholder' or licenseId eq 'Account-Express'. licenseStatus: filters based on license status. currently only supports disabled. i.e. licenseStatus eq 'Disabled'. To get disabled basic licenses, you would pass (licenseId eq 'Account-Express' and licenseStatus eq 'Disabled') userType: filters off identity type. Suppored types are member or guest i.e. userType eq 'member'. name: filters on if the user's display name or email contians given input. i.e. get all users with \"test\" in email or displayname is \"name eq 'test'\". A valid query could be: (licenseId eq 'Account-Stakeholder' or (licenseId eq 'Account-Express' and licenseStatus eq 'Disabled')) and name eq 'test' and userType eq 'guest'.",
+            "name": "sortOption",
+            "description": "PropertyName and Order (separated by a space ( )) to sort on (e.g. LastAccessDate Desc)",
             "required": false,
             "type": "string"
           },
           {
-            "in": "query",
-            "name": "$orderBy",
-            "description": "PropertyName and Order (separated by a space ( )) to sort on (e.g. lastAccessed desc). Order defaults to ascending. valid properties to order by are dateCreated, lastAccessed, and name",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.3"
+            "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
         "responses": {
@@ -726,7 +696,7 @@
         "tags": [
           "User Entitlements"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "userEntitlements",
         "x-ms-vss-method": "UpdateUserEntitlements",
         "x-ms-preview": true,
@@ -763,7 +733,7 @@
             "type": "boolean"
           },
           {
-            "$ref": "#/parameters/api-Version-preview.3"
+            "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
         "responses": {
@@ -793,7 +763,7 @@
         "tags": [
           "User Entitlements"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "userEntitlements",
         "x-ms-vss-method": "DeleteUserEntitlement",
         "x-ms-preview": true,
@@ -816,7 +786,7 @@
             "format": "uuid"
           },
           {
-            "$ref": "#/parameters/api-Version-preview.3"
+            "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
         "responses": {
@@ -836,12 +806,12 @@
         "tags": [
           "User Entitlements"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "userEntitlements",
         "x-ms-vss-method": "GetUserEntitlement",
         "x-ms-preview": true,
         "description": "Get User Entitlement for a user.",
-        "operationId": "User Entitlements_Get",
+        "operationId": "User Entitlements_Get User Entitlement",
         "produces": [
           "application/json"
         ],
@@ -862,7 +832,7 @@
             "format": "uuid"
           },
           {
-            "$ref": "#/parameters/api-Version-preview.3"
+            "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
         "responses": {
@@ -890,7 +860,7 @@
         "tags": [
           "User Entitlements"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "userEntitlements",
         "x-ms-vss-method": "UpdateUserEntitlement",
         "x-ms-preview": true,
@@ -928,7 +898,7 @@
             "format": "uuid"
           },
           {
-            "$ref": "#/parameters/api-Version-preview.3"
+            "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
         "responses": {
@@ -958,7 +928,7 @@
         "tags": [
           "User Entitlement Summary"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "userEntitlementSummary",
         "x-ms-vss-method": "GetUsersSummary",
         "x-ms-preview": true,
@@ -978,7 +948,7 @@
           {
             "in": "query",
             "name": "select",
-            "description": "Comma (\",\") separated list of properties to select. Supported property names are {AccessLevels, Licenses, Projects, Groups}.",
+            "description": "Comma (\",\") separated list of properties to select. Supported property names are {AccessLevels, Licenses, Extensions, Projects, Groups}.",
             "required": false,
             "type": "string"
           },
@@ -1547,6 +1517,13 @@
       "description": "A group entity with additional properties including its license, extensions, and project membership",
       "type": "object",
       "properties": {
+        "extensionRules": {
+          "description": "Extension Rules.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Extension"
+          }
+        },
         "group": {
           "description": "Member reference.",
           "$ref": "#/definitions/GraphGroup"
@@ -2084,24 +2061,11 @@
       "description": "A page of users",
       "type": "object",
       "properties": {
-        "continuationToken": {
-          "type": "string"
-        },
-        "items": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/UserEntitlement"
-          }
-        },
         "members": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/UserEntitlement"
           }
-        },
-        "totalCount": {
-          "type": "integer",
-          "format": "int32"
         }
       }
     },
@@ -2258,6 +2222,13 @@
           "type": "string",
           "format": "date-time"
         },
+        "extensions": {
+          "description": "User's extensions.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Extension"
+          }
+        },
         "groupAssignments": {
           "description": "[Readonly] GroupEntitlements that this user belongs to.",
           "type": "array",
@@ -2398,9 +2369,12 @@
             "$ref": "#/definitions/AccessLevel"
           }
         },
-        "defaultAccessLevel": {
-          "description": "Default Access Level",
-          "$ref": "#/definitions/AccessLevel"
+        "extensions": {
+          "description": "Summary of Extensions in the organization",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ExtensionSummaryData"
+          }
         },
         "groupOptions": {
           "description": "Group Options",
@@ -2455,14 +2429,14 @@
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
-    "api-Version-preview.3": {
+    "api-Version-preview.2": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.3' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.2' to use this version of the api.",
       "required": true,
       "type": "string"
     }

@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0"
+    "version": "5.1"
   },
   "host": "dev.azure.com",
   "x-ms-vss-area": "Test",
@@ -78,7 +78,7 @@
         "tags": [
           "Code Coverage"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "codeCoverage",
         "x-ms-vss-method": "GetBuildCodeCoverage",
         "x-ms-preview": true,
@@ -152,7 +152,7 @@
         "tags": [
           "Points"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "points",
         "x-ms-vss-method": "GetPoints",
         "description": "Get a list of test points.",
@@ -291,7 +291,7 @@
         "tags": [
           "Points"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "points",
         "x-ms-vss-method": "GetPoint",
         "description": "Get a test point.",
@@ -377,7 +377,7 @@
         "tags": [
           "Points"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "points",
         "x-ms-vss-method": "UpdateTestPoints",
         "description": "Update test points.",
@@ -475,7 +475,7 @@
         "tags": [
           "Test  Suites"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "suites",
         "x-ms-vss-method": "GetTestCases",
         "description": "Get all test cases in a suite.",
@@ -548,7 +548,7 @@
         "tags": [
           "Test  Suites"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "suites",
         "x-ms-vss-method": "AddTestCasesToSuite",
         "description": "Add test cases to suite.",
@@ -626,7 +626,7 @@
         "tags": [
           "Test  Suites"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "suites",
         "x-ms-vss-method": "GetTestCaseById",
         "description": "Get a specific test case in a test suite with test case id.",
@@ -702,7 +702,7 @@
         "tags": [
           "Test  Suites"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "suites",
         "x-ms-vss-method": "RemoveTestCasesFromSuiteUrl",
         "description": "The test points associated with the test cases are removed from the test suite. The test case work item is not deleted from the system. See test cases resource to delete a test case permanently.",
@@ -771,7 +771,7 @@
         "tags": [
           "Test  Suites"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "suites",
         "x-ms-vss-method": "UpdateSuiteTestCases",
         "description": "Updates the properties of the test case association in a suite.",
@@ -863,7 +863,7 @@
         "tags": [
           "Points"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "points",
         "x-ms-vss-method": "GetPointsByQuery",
         "x-ms-preview": true,
@@ -955,7 +955,7 @@
         "tags": [
           "Result Retention Settings"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "resultRetentionSettings",
         "x-ms-vss-method": "GetResultRetentionSettings",
         "x-ms-preview": true,
@@ -1008,7 +1008,7 @@
         "tags": [
           "Result Retention Settings"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "resultRetentionSettings",
         "x-ms-vss-method": "UpdateResultRetentionSettings",
         "x-ms-preview": true,
@@ -1075,7 +1075,7 @@
         "tags": [
           "Test History"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "testHistory",
         "x-ms-vss-method": "QueryTestHistory",
         "x-ms-preview": true,
@@ -1137,7 +1137,7 @@
         "tags": [
           "Runs"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "runs",
         "x-ms-vss-method": "CreateTestRun",
         "description": "Create new test run.",
@@ -1201,7 +1201,7 @@
         "tags": [
           "Runs"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "runs",
         "x-ms-vss-method": "GetTestRuns",
         "description": "Get a list of test runs.",
@@ -1323,7 +1323,7 @@
         "tags": [
           "Runs"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "runs",
         "x-ms-vss-method": "DeleteTestRun",
         "description": "Delete a test run by its ID.",
@@ -1377,7 +1377,7 @@
         "tags": [
           "Runs"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "runs",
         "x-ms-vss-method": "GetTestRunById",
         "description": "Get a test run by its ID.",
@@ -1444,7 +1444,7 @@
         "tags": [
           "Runs"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "runs",
         "x-ms-vss-method": "UpdateTestRun",
         "description": "Update test run by its ID.",
@@ -1527,7 +1527,7 @@
         "tags": [
           "Attachments"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "attachments",
         "x-ms-vss-method": "CreateTestRunAttachment",
         "x-ms-preview": true,
@@ -1600,7 +1600,7 @@
         "tags": [
           "Attachments"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "attachments",
         "x-ms-vss-method": "GetTestRunAttachments",
         "x-ms-preview": true,
@@ -1666,7 +1666,7 @@
         "tags": [
           "Attachments"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "attachments",
         "x-ms-vss-method": "GetTestRunAttachment",
         "x-ms-preview": true,
@@ -1734,7 +1734,7 @@
         "tags": [
           "Code Coverage"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "codeCoverage",
         "x-ms-vss-method": "GetTestRunCodeCoverage",
         "x-ms-preview": true,
@@ -1808,7 +1808,7 @@
         "tags": [
           "Results"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "results",
         "x-ms-vss-method": "AddTestResultsToTestRun",
         "description": "Add test results to a test run.",
@@ -1886,7 +1886,7 @@
         "tags": [
           "Results"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "results",
         "x-ms-vss-method": "GetTestResults",
         "description": "Get test results for a test run.",
@@ -2018,7 +2018,7 @@
         "tags": [
           "Results"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "results",
         "x-ms-vss-method": "UpdateTestResults",
         "description": "Update test results in a test run.",
@@ -2098,7 +2098,7 @@
         "tags": [
           "Results"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "results",
         "x-ms-vss-method": "GetTestResultById",
         "description": "Get a test result for a test run.",
@@ -2207,7 +2207,7 @@
         "tags": [
           "Attachments"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "attachments",
         "x-ms-vss-method": "CreateTestResultAttachment",
         "x-ms-preview": true,
@@ -2288,7 +2288,7 @@
         "tags": [
           "Attachments"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "attachments",
         "x-ms-vss-method": "GetTestResultAttachments",
         "x-ms-preview": true,
@@ -2362,7 +2362,7 @@
         "tags": [
           "Attachments"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "attachments",
         "x-ms-vss-method": "GetTestResultAttachment",
         "x-ms-preview": true,
@@ -2438,7 +2438,7 @@
         "tags": [
           "Iterations"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "iterations",
         "x-ms-vss-method": "GetTestIterations",
         "description": "Get iterations for a result",
@@ -2518,7 +2518,7 @@
         "tags": [
           "Iterations"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "iterations",
         "x-ms-vss-method": "GetTestIteration",
         "description": "Get iteration for a result",
@@ -2606,7 +2606,7 @@
         "tags": [
           "Action Results"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "actionResults",
         "x-ms-vss-method": "GetActionResults",
         "description": "Gets the action results for an iteration in a test result.",
@@ -2695,7 +2695,7 @@
         "tags": [
           "Parameter Results"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "parameterResults",
         "x-ms-vss-method": "GetResultParameters",
         "description": "Get a list of parameterized results",
@@ -2783,7 +2783,7 @@
         "tags": [
           "Runs"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "runs",
         "x-ms-vss-method": "GetTestRunStatistics",
         "description": "Get test run statistics , used when we want to get summary of a run by outcome.",
@@ -2845,7 +2845,7 @@
         "tags": [
           "Test Cases"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "testCases",
         "x-ms-vss-method": "DeleteTestCase",
         "x-ms-preview": true,
@@ -2895,7 +2895,7 @@
         "tags": [
           "Session"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "session",
         "x-ms-vss-method": "CreateTestSession",
         "x-ms-preview": true,
@@ -2968,7 +2968,7 @@
         "tags": [
           "Session"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "session",
         "x-ms-vss-method": "GetTestSessions",
         "x-ms-preview": true,
@@ -3110,7 +3110,7 @@
         "tags": [
           "Session"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "session",
         "x-ms-vss-method": "UpdateTestSession",
         "x-ms-preview": true,
@@ -3187,7 +3187,7 @@
         "tags": [
           "Runs"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "runs",
         "x-ms-vss-method": "QueryTestRuns",
         "description": "Query Test Runs based on filters. Mandatory fields are minLastUpdatedDate and maxLastUpdatedDate.",
@@ -3425,7 +3425,7 @@
         "tags": [
           "Attachments"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "attachments",
         "x-ms-vss-method": "GetTestSubResultAttachments",
         "x-ms-preview": true,
@@ -3500,7 +3500,7 @@
         "tags": [
           "Attachments"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "attachments",
         "x-ms-vss-method": "CreateTestSubResultAttachment",
         "x-ms-preview": true,
@@ -3586,7 +3586,7 @@
         "tags": [
           "Attachments"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "attachments",
         "x-ms-vss-method": "GetTestSubResultAttachment",
         "x-ms-preview": true,
@@ -3778,112 +3778,6 @@
         }
       }
     },
-    "AggregatedResultDetailsByOutcome": {
-      "description": "Result deatils for a particular test result outcome.",
-      "type": "object",
-      "properties": {
-        "count": {
-          "description": "Number of results for current outcome.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "duration": {
-          "description": "Time taken by results.",
-          "type": "string",
-          "format": "TimeSpan"
-        },
-        "outcome": {
-          "description": "Test result outcome",
-          "enum": [
-            "unspecified",
-            "none",
-            "passed",
-            "failed",
-            "inconclusive",
-            "timeout",
-            "aborted",
-            "blocked",
-            "notExecuted",
-            "warning",
-            "error",
-            "notApplicable",
-            "paused",
-            "inProgress",
-            "notImpacted"
-          ],
-          "x-ms-enum": {
-            "name": "TestOutcome",
-            "values": [
-              {
-                "value": "unspecified",
-                "description": "Only used during an update to preserve the existing value."
-              },
-              {
-                "value": "none",
-                "description": "Test has not been completed, or the test type does not report pass/failure."
-              },
-              {
-                "value": "passed",
-                "description": "Test was executed w/o any issues."
-              },
-              {
-                "value": "failed",
-                "description": "Test was executed, but there were issues. Issues may involve exceptions or failed assertions."
-              },
-              {
-                "value": "inconclusive",
-                "description": "Test has completed, but we can't say if it passed or failed. May be used for aborted tests..."
-              },
-              {
-                "value": "timeout",
-                "description": "The test timed out"
-              },
-              {
-                "value": "aborted",
-                "description": "Test was aborted. This was not caused by a user gesture, but rather by a framework decision."
-              },
-              {
-                "value": "blocked",
-                "description": "Test had it chance for been executed but was not, as ITestElement.IsRunnable == false."
-              },
-              {
-                "value": "notExecuted",
-                "description": "Test was not executed. This was caused by a user gesture - e.g. user hit stop button."
-              },
-              {
-                "value": "warning",
-                "description": "To be used by Run level results. This is not a failure."
-              },
-              {
-                "value": "error",
-                "description": "There was a system error while we were trying to execute a test."
-              },
-              {
-                "value": "notApplicable",
-                "description": "Test is Not Applicable for execution."
-              },
-              {
-                "value": "paused",
-                "description": "Test is paused."
-              },
-              {
-                "value": "inProgress",
-                "description": "Test is currently executing. Added this for TCM charts"
-              },
-              {
-                "value": "notImpacted",
-                "description": "Test is not impacted. Added fot TIA."
-              }
-            ]
-          }
-        },
-        "rerunResultCount": {
-          "description": "Number of results on rerun",
-          "type": "integer",
-          "format": "int32"
-        }
-      }
-    },
     "AggregatedResultsAnalysis": {
       "description": "",
       "type": "object",
@@ -4045,10 +3939,6 @@
           "format": "TimeSpan"
         },
         "increaseInFailures": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "increaseInNonImpactedTests": {
           "type": "integer",
           "format": "int32"
         },
@@ -4800,24 +4690,6 @@
         }
       }
     },
-    "CloneTestCaseOptions": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "includeAttachments": {
-          "description": "If set to true, include the attachments",
-          "type": "boolean"
-        },
-        "includeLinks": {
-          "description": "If set to true, include the links",
-          "type": "boolean"
-        },
-        "relatedLinkComment": {
-          "description": "Comment on the link that will link the new clone  test case to the original Set null for no comment",
-          "type": "string"
-        }
-      }
-    },
     "CodeCoverageData": {
       "description": "Represents the build configuration (platform, flavor) and coverage data for the build",
       "type": "object",
@@ -4899,8 +4771,7 @@
             "inProgress",
             "completed",
             "finalized",
-            "pending",
-            "updateRequestQueued"
+            "pending"
           ],
           "x-ms-enum": {
             "name": "CoverageSummaryStatus",
@@ -4924,10 +4795,6 @@
               {
                 "value": "pending",
                 "description": "The summary evaluation is pending"
-              },
-              {
-                "value": "updateRequestQueued",
-                "description": "Summary evaluation may be ongoing but another merge has been requested."
               }
             ]
           }
@@ -5471,10 +5338,6 @@
         },
         "flakyInSummaryReport": {
           "description": "FlakyInSummaryReport defines flaky data should show in summary report or not.",
-          "type": "boolean"
-        },
-        "isFlakyBugCreated": {
-          "description": "IsFlakyBugCreated defines if there is any bug that has been created with flaky testresult.",
           "type": "boolean"
         },
         "manualMarkUnmarkFlaky": {
@@ -6596,16 +6459,6 @@
         }
       }
     },
-    "NewTestResultLoggingSettings": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "logNewTests": {
-          "description": "LogNewTests defines whether or not we will record new test cases coming into the system",
-          "type": "boolean"
-        }
-      }
-    },
     "PhaseReference": {
       "description": "Phase in pipeline",
       "type": "object",
@@ -6641,35 +6494,6 @@
         "stageReference": {
           "description": "Reference of the stage.",
           "$ref": "#/definitions/StageReference"
-        }
-      }
-    },
-    "PipelineTestMetrics": {
-      "description": "Test summary of a pipeline instance.",
-      "type": "object",
-      "properties": {
-        "currentContext": {
-          "description": "Reference of Pipeline instance for which test summary is calculated.",
-          "$ref": "#/definitions/PipelineReference"
-        },
-        "resultsAnalysis": {
-          "description": "This is the return value for metric ResultsAnalysis Results insights which include failure analysis, increase/decrease in results count analysis.",
-          "$ref": "#/definitions/ResultsAnalysis"
-        },
-        "resultSummary": {
-          "description": "This is the return value for metric ResultSummary Results summary based on results outcome.",
-          "$ref": "#/definitions/ResultSummary"
-        },
-        "runSummary": {
-          "description": "This is the return value for metric RunSummary Run summary.",
-          "$ref": "#/definitions/RunSummary"
-        },
-        "summaryAtChild": {
-          "description": "Summary at child node.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/PipelineTestMetrics"
-          }
         }
       }
     },
@@ -7537,24 +7361,6 @@
         }
       }
     },
-    "ResultsAnalysis": {
-      "description": "Results insights for runs with state completed and NeedInvestigation.",
-      "type": "object",
-      "properties": {
-        "previousContext": {
-          "description": "Reference of pipeline instance from which to compare the results.",
-          "$ref": "#/definitions/PipelineReference"
-        },
-        "resultsDifference": {
-          "description": "Increase/Decrease in counts of results for a different outcome with respect to PreviousContext.",
-          "$ref": "#/definitions/AggregatedResultsDifference"
-        },
-        "testFailuresAnalysis": {
-          "description": "Failure analysis of results with respect to PreviousContext",
-          "$ref": "#/definitions/TestResultFailuresAnalysis"
-        }
-      }
-    },
     "ResultsByQueryRequest": {
       "description": "",
       "type": "object",
@@ -7677,47 +7483,6 @@
         },
         "timeZone": {
           "type": "string"
-        }
-      }
-    },
-    "ResultsSummaryByOutcome": {
-      "description": "Result summary by the outcome of test results.",
-      "type": "object",
-      "properties": {
-        "aggregatedResultDetailsByOutcome": {
-          "description": "Aggregated result details for each test result outcome.",
-          "type": "object",
-          "additionalProperties": {
-            "$ref": "#/definitions/AggregatedResultDetailsByOutcome"
-          }
-        },
-        "duration": {
-          "description": "Time taken by results.",
-          "type": "string",
-          "format": "TimeSpan"
-        },
-        "notReportedTestCount": {
-          "description": "Total number of not reported test results.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "totalTestCount": {
-          "description": "Total number of test results. (It includes NotImpacted test results as well which need to exclude while calculating pass/fail test result percentage).",
-          "type": "integer",
-          "format": "int32"
-        }
-      }
-    },
-    "ResultSummary": {
-      "description": "Summary of results for a pipeline instance.",
-      "type": "object",
-      "properties": {
-        "resultSummaryByRunState": {
-          "description": "Result summary of pipeline, group by TestRun state.",
-          "type": "object",
-          "additionalProperties": {
-            "$ref": "#/definitions/ResultsSummaryByOutcome"
-          }
         }
       }
     },
@@ -8055,66 +7820,9 @@
           "description": "Test run Resolution State.",
           "$ref": "#/definitions/TestResolutionState"
         },
-        "resultMetadata": {
-          "description": "ResultMetadata for the given outcome/count.",
-          "enum": [
-            "rerun",
-            "flaky"
-          ],
-          "x-ms-enum": {
-            "name": "ResultMetadata",
-            "values": [
-              {
-                "value": "rerun",
-                "description": "Rerun metadata"
-              },
-              {
-                "value": "flaky",
-                "description": "Flaky metadata"
-              }
-            ]
-          }
-        },
         "state": {
           "description": "State of the test run",
           "type": "string"
-        }
-      }
-    },
-    "RunSummary": {
-      "description": "Summary of runs for a pipeline instance.",
-      "type": "object",
-      "properties": {
-        "duration": {
-          "description": "Total time taken by runs with state completed and NeedInvestigation.",
-          "type": "string",
-          "format": "TimeSpan"
-        },
-        "noConfigRunsCount": {
-          "description": "NoConfig runs count.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "runSummaryByOutcome": {
-          "description": "Runs count by outcome for runs with state completed and NeedInvestigation runs.",
-          "type": "object",
-          "additionalProperties": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "runSummaryByState": {
-          "description": "Runs count by state.",
-          "type": "object",
-          "additionalProperties": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "totalRunsCount": {
-          "description": "Total runs count.",
-          "type": "integer",
-          "format": "int32"
         }
       }
     },
@@ -10138,7 +9846,6 @@
           "$ref": "#/definitions/TestLogReference"
         },
         "metaData": {
-          "description": "Meta data for Log file",
           "type": "object",
           "additionalProperties": {
             "type": "string"
@@ -10157,7 +9864,7 @@
       }
     },
     "TestLogReference": {
-      "description": "Test Log Reference object",
+      "description": "",
       "type": "object",
       "properties": {
         "buildId": {
@@ -10190,9 +9897,11 @@
           "format": "int32"
         },
         "scope": {
-          "description": "Test Log Scope",
+          "description": "Test Log Reference object",
           "enum": [
-            "run"
+            "run",
+            "build",
+            "release"
           ],
           "x-ms-enum": {
             "name": "TestLogScope",
@@ -10200,6 +9909,14 @@
               {
                 "value": "run",
                 "description": "Log file is associated with Run, result, subresult"
+              },
+              {
+                "value": "build",
+                "description": "Log File associated with Build"
+              },
+              {
+                "value": "release",
+                "description": "Log File associated with Release"
               }
             ]
           }
@@ -10212,7 +9929,10 @@
         "type": {
           "description": "Log Type",
           "enum": [
-            "generalAttachment"
+            "generalAttachment",
+            "codeCoverage",
+            "testImpact",
+            "intermediate"
           ],
           "x-ms-enum": {
             "name": "TestLogType",
@@ -10220,6 +9940,18 @@
               {
                 "value": "generalAttachment",
                 "description": "Any gereric attachment."
+              },
+              {
+                "value": "codeCoverage",
+                "description": "Code Coverage files"
+              },
+              {
+                "value": "testImpact",
+                "description": "Test Impact details."
+              },
+              {
+                "value": "intermediate",
+                "description": "Temporary files"
               }
             ]
           }
@@ -10252,79 +9984,74 @@
             "fileSizeExceeds",
             "containerNotFound",
             "fileNotFound",
-            "directoryNotFound",
-            "storageCapacityExceeded"
+            "directoryNotFound"
           ],
           "x-ms-enum": {
             "name": "TestLogStatusCode",
             "values": [
               {
                 "value": "success",
-                "description": "Operation is successful"
+                "description": ""
               },
               {
                 "value": "failed",
-                "description": "Operation failed"
+                "description": ""
               },
               {
                 "value": "fileAlreadyExists",
-                "description": "Operation failed due to file already exist"
+                "description": ""
               },
               {
                 "value": "invalidInput",
-                "description": "Invalid input provided by user"
+                "description": ""
               },
               {
                 "value": "invalidFileName",
-                "description": "Invalid file name provided by user"
+                "description": ""
               },
               {
                 "value": "invalidContainer",
-                "description": "Error occurred while operating on container"
+                "description": ""
               },
               {
                 "value": "transferFailed",
-                "description": "Blob Transfer Error"
+                "description": ""
               },
               {
                 "value": "featureDisabled",
-                "description": "TestLogStore feature is not enabled"
+                "description": ""
               },
               {
                 "value": "buildDoesNotExist",
-                "description": "Build for which operation is requested does not exist"
+                "description": ""
               },
               {
                 "value": "runDoesNotExist",
-                "description": "Run for which operation is requested does not exist"
+                "description": ""
               },
               {
                 "value": "containerNotCreated",
-                "description": "Container cannot be created"
+                "description": ""
               },
               {
                 "value": "apiNotSupported",
-                "description": "Api is not supported"
+                "description": ""
               },
               {
                 "value": "fileSizeExceeds",
-                "description": "File size is greater than the limitation"
+                "description": ""
               },
               {
                 "value": "containerNotFound",
-                "description": "Container is not found for which operation is requested"
+                "description": ""
               },
               {
                 "value": "fileNotFound",
-                "description": "File cannot be found"
+                "description": ""
               },
               {
                 "value": "directoryNotFound",
-                "description": "Directory cannot be found"
-              },
-              {
-                "value": "storageCapacityExceeded",
-                "description": "Storage capacity exceeded"
+                "description": ""
               }
             ]
           }
@@ -10354,11 +10081,11 @@
             "values": [
               {
                 "value": "root",
-                "description": "Endpoint type is scoped to root"
+                "description": ""
               },
               {
                 "value": "file",
-                "description": "Endpoint type is scoped to file"
+                "description": ""
               }
             ]
           }
@@ -10381,79 +10108,74 @@
             "fileSizeExceeds",
             "containerNotFound",
             "fileNotFound",
-            "directoryNotFound",
-            "storageCapacityExceeded"
+            "directoryNotFound"
           ],
           "x-ms-enum": {
             "name": "TestLogStatusCode",
             "values": [
               {
                 "value": "success",
-                "description": "Operation is successful"
+                "description": ""
               },
               {
                 "value": "failed",
-                "description": "Operation failed"
+                "description": ""
               },
               {
                 "value": "fileAlreadyExists",
-                "description": "Operation failed due to file already exist"
+                "description": ""
               },
               {
                 "value": "invalidInput",
-                "description": "Invalid input provided by user"
+                "description": ""
               },
               {
                 "value": "invalidFileName",
-                "description": "Invalid file name provided by user"
+                "description": ""
               },
               {
                 "value": "invalidContainer",
-                "description": "Error occurred while operating on container"
+                "description": ""
               },
               {
                 "value": "transferFailed",
-                "description": "Blob Transfer Error"
+                "description": ""
               },
               {
                 "value": "featureDisabled",
-                "description": "TestLogStore feature is not enabled"
+                "description": ""
               },
               {
                 "value": "buildDoesNotExist",
-                "description": "Build for which operation is requested does not exist"
+                "description": ""
               },
               {
                 "value": "runDoesNotExist",
-                "description": "Run for which operation is requested does not exist"
+                "description": ""
               },
               {
                 "value": "containerNotCreated",
-                "description": "Container cannot be created"
+                "description": ""
               },
               {
                 "value": "apiNotSupported",
-                "description": "Api is not supported"
+                "description": ""
               },
               {
                 "value": "fileSizeExceeds",
-                "description": "File size is greater than the limitation"
+                "description": ""
               },
               {
                 "value": "containerNotFound",
-                "description": "Container is not found for which operation is requested"
+                "description": ""
               },
               {
                 "value": "fileNotFound",
-                "description": "File cannot be found"
+                "description": ""
               },
               {
                 "value": "directoryNotFound",
-                "description": "Directory cannot be found"
-              },
-              {
-                "value": "storageCapacityExceeded",
-                "description": "Storage capacity exceeded"
+                "description": ""
               }
             ]
           }
@@ -11319,21 +11041,6 @@
         }
       }
     },
-    "TestResultFailuresAnalysis": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "existingFailures": {
-          "$ref": "#/definitions/TestFailureDetails"
-        },
-        "fixedTests": {
-          "$ref": "#/definitions/TestFailureDetails"
-        },
-        "newFailures": {
-          "$ref": "#/definitions/TestFailureDetails"
-        }
-      }
-    },
     "TestResultHistory": {
       "description": "",
       "type": "object",
@@ -11607,8 +11314,7 @@
         "contextType": {
           "enum": [
             "build",
-            "release",
-            "pipeline"
+            "release"
           ],
           "x-ms-enum": {
             "name": "TestResultsContextType",
@@ -11620,16 +11326,9 @@
               {
                 "value": "release",
                 "description": ""
-              },
-              {
-                "value": "pipeline",
-                "description": ""
               }
             ]
           }
-        },
-        "pipelineReference": {
-          "$ref": "#/definitions/PipelineReference"
         },
         "release": {
           "$ref": "#/definitions/ReleaseReference"
@@ -11798,9 +11497,6 @@
         "flakySettings": {
           "description": "IsRequired and EmitDefaultValue are passed as false as if users doesn't pass anything, should not come for serialisation and deserialisation.",
           "$ref": "#/definitions/FlakySettings"
-        },
-        "newTestResultLoggingSettings": {
-          "$ref": "#/definitions/NewTestResultLoggingSettings"
         }
       }
     },
@@ -11837,10 +11533,6 @@
         "flakySettings": {
           "description": "FlakySettings defines Flaky Settings Data.",
           "$ref": "#/definitions/FlakySettings"
-        },
-        "newTestResultLoggingSettings": {
-          "description": "NewTestResultLoggingSettings defines the setting for logging new test results",
-          "$ref": "#/definitions/NewTestResultLoggingSettings"
         }
       }
     },
@@ -13429,35 +13121,35 @@
     "api-Version": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.2": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.2' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.2' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.3": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.3' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.3' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.6": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.6' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.6' to use this version of the api.",
       "required": true,
       "type": "string"
     }

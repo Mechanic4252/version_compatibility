@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0-preview"
+    "version": "5.1-preview"
   },
   "host": "feeds.dev.azure.com",
   "x-ms-vss-area": "Packaging",
@@ -27,9 +27,6 @@
     },
     {
       "name": "Feed  Management"
-    },
-    {
-      "name": "Feed Recycle Bin"
     },
     {
       "name": "Recycle  Bin"
@@ -50,7 +47,7 @@
         "tags": [
           "Service  Settings"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "globalPermissions",
         "x-ms-vss-method": "GetGlobalPermissions",
         "x-ms-preview": true,
@@ -101,7 +98,7 @@
         "tags": [
           "Service  Settings"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "globalPermissions",
         "x-ms-vss-method": "SetGlobalPermissions",
         "x-ms-preview": true,
@@ -162,7 +159,7 @@
         "tags": [
           "Change  Tracking"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "feedChanges",
         "x-ms-vss-method": "GetFeedChanges",
         "x-ms-preview": true,
@@ -236,7 +233,7 @@
         "tags": [
           "Change  Tracking"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "feedChanges",
         "x-ms-vss-method": "GetFeedChange",
         "x-ms-preview": true,
@@ -289,184 +286,16 @@
         ]
       }
     },
-    "/{organization}/{project}/_apis/packaging/feedrecyclebin": {
-      "get": {
-        "tags": [
-          "Feed Recycle Bin"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "feedRecycleBin",
-        "x-ms-vss-method": "GetFeedsFromRecycleBin",
-        "x-ms-preview": true,
-        "description": "Query for feeds within the recycle bin.\n\nIf the project parameter is present, gets all feeds in recycle bin in the given project.\nIf omitted, gets all feeds in recycle bin in the organization.",
-        "operationId": "Feed Recycle Bin_List",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Feed"
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.packaging"
-            ]
-          }
-        ]
-      }
-    },
-    "/{organization}/{project}/_apis/packaging/feedrecyclebin/{feedId}": {
-      "delete": {
-        "tags": [
-          "Feed Recycle Bin"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "feedRecycleBin",
-        "x-ms-vss-method": "PermanentDeleteFeed",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Feed Recycle Bin_Permanent Delete Feed",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "feedId",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation"
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.packaging_manage"
-            ]
-          }
-        ]
-      },
-      "patch": {
-        "tags": [
-          "Feed Recycle Bin"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "feedRecycleBin",
-        "x-ms-vss-method": "RestoreDeletedFeed",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Feed Recycle Bin_Restore Deleted Feed",
-        "consumes": [
-          "application/json-patch+json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/JsonPatchDocument"
-            }
-          },
-          {
-            "in": "path",
-            "name": "feedId",
-            "description": "",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation"
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.packaging_manage"
-            ]
-          }
-        ]
-      }
-    },
     "/{organization}/{project}/_apis/packaging/feeds": {
       "post": {
         "tags": [
           "Feed  Management"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "feeds",
         "x-ms-vss-method": "CreateFeed",
         "x-ms-preview": true,
-        "description": "Create a feed, a container for various package types.\n\nFeeds can be created in a project if the project parameter is included in the request url.\nIf the project parameter is omitted, the feed will not be associated with a project and will be created at the organization level.",
+        "description": "Create a feed, a container for various package types.\n\nFeeds can be created in a project if the project parameter is included in the request url.\nIf the project parameter is omitted, the feed will not be associated with a project and will be created at the organization level.\nCreating project-scoped feeds is in prerelease, and may not yet be available in your organization.",
         "operationId": "Feed  Management_Create Feed",
         "consumes": [
           "application/json"
@@ -523,7 +352,7 @@
         "tags": [
           "Feed  Management"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "feeds",
         "x-ms-vss-method": "GetFeeds",
         "x-ms-preview": true,
@@ -628,11 +457,11 @@
         "tags": [
           "Feed  Management"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "feeds",
         "x-ms-vss-method": "DeleteFeed",
         "x-ms-preview": true,
-        "description": "Remove a feed and all its packages. The feed moves to the recycle bin and is reversible.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Remove a feed and all its packages. The action does not result in packages moving to the RecycleBin and is not reversible.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
         "operationId": "Feed  Management_Delete Feed",
         "parameters": [
           {
@@ -678,7 +507,7 @@
         "tags": [
           "Feed  Management"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "feeds",
         "x-ms-vss-method": "GetFeed",
         "x-ms-preview": true,
@@ -741,7 +570,7 @@
         "tags": [
           "Feed  Management"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "feeds",
         "x-ms-vss-method": "UpdateFeed",
         "x-ms-preview": true,
@@ -811,7 +640,7 @@
         "tags": [
           "Change  Tracking"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "packageChanges",
         "x-ms-vss-method": "GetPackageChanges",
         "x-ms-preview": true,
@@ -885,7 +714,7 @@
         "tags": [
           "Artifact  Details"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "packageMetricsBatch",
         "x-ms-vss-method": "QueryPackageMetrics",
         "x-ms-preview": true,
@@ -958,7 +787,7 @@
         "tags": [
           "Artifact  Details"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "packages",
         "x-ms-vss-method": "GetPackages",
         "x-ms-preview": true,
@@ -1120,7 +949,7 @@
         "tags": [
           "Artifact  Details"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "packages",
         "x-ms-vss-method": "GetPackage",
         "x-ms-preview": true,
@@ -1227,7 +1056,7 @@
         "tags": [
           "Artifact  Details"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versionMetricsBatch",
         "x-ms-vss-method": "QueryPackageVersionMetrics",
         "x-ms-preview": true,
@@ -1308,7 +1137,7 @@
         "tags": [
           "Artifact  Details"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "GetPackageVersions",
         "x-ms-preview": true,
@@ -1397,7 +1226,7 @@
         "tags": [
           "Artifact  Details"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "GetPackageVersion",
         "x-ms-preview": true,
@@ -1490,7 +1319,7 @@
         "tags": [
           "Artifact  Details"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "provenance",
         "x-ms-vss-method": "GetPackageVersionProvenance",
         "x-ms-preview": true,
@@ -1564,7 +1393,7 @@
         "tags": [
           "Feed  Management"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "permissions",
         "x-ms-vss-method": "GetFeedPermissions",
         "x-ms-preview": true,
@@ -1618,13 +1447,6 @@
             "type": "string"
           },
           {
-            "in": "query",
-            "name": "includeDeletedFeeds",
-            "description": "If includeDeletedFeeds is true, then feedId must be specified by name and not by Guid.",
-            "required": false,
-            "type": "boolean"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -1651,7 +1473,7 @@
         "tags": [
           "Feed  Management"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "permissions",
         "x-ms-vss-method": "SetFeedPermissions",
         "x-ms-preview": true,
@@ -1727,7 +1549,7 @@
         "tags": [
           "Recycle  Bin"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinPackages",
         "x-ms-vss-method": "GetRecycleBinPackages",
         "x-ms-preview": true,
@@ -1832,7 +1654,7 @@
         "tags": [
           "Recycle  Bin"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinPackages",
         "x-ms-vss-method": "GetRecycleBinPackage",
         "x-ms-preview": true,
@@ -1905,7 +1727,7 @@
         "tags": [
           "Recycle  Bin"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "GetRecycleBinPackageVersions",
         "x-ms-preview": true,
@@ -1981,7 +1803,7 @@
         "tags": [
           "Recycle  Bin"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "GetRecycleBinPackageVersion",
         "x-ms-preview": true,
@@ -2062,7 +1884,7 @@
         "tags": [
           "Retention  Policies"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "retentionPolicies",
         "x-ms-vss-method": "DeleteFeedRetentionPolicies",
         "x-ms-preview": true,
@@ -2112,7 +1934,7 @@
         "tags": [
           "Retention  Policies"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "retentionPolicies",
         "x-ms-vss-method": "GetFeedRetentionPolicies",
         "x-ms-preview": true,
@@ -2168,7 +1990,7 @@
         "tags": [
           "Retention  Policies"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "retentionPolicies",
         "x-ms-vss-method": "SetFeedRetentionPolicies",
         "x-ms-preview": true,
@@ -2238,7 +2060,7 @@
         "tags": [
           "Feed  Management"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "views",
         "x-ms-vss-method": "CreateFeedView",
         "x-ms-preview": true,
@@ -2306,7 +2128,7 @@
         "tags": [
           "Feed  Management"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "views",
         "x-ms-vss-method": "GetFeedViews",
         "x-ms-preview": true,
@@ -2367,7 +2189,7 @@
         "tags": [
           "Feed  Management"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "views",
         "x-ms-vss-method": "DeleteFeedView",
         "x-ms-preview": true,
@@ -2424,7 +2246,7 @@
         "tags": [
           "Feed  Management"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "views",
         "x-ms-vss-method": "GetFeedView",
         "x-ms-preview": true,
@@ -2487,7 +2309,7 @@
         "tags": [
           "Feed  Management"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "views",
         "x-ms-vss-method": "UpdateFeedView",
         "x-ms-preview": true,
@@ -2564,14 +2386,14 @@
         "tags": [
           "Artifact  Details"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "badge",
         "x-ms-vss-method": "GetBadge",
         "x-ms-preview": true,
         "description": "Generate a SVG badge for the latest version of a package.  The generated SVG is typically used as the image in an HTML link which takes users to the feed containing the package to accelerate discovery and consumption.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
         "operationId": "Artifact  Details_Get Badge",
         "produces": [
-          "image/svg+xml"
+          "application/json"
         ],
         "parameters": [
           {
@@ -2612,47 +2434,14 @@
           "200": {
             "description": "successful operation",
             "schema": {
-              "type": "string",
-              "format": "Stream"
+              "type": "string"
             }
           }
-        },
-        "security": []
+        }
       }
     }
   },
   "definitions": {
-    "BuildPackage": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "feedName": {
-          "description": "Display name of the feed.",
-          "type": "string"
-        },
-        "packageDescription": {
-          "description": "Package version description.",
-          "type": "string"
-        },
-        "packageName": {
-          "description": "Display name of the package.",
-          "type": "string"
-        },
-        "packageVersion": {
-          "description": "Version of the package.",
-          "type": "string"
-        },
-        "projectId": {
-          "description": "TFS project id.",
-          "type": "string",
-          "format": "uuid"
-        },
-        "protocolType": {
-          "description": "Type of the package.",
-          "type": "string"
-        }
-      }
-    },
     "Feed": {
       "description": "A container for artifacts.",
       "type": "object",
@@ -2688,22 +2477,12 @@
           "description": "If set, the feed will hide all deleted/unpublished versions",
           "type": "boolean"
         },
-        "permanentDeletedDate": {
-          "description": "The date that this feed was permanently deleted.",
-          "type": "string",
-          "format": "date-time"
-        },
         "permissions": {
           "description": "Explicit permissions for the feed.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/FeedPermission"
           }
-        },
-        "scheduledPermanentDeleteDate": {
-          "description": "The date that this feed is scheduled to be permanently deleted.",
-          "type": "string",
-          "format": "date-time"
         },
         "upstreamEnabledChangedDate": {
           "description": "If set, time that the UpstreamEnabled property was changed. Will be null if UpstreamEnabled was never changed after Feed creation.",
@@ -2752,8 +2531,7 @@
           "description": "The type of operation.",
           "enum": [
             "addOrUpdate",
-            "delete",
-            "permanentDelete"
+            "delete"
           ],
           "x-ms-enum": {
             "name": "ChangeType",
@@ -2765,10 +2543,6 @@
               {
                 "value": "delete",
                 "description": "A package version was deleted."
-              },
-              {
-                "value": "permanentDelete",
-                "description": "A feed was permanently deleted. This is not used for package version."
               }
             ]
           }
@@ -2916,10 +2690,6 @@
           "description": "Id of the identity associated with this role.",
           "type": "string",
           "format": "uuid"
-        },
-        "isInheritedRole": {
-          "description": "Boolean indicating whether the role is inherited or set directly.",
-          "type": "boolean"
         },
         "role": {
           "description": "The role for this identity on a feed.",
@@ -3082,8 +2852,7 @@
           "enum": [
             "private",
             "collection",
-            "organization",
-            "aadTenant"
+            "organization"
           ],
           "x-ms-enum": {
             "name": "FeedVisibility",
@@ -3098,11 +2867,7 @@
               },
               {
                 "value": "organization",
-                "description": "Feed is accessible by all the valid users present in the enterprise where the feed resides. Note that legacy naming and back compat leaves the name of this value out of sync with its new meaning."
-              },
-              {
-                "value": "aadTenant",
-                "description": "Feed is accessible by all the valid users present in the Azure Active Directory tenant."
+                "description": "Feed is accessible by all the valid users present in the enterprise where the feed resides.  Note that legacy naming and back compat leaves the name of this value out of sync with its new meaning."
               }
             ]
           }
@@ -3549,8 +3314,7 @@
           "description": "The type of change that was performed.",
           "enum": [
             "addOrUpdate",
-            "delete",
-            "permanentDelete"
+            "delete"
           ],
           "x-ms-enum": {
             "name": "ChangeType",
@@ -3562,10 +3326,6 @@
               {
                 "value": "delete",
                 "description": "A package version was deleted."
-              },
-              {
-                "value": "permanentDelete",
-                "description": "A feed was permanently deleted. This is not used for package version."
               }
             ]
           }
@@ -3792,11 +3552,6 @@
           "type": "string",
           "format": "uuid"
         },
-        "internalUpstreamProjectId": {
-          "description": "For an internal upstream type, track the project of the feed being referenced.",
-          "type": "string",
-          "format": "uuid"
-        },
         "internalUpstreamViewId": {
           "description": "For an internal upstream type, track the view of the feed being referenced.",
           "type": "string",
@@ -3813,33 +3568,6 @@
         "protocol": {
           "description": "Package type associated with the upstream source.",
           "type": "string"
-        },
-        "status": {
-          "description": "Specifies the status of the upstream.",
-          "enum": [
-            "ok",
-            "disabled"
-          ],
-          "x-ms-enum": {
-            "name": "UpstreamStatus",
-            "values": [
-              {
-                "value": "ok",
-                "description": "Upstream source is ok."
-              },
-              {
-                "value": "disabled",
-                "description": "Upstream source is disabled."
-              }
-            ]
-          }
-        },
-        "statusDetails": {
-          "description": "Provides a human-readable reason for the status of the upstream.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/UpstreamStatusDetail"
-          }
         },
         "upstreamSourceType": {
           "description": "Source type, such as Public or Internal.",
@@ -3860,16 +3588,6 @@
               }
             ]
           }
-        }
-      }
-    },
-    "UpstreamStatusDetail": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "reason": {
-          "description": "Provides a human-readable reason for the status of the upstream.",
-          "type": "string"
         }
       }
     },
@@ -3903,7 +3621,7 @@
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     }

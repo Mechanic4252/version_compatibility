@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0-preview"
+    "version": "5.1-preview"
   },
   "host": "almsearch.dev.azure.com",
   "x-ms-vss-area": "Search",
@@ -26,14 +26,6 @@
     {
       "name": "Package Search Results",
       "description": "REST API for package search."
-    },
-    {
-      "name": "Repositories",
-      "description": "REST API controller for Repository Status."
-    },
-    {
-      "name": "Tfvc",
-      "description": "REST API controller for TFVC Repository Status."
     },
     {
       "name": "Wiki Search Results",
@@ -53,7 +45,7 @@
         "tags": [
           "Package Search Results"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "packageSearchResults",
         "x-ms-vss-method": "FetchPackageSearchResults",
         "x-ms-preview": true,
@@ -118,7 +110,7 @@
         "tags": [
           "Code Search Results"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "codeSearchResults",
         "x-ms-vss-method": "FetchCodeSearchResults",
         "x-ms-preview": true,
@@ -181,112 +173,12 @@
         }
       }
     },
-    "/{organization}/{project}/_apis/search/status/repositories/{repository}": {
-      "get": {
-        "tags": [
-          "Repositories"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "repositories",
-        "x-ms-vss-method": "GetRepositoryStatus",
-        "x-ms-preview": true,
-        "description": "Provides status of Repository.",
-        "operationId": "Repositories_Get",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "repository",
-            "description": "Repository ID or repository name.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/RepositoryStatusResponse"
-            }
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.code"
-            ]
-          }
-        ]
-      }
-    },
-    "/{organization}/{project}/_apis/search/status/tfvc": {
-      "get": {
-        "tags": [
-          "Tfvc"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "tfvc",
-        "x-ms-vss-method": "GetTfvcRepositoryStatus",
-        "x-ms-preview": true,
-        "description": "Provides status of TFVC Repository.",
-        "operationId": "Tfvc_Get",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/TfvcRepositoryStatusResponse"
-            }
-          }
-        }
-      }
-    },
     "/{organization}/{project}/_apis/search/wikisearchresults": {
       "post": {
         "tags": [
           "Wiki Search Results"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "wikiSearchResults",
         "x-ms-vss-method": "FetchWikiSearchResults",
         "x-ms-preview": true,
@@ -354,7 +246,7 @@
         "tags": [
           "Work Item Search Results"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "workItemSearchResults",
         "x-ms-vss-method": "FetchWorkItemSearchResults",
         "x-ms-preview": true,
@@ -419,71 +311,6 @@
     }
   },
   "definitions": {
-    "BoardResult": {
-      "description": "Defines the Board result that matched a Board search request.",
-      "type": "object",
-      "properties": {
-        "boardtype": {
-          "description": "Board Type of the board document.",
-          "type": "string"
-        },
-        "collection": {
-          "description": "Collection details of the baord document.",
-          "$ref": "#/definitions/Collection"
-        },
-        "project": {
-          "description": "Project details of the board document.",
-          "$ref": "#/definitions/Project"
-        },
-        "team": {
-          "description": "Team details of the board document.",
-          "$ref": "#/definitions/Team"
-        }
-      }
-    },
-    "BoardSearchRequest": {
-      "description": "Defines a Board search request.",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/EntitySearchRequest"
-        }
-      ],
-      "properties": {}
-    },
-    "BoardSearchResponse": {
-      "description": "Defines a Board search response item.",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/EntitySearchResponse"
-        }
-      ],
-      "properties": {
-        "count": {
-          "description": "Total number of matched Board documents.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "results": {
-          "description": "List of top matched Board documents.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/BoardResult"
-          }
-        }
-      }
-    },
-    "BranchInfo": {
-      "description": "Information about the configured branch.",
-      "type": "object",
-      "properties": {
-        "name": {
-          "description": "Name of the indexed branch",
-          "type": "string"
-        }
-      }
-    },
     "CodeResult": {
       "description": "Defines the code result containing information of the searched files and its metadata.",
       "type": "object",
@@ -539,12 +366,7 @@
           "$ref": "#/definitions/EntitySearchRequest"
         }
       ],
-      "properties": {
-        "includeSnippet": {
-          "description": "Flag to opt for including matched code snippet in the result. Default behavior is false.",
-          "type": "boolean"
-        }
-      }
+      "properties": {}
     },
     "CodeSearchResponse": {
       "description": "Defines a code search response item.",
@@ -575,38 +397,6 @@
       "properties": {
         "name": {
           "description": "Name of the collection.",
-          "type": "string"
-        }
-      }
-    },
-    "CustomRepositoryStatusResponse": {
-      "description": "Defines the custom repository status.",
-      "type": "object",
-      "properties": {
-        "id": {
-          "description": "Repository Id.",
-          "type": "string",
-          "format": "uuid"
-        },
-        "indexedTopLevelFolders": {
-          "description": "List of indexed top level folders info.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/DepotInfo"
-          }
-        },
-        "name": {
-          "description": "Repository Name.",
-          "type": "string"
-        }
-      }
-    },
-    "DepotInfo": {
-      "description": "Information about the custom repository indexing freshness for configured branches and depots.",
-      "type": "object",
-      "properties": {
-        "name": {
-          "description": "Name of the indexed top level folder (depot).",
           "type": "string"
         }
       }
@@ -753,28 +543,10 @@
           "type": "integer",
           "format": "int32"
         },
-        "codeSnippet": {
-          "description": "Gets or sets an extract of code where the match appears. Usually it is the line where there is the match.",
-          "type": "string"
-        },
-        "column": {
-          "description": "Gets or sets the column number where the match appears in the line.",
-          "type": "integer",
-          "format": "int32"
-        },
         "length": {
           "description": "Gets or sets the length of a piece of text.",
           "type": "integer",
           "format": "int32"
-        },
-        "line": {
-          "description": "Gets or sets the line number where the match appears in the file.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "type": {
-          "description": "Gets or sets the name of type of a piece of text.",
-          "type": "string"
         }
       }
     },
@@ -952,28 +724,6 @@
         }
       }
     },
-    "RepositoryStatusResponse": {
-      "description": "Defines the repository status.",
-      "type": "object",
-      "properties": {
-        "id": {
-          "description": "Repository Id.",
-          "type": "string",
-          "format": "uuid"
-        },
-        "indexedBranches": {
-          "description": "List of Indexed branches info.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/BranchInfo"
-          }
-        },
-        "name": {
-          "description": "Repository Name.",
-          "type": "string"
-        }
-      }
-    },
     "ScrollSearchRequest": {
       "description": "Defines a scroll code search request.",
       "type": "object",
@@ -994,98 +744,6 @@
         }
       }
     },
-    "SettingResult": {
-      "description": "Defines the setting result that matched a setting search request",
-      "type": "object",
-      "properties": {
-        "description": {
-          "description": "Description of the settings page",
-          "type": "string"
-        },
-        "icon": {
-          "description": "Icon name of the settings page",
-          "type": "string"
-        },
-        "routeId": {
-          "description": "Contribution url route id of the corresponding settings page",
-          "type": "string"
-        },
-        "routeParameterMapping": {
-          "description": "Contribution url route parameter of the corresponding settings page",
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          }
-        },
-        "scope": {
-          "description": "Scope of the settings page, either organization, project or user",
-          "enum": [
-            "none",
-            "organization",
-            "project",
-            "user"
-          ],
-          "x-ms-enum": {
-            "name": "SearchScope",
-            "values": [
-              {
-                "value": "none",
-                "description": ""
-              },
-              {
-                "value": "organization",
-                "description": ""
-              },
-              {
-                "value": "project",
-                "description": ""
-              },
-              {
-                "value": "user",
-                "description": ""
-              }
-            ]
-          }
-        },
-        "title": {
-          "description": "Title of the settings page",
-          "type": "string"
-        }
-      }
-    },
-    "SettingSearchRequest": {
-      "description": "Defines a setting search request",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/EntitySearchRequest"
-        }
-      ],
-      "properties": {}
-    },
-    "SettingSearchResponse": {
-      "description": "Defines a setting search response item",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/EntitySearchResponse"
-        }
-      ],
-      "properties": {
-        "count": {
-          "description": "Total number of matched setting documents.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "results": {
-          "description": "List of top matched setting documents.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/SettingResult"
-          }
-        }
-      }
-    },
     "SortOption": {
       "description": "Defines how to sort the result.",
       "type": "object",
@@ -1096,43 +754,6 @@
         },
         "sortOrder": {
           "description": "Order (ASC/DESC) in which the results should be sorted.",
-          "type": "string"
-        }
-      }
-    },
-    "Team": {
-      "description": "Defines the details of the team.",
-      "type": "object",
-      "properties": {
-        "id": {
-          "description": "Id of the team.",
-          "type": "string",
-          "format": "uuid"
-        },
-        "name": {
-          "description": "Name of the Team.",
-          "type": "string"
-        }
-      }
-    },
-    "TfvcRepositoryStatusResponse": {
-      "description": "Defines the TFVC repository status.",
-      "type": "object",
-      "properties": {
-        "id": {
-          "description": "Repository Id.",
-          "type": "string",
-          "format": "uuid"
-        },
-        "indexingInformation": {
-          "description": "List of Indexing Information for TFVC repository",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/BranchInfo"
-          }
-        },
-        "name": {
-          "description": "Repository Name.",
           "type": "string"
         }
       }
@@ -1343,7 +964,7 @@
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     }

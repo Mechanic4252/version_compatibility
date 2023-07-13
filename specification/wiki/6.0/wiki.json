@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0"
+    "version": "5.1"
   },
   "host": "dev.azure.com",
   "x-ms-vss-area": "Wiki",
@@ -32,14 +32,6 @@
       "description": "Wiki pages are the MD files that are stored in a Git repository in the backend."
     },
     {
-      "name": "Pages Batch",
-      "description": "Controller to handle all Batch REST calls against Wiki pages."
-    },
-    {
-      "name": "Page Stats",
-      "description": "Controller to handle all REST calls related to  Wiki page stats."
-    },
-    {
       "name": "Wikis",
       "description": "Wiki is a collection of pages maintained in a particular hierarchy. Every wiki is backed up by a Git repository."
     }
@@ -53,7 +45,7 @@
         "tags": [
           "Wikis"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "wikis",
         "x-ms-vss-method": "CreateWiki",
         "description": "Creates the wiki resource.",
@@ -121,7 +113,7 @@
         "tags": [
           "Wikis"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "wikis",
         "x-ms-vss-method": "GetAllWikis",
         "description": "Gets all wikis in a project or collection.",
@@ -182,10 +174,10 @@
         "tags": [
           "Wikis"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "wikis",
         "x-ms-vss-method": "DeleteWiki",
-        "description": "Deletes the wiki corresponding to the wiki ID or wiki name provided.",
+        "description": "Deletes the wiki corresponding to the wiki name or Id provided.",
         "operationId": "Wikis_Delete",
         "produces": [
           "application/json"
@@ -201,7 +193,7 @@
           {
             "in": "path",
             "name": "wikiIdentifier",
-            "description": "Wiki ID or wiki name.",
+            "description": "Wiki name or Id.",
             "required": true,
             "type": "string"
           },
@@ -242,10 +234,10 @@
         "tags": [
           "Wikis"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "wikis",
         "x-ms-vss-method": "GetWiki",
-        "description": "Gets the wiki corresponding to the wiki ID or wiki name provided.",
+        "description": "Gets the wiki corresponding to the wiki name or Id provided.",
         "operationId": "Wikis_Get",
         "produces": [
           "application/json"
@@ -261,7 +253,7 @@
           {
             "in": "path",
             "name": "wikiIdentifier",
-            "description": "Wiki ID or wiki name.",
+            "description": "Wiki name or id.",
             "required": true,
             "type": "string"
           },
@@ -305,10 +297,10 @@
         "tags": [
           "Wikis"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "wikis",
         "x-ms-vss-method": "UpdateWiki",
-        "description": "Updates the wiki corresponding to the wiki ID or wiki name provided using the update parameters.",
+        "description": "Updates the wiki corresponding to the wiki Id or name provided using the update parameters.",
         "operationId": "Wikis_Update",
         "consumes": [
           "application/json"
@@ -336,7 +328,7 @@
           {
             "in": "path",
             "name": "wikiIdentifier",
-            "description": "Wiki ID or wiki name.",
+            "description": "Wiki name or Id.",
             "required": true,
             "type": "string"
           },
@@ -379,7 +371,7 @@
         "tags": [
           "Attachments"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "attachments",
         "x-ms-vss-method": "CreateAttachment",
         "description": "Creates an attachment in the wiki.",
@@ -418,7 +410,7 @@
           {
             "in": "path",
             "name": "wikiIdentifier",
-            "description": "Wiki ID or wiki name.",
+            "description": "Wiki Id or name.",
             "required": true,
             "type": "string"
           },
@@ -427,13 +419,6 @@
             "name": "name",
             "description": "Wiki attachment name.",
             "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "versionDescriptor.version",
-            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
-            "required": false,
             "type": "string"
           },
           {
@@ -464,6 +449,13 @@
                 }
               ]
             }
+          },
+          {
+            "in": "query",
+            "name": "versionDescriptor.version",
+            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
+            "required": false,
+            "type": "string"
           },
           {
             "in": "query",
@@ -530,7 +522,7 @@
         "tags": [
           "Page Moves"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "pageMoves",
         "x-ms-vss-method": "CreatePageMove",
         "description": "Creates a page move operation that updates the path and order of the page as provided in the parameters.",
@@ -568,7 +560,7 @@
           {
             "in": "path",
             "name": "wikiIdentifier",
-            "description": "Wiki ID or wiki name.",
+            "description": "Wiki Id or name.",
             "required": true,
             "type": "string"
           },
@@ -576,13 +568,6 @@
             "in": "query",
             "name": "comment",
             "description": "Comment that is to be associated with this page move.",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "versionDescriptor.version",
-            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
             "required": false,
             "type": "string"
           },
@@ -614,6 +599,13 @@
                 }
               ]
             }
+          },
+          {
+            "in": "query",
+            "name": "versionDescriptor.version",
+            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
+            "required": false,
+            "type": "string"
           },
           {
             "in": "query",
@@ -683,7 +675,7 @@
         "tags": [
           "Pages"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "pages",
         "x-ms-vss-method": "CreateOrUpdatePage",
         "description": "Creates or edits a wiki page.",
@@ -721,7 +713,7 @@
           {
             "in": "path",
             "name": "wikiIdentifier",
-            "description": "Wiki ID or wiki name.",
+            "description": "Wiki Id or name.",
             "required": true,
             "type": "string"
           },
@@ -743,13 +735,6 @@
             "in": "query",
             "name": "comment",
             "description": "Comment to be associated with the page operation.",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "versionDescriptor.version",
-            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
             "required": false,
             "type": "string"
           },
@@ -781,6 +766,13 @@
                 }
               ]
             }
+          },
+          {
+            "in": "query",
+            "name": "versionDescriptor.version",
+            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
+            "required": false,
+            "type": "string"
           },
           {
             "in": "query",
@@ -859,7 +851,7 @@
         "tags": [
           "Pages"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "pages",
         "x-ms-vss-method": "DeletePage",
         "description": "Deletes a wiki page.",
@@ -885,7 +877,7 @@
           {
             "in": "path",
             "name": "wikiIdentifier",
-            "description": "Wiki ID or wiki name.",
+            "description": "Wiki Id or name.",
             "required": true,
             "type": "string"
           },
@@ -900,13 +892,6 @@
             "in": "query",
             "name": "comment",
             "description": "Comment to be associated with this page delete.",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "versionDescriptor.version",
-            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
             "required": false,
             "type": "string"
           },
@@ -938,6 +923,13 @@
                 }
               ]
             }
+          },
+          {
+            "in": "query",
+            "name": "versionDescriptor.version",
+            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
+            "required": false,
+            "type": "string"
           },
           {
             "in": "query",
@@ -1002,7 +994,7 @@
         "tags": [
           "Pages"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "pages",
         "x-ms-vss-method": "GetPage",
         "description": "Gets metadata or content of the wiki page for the provided path. Content negotiation is done based on the `Accept` header sent in the request.",
@@ -1030,7 +1022,7 @@
           {
             "in": "path",
             "name": "wikiIdentifier",
-            "description": "Wiki ID or wiki name.",
+            "description": "Wiki Id or name.",
             "required": true,
             "type": "string"
           },
@@ -1077,13 +1069,6 @@
           },
           {
             "in": "query",
-            "name": "versionDescriptor.version",
-            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
             "name": "versionDescriptor.versionOptions",
             "description": "Version options - Specify additional modifiers to version (e.g Previous)",
             "required": false,
@@ -1110,6 +1095,13 @@
                 }
               ]
             }
+          },
+          {
+            "in": "query",
+            "name": "versionDescriptor.version",
+            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
+            "required": false,
+            "type": "string"
           },
           {
             "in": "query",
@@ -1192,7 +1184,7 @@
         "tags": [
           "Pages"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "pages",
         "x-ms-vss-method": "DeletePageById",
         "x-ms-preview": true,
@@ -1219,14 +1211,14 @@
           {
             "in": "path",
             "name": "wikiIdentifier",
-            "description": "Wiki ID or wiki name.",
+            "description": "Wiki Id or name.",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
             "name": "id",
-            "description": "Wiki page ID.",
+            "description": "Wiki page id.",
             "required": true,
             "type": "integer",
             "format": "int32"
@@ -1272,7 +1264,7 @@
         "tags": [
           "Pages"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "pages",
         "x-ms-vss-method": "GetPageById",
         "x-ms-preview": true,
@@ -1301,14 +1293,14 @@
           {
             "in": "path",
             "name": "wikiIdentifier",
-            "description": "Wiki ID or wiki name..",
+            "description": "Wiki Id or name.",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
             "name": "id",
-            "description": "Wiki page ID.",
+            "description": "Wiki page id.",
             "required": true,
             "type": "integer",
             "format": "int32"
@@ -1397,7 +1389,7 @@
         "tags": [
           "Pages"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "pages",
         "x-ms-vss-method": "UpdatePageById",
         "x-ms-preview": true,
@@ -1436,14 +1428,14 @@
           {
             "in": "path",
             "name": "wikiIdentifier",
-            "description": "Wiki ID or wiki name.",
+            "description": "Wiki Id or name.",
             "required": true,
             "type": "string"
           },
           {
             "in": "path",
             "name": "id",
-            "description": "Wiki page ID.",
+            "description": "Wiki page id.",
             "required": true,
             "type": "integer",
             "format": "int32"
@@ -1492,571 +1484,9 @@
           }
         }
       }
-    },
-    "/{organization}/{project}/_apis/wiki/wikis/{wikiIdentifier}/pages/{pageId}/stats": {
-      "get": {
-        "tags": [
-          "Page Stats"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "pageStats",
-        "x-ms-vss-method": "GetPageData",
-        "x-ms-preview": true,
-        "description": "Returns page detail corresponding to Page ID.",
-        "operationId": "Page Stats_Get",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "wikiIdentifier",
-            "description": "Wiki ID or wiki name.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "pageId",
-            "description": "Wiki page ID.",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "pageViewsForDays",
-            "description": "last N days from the current day for which page views is to be returned. It's inclusive of current day.",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/WikiPageDetail"
-            }
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.wiki"
-            ]
-          }
-        ],
-        "x-ms-examples": {
-          "Get page stats by id": {
-            "$ref": "./httpExamples/pageStats/GET_wiki_pageStats.json"
-          }
-        }
-      }
-    },
-    "/{organization}/{project}/_apis/wiki/wikis/{wikiIdentifier}/pagesbatch": {
-      "post": {
-        "tags": [
-          "Pages Batch"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "pagesBatch",
-        "x-ms-vss-method": "GetPagesBatch",
-        "x-ms-preview": true,
-        "description": "Returns pageable list of Wiki Pages",
-        "operationId": "Pages Batch_Get",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Wiki batch page request.",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/WikiPagesBatchRequest"
-            }
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "wikiIdentifier",
-            "description": "Wiki ID or wiki name.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "versionDescriptor.version",
-            "description": "Version string identifier (name of tag/branch, SHA1 of commit)",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "versionDescriptor.versionOptions",
-            "description": "Version options - Specify additional modifiers to version (e.g Previous)",
-            "required": false,
-            "type": "string",
-            "enum": [
-              "none",
-              "previousChange",
-              "firstParent"
-            ],
-            "x-ms-enum": {
-              "name": "GitVersionOptions",
-              "values": [
-                {
-                  "value": "none",
-                  "description": "Not specified"
-                },
-                {
-                  "value": "previousChange",
-                  "description": "Commit that changed item prior to the current version"
-                },
-                {
-                  "value": "firstParent",
-                  "description": "First parent of commit (HEAD^)"
-                }
-              ]
-            }
-          },
-          {
-            "in": "query",
-            "name": "versionDescriptor.versionType",
-            "description": "Version type (branch, tag, or commit). Determines how Id is interpreted",
-            "required": false,
-            "type": "string",
-            "enum": [
-              "branch",
-              "tag",
-              "commit"
-            ],
-            "x-ms-enum": {
-              "name": "GitVersionType",
-              "values": [
-                {
-                  "value": "branch",
-                  "description": "Interpret the version as a branch name"
-                },
-                {
-                  "value": "tag",
-                  "description": "Interpret the version as a tag name"
-                },
-                {
-                  "value": "commit",
-                  "description": "Interpret the version as a commit ID (SHA1)"
-                }
-              ]
-            }
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/WikiPageDetail"
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.wiki_write"
-            ]
-          }
-        ],
-        "x-ms-examples": {
-          "Get page details in batch after sending continuation token": {
-            "$ref": "./httpExamples/pagesBatch/GET_wiki_pageBatch_WithContinuationToken.json"
-          },
-          "Get page details in batch without sending continuation token": {
-            "$ref": "./httpExamples/pagesBatch/GET_wiki_pageBatch_WithoutContinuationToken.json"
-          },
-          "Get page details in batch with page views": {
-            "$ref": "./httpExamples/pagesBatch/GET_wiki_pageBatch_WithPageViews.json"
-          }
-        }
-      }
     }
   },
   "definitions": {
-    "Comment": {
-      "description": "Comment on an artifact like Work Item or Wiki, etc.",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/CommentResourceReference"
-        }
-      ],
-      "properties": {
-        "artifactId": {
-          "description": "The id of the artifact this comment belongs to",
-          "type": "string"
-        },
-        "createdBy": {
-          "description": "IdentityRef of the creator of the comment.",
-          "$ref": "#/definitions/IdentityRef"
-        },
-        "createdDate": {
-          "description": "The creation date of the comment.",
-          "type": "string",
-          "format": "date-time"
-        },
-        "id": {
-          "description": "The id assigned to the comment.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "isDeleted": {
-          "description": "Indicates if the comment has been deleted.",
-          "type": "boolean"
-        },
-        "mentions": {
-          "description": "The mentions of the comment.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/CommentMention"
-          }
-        },
-        "modifiedBy": {
-          "description": "IdentityRef of the user who last modified the comment.",
-          "$ref": "#/definitions/IdentityRef"
-        },
-        "modifiedDate": {
-          "description": "The last modification date of the comment.",
-          "type": "string",
-          "format": "date-time"
-        },
-        "parentId": {
-          "description": "The comment id of the parent comment, if any",
-          "type": "integer",
-          "format": "int32"
-        },
-        "reactions": {
-          "description": "The reactions on the comment.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/CommentReaction"
-          }
-        },
-        "renderedText": {
-          "description": "The rendered text of the comment",
-          "type": "string"
-        },
-        "replies": {
-          "description": "Replies for this comment",
-          "$ref": "#/definitions/CommentList"
-        },
-        "state": {
-          "description": "Indicates the current state of the comment",
-          "enum": [
-            "active",
-            "resolved",
-            "closed"
-          ],
-          "x-ms-enum": {
-            "name": "CommentState",
-            "values": [
-              {
-                "value": "active",
-                "description": ""
-              },
-              {
-                "value": "resolved",
-                "description": ""
-              },
-              {
-                "value": "closed",
-                "description": ""
-              }
-            ]
-          }
-        },
-        "text": {
-          "description": "The plaintext/markdown version of the comment",
-          "type": "string"
-        },
-        "version": {
-          "description": "The current version of the comment",
-          "type": "integer",
-          "format": "int32"
-        }
-      }
-    },
-    "CommentAttachment": {
-      "description": "Represents an attachment to a comment.",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/CommentResourceReference"
-        }
-      ],
-      "properties": {
-        "createdBy": {
-          "description": "IdentityRef of the creator of the attachment.",
-          "$ref": "#/definitions/IdentityRef"
-        },
-        "createdDate": {
-          "description": "The creation date of the attachment.",
-          "type": "string",
-          "format": "date-time"
-        },
-        "id": {
-          "description": "Unique Id of the attachment.",
-          "type": "string",
-          "format": "uuid"
-        }
-      }
-    },
-    "CommentCreateParameters": {
-      "description": "Represents a request to create a work item comment.",
-      "type": "object",
-      "properties": {
-        "parentId": {
-          "description": "Optional CommentId of the parent in order to add a reply for an existing comment",
-          "type": "integer",
-          "format": "int32"
-        },
-        "text": {
-          "type": "string"
-        }
-      }
-    },
-    "CommentList": {
-      "description": "Represents a list of comments.",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/CommentResourceReference"
-        }
-      ],
-      "properties": {
-        "comments": {
-          "description": "List of comments in the current batch.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Comment"
-          }
-        },
-        "continuationToken": {
-          "description": "A string token that can be used to retrieving next page of comments if available. Otherwise null.",
-          "type": "string"
-        },
-        "count": {
-          "description": "The count of comments in the current batch.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "nextPage": {
-          "description": "Uri to the next page of comments if it is available. Otherwise null.",
-          "type": "string"
-        },
-        "totalCount": {
-          "description": "Total count of comments on a work item.",
-          "type": "integer",
-          "format": "int32"
-        }
-      }
-    },
-    "CommentMention": {
-      "description": "Contains information about various artifacts mentioned in the comment",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/CommentResourceReference"
-        }
-      ],
-      "properties": {
-        "artifactId": {
-          "description": "Id of the artifact this mention belongs to",
-          "type": "string"
-        },
-        "commentId": {
-          "description": "Id of the comment associated with this mention. Nullable to support legacy mentions which can potentially have null commentId",
-          "type": "integer",
-          "format": "int32"
-        },
-        "mentionedArtifact": {
-          "description": "Value of the mentioned artifact. Expected Value varies by CommentMentionType: Person:         VSID associated with the identity Work Item:      ID of the work item Pull Request:   ID of the Pull Request",
-          "type": "string"
-        },
-        "type": {
-          "description": "The context which represent where this mentioned was parsed from",
-          "enum": [
-            "person",
-            "workItem",
-            "pullRequest"
-          ],
-          "x-ms-enum": {
-            "name": "CommentMentionType",
-            "values": [
-              {
-                "value": "person",
-                "description": "An identity was mentioned by using the format @{VSID}"
-              },
-              {
-                "value": "workItem",
-                "description": "A work item was mentioned by using the format #{Work Item ID}"
-              },
-              {
-                "value": "pullRequest",
-                "description": "A Pull Request was mentioned by using the format !{PR Number}"
-              }
-            ]
-          }
-        }
-      }
-    },
-    "CommentReaction": {
-      "description": "Contains information about comment reaction for a particular reaction type.",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/CommentResourceReference"
-        }
-      ],
-      "properties": {
-        "commentId": {
-          "description": "The id of the comment this reaction belongs to.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "count": {
-          "description": "Total number of reactions for the CommentReactionType.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "isCurrentUserEngaged": {
-          "description": "Flag to indicate if the current user has engaged on this particular EngagementType (e.g. if they liked the associated comment).",
-          "type": "boolean"
-        },
-        "type": {
-          "description": "Type of the reaction.",
-          "enum": [
-            "like",
-            "dislike",
-            "heart",
-            "hooray",
-            "smile",
-            "confused"
-          ],
-          "x-ms-enum": {
-            "name": "CommentReactionType",
-            "values": [
-              {
-                "value": "like",
-                "description": ""
-              },
-              {
-                "value": "dislike",
-                "description": ""
-              },
-              {
-                "value": "heart",
-                "description": ""
-              },
-              {
-                "value": "hooray",
-                "description": ""
-              },
-              {
-                "value": "smile",
-                "description": ""
-              },
-              {
-                "value": "confused",
-                "description": ""
-              }
-            ]
-          }
-        }
-      }
-    },
-    "CommentResourceReference": {
-      "description": "Base class for comment resource references",
-      "type": "object",
-      "properties": {
-        "url": {
-          "type": "string"
-        }
-      }
-    },
-    "CommentUpdateParameters": {
-      "description": "Represents a request to update a comment.",
-      "type": "object",
-      "properties": {
-        "state": {
-          "description": "Set the current state of the comment",
-          "enum": [
-            "active",
-            "resolved",
-            "closed"
-          ],
-          "x-ms-enum": {
-            "name": "CommentState",
-            "values": [
-              {
-                "value": "active",
-                "description": ""
-              },
-              {
-                "value": "resolved",
-                "description": ""
-              },
-              {
-                "value": "closed",
-                "description": ""
-              }
-            ]
-          }
-        },
-        "text": {
-          "description": "The updated text of the comment",
-          "type": "string"
-        }
-      }
-    },
     "GitRepository": {
       "description": "",
       "type": "object",
@@ -2202,79 +1632,11 @@
         }
       }
     },
-    "GraphSubjectBase": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "_links": {
-          "description": "This field contains zero or more interesting links about the graph subject. These links may be invoked to obtain additional relationships or more detailed information about this graph subject.",
-          "$ref": "#/definitions/ReferenceLinks"
-        },
-        "descriptor": {
-          "description": "The descriptor is the primary way to reference the graph subject while the system is running. This field will uniquely identify the same graph subject across both Accounts and Organizations.",
-          "type": "string"
-        },
-        "displayName": {
-          "description": "This is the non-unique display name of the graph subject. To change this field, you must alter its value in the source provider.",
-          "type": "string"
-        },
-        "url": {
-          "description": "This url is the full route to the source resource of this graph subject.",
-          "type": "string"
-        }
-      }
-    },
-    "IdentityRef": {
-      "description": "",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/GraphSubjectBase"
-        }
-      ],
-      "properties": {
-        "directoryAlias": {
-          "description": "Deprecated - Can be retrieved by querying the Graph user referenced in the \"self\" entry of the IdentityRef \"_links\" dictionary",
-          "type": "string"
-        },
-        "id": {
-          "type": "string"
-        },
-        "imageUrl": {
-          "description": "Deprecated - Available in the \"avatar\" entry of the IdentityRef \"_links\" dictionary",
-          "type": "string"
-        },
-        "inactive": {
-          "description": "Deprecated - Can be retrieved by querying the Graph membership state referenced in the \"membershipState\" entry of the GraphUser \"_links\" dictionary",
-          "type": "boolean"
-        },
-        "isAadIdentity": {
-          "description": "Deprecated - Can be inferred from the subject type of the descriptor (Descriptor.IsAadUserType/Descriptor.IsAadGroupType)",
-          "type": "boolean"
-        },
-        "isContainer": {
-          "description": "Deprecated - Can be inferred from the subject type of the descriptor (Descriptor.IsGroupType)",
-          "type": "boolean"
-        },
-        "isDeletedInOrigin": {
-          "type": "boolean"
-        },
-        "profileUrl": {
-          "description": "Deprecated - not in use in most preexisting implementations of ToIdentityRef",
-          "type": "string"
-        },
-        "uniqueName": {
-          "description": "Deprecated - use Domain+PrincipalName instead",
-          "type": "string"
-        }
-      }
-    },
     "ReferenceLinks": {
-      "description": "The class to represent a collection of REST reference links.",
+      "description": "",
       "type": "object",
       "properties": {
         "links": {
-          "description": "The readonly view of the links.  Because Reference links are readonly, we only want to expose them as read only.",
           "type": "object",
           "additionalProperties": {
             "type": "object"
@@ -2610,28 +1972,6 @@
         }
       }
     },
-    "WikiPageDetail": {
-      "description": "Defines a page with its metedata in a wiki.",
-      "type": "object",
-      "properties": {
-        "id": {
-          "description": "When present, permanent identifier for the wiki page",
-          "type": "integer",
-          "format": "int32"
-        },
-        "path": {
-          "description": "Path of the wiki page.",
-          "type": "string"
-        },
-        "viewStats": {
-          "description": "Path of the wiki page.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/WikiPageStat"
-          }
-        }
-      }
-    },
     "WikiPageMove": {
       "description": "Request contract for Wiki Page Move.",
       "type": "object",
@@ -2697,42 +2037,6 @@
         "page": {
           "description": "Defines properties for wiki page.",
           "$ref": "#/definitions/WikiPage"
-        }
-      }
-    },
-    "WikiPagesBatchRequest": {
-      "description": "Contract encapsulating parameters for the pages batch.",
-      "type": "object",
-      "properties": {
-        "continuationToken": {
-          "description": "If the list of page data returned is not complete, a continuation token to query next batch of pages is included in the response header as \"x-ms-continuationtoken\". Omit this parameter to get the first batch of Wiki Page Data.",
-          "type": "string"
-        },
-        "pageViewsForDays": {
-          "description": "last N days from the current day for which page views is to be returned. It's inclusive of current day.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "top": {
-          "description": "Total count of pages on a wiki to return.",
-          "type": "integer",
-          "format": "int32"
-        }
-      }
-    },
-    "WikiPageStat": {
-      "description": "Defines properties for wiki page stat.",
-      "type": "object",
-      "properties": {
-        "count": {
-          "description": "the count of the stat for the Day",
-          "type": "integer",
-          "format": "int32"
-        },
-        "day": {
-          "description": "Day of the stat",
-          "type": "string",
-          "format": "date-time"
         }
       }
     },
@@ -2837,14 +2141,14 @@
     "api-Version": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     }

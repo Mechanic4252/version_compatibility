@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0"
+    "version": "5.1"
   },
   "host": "dev.azure.com",
   "x-ms-vss-area": "TestPlan",
@@ -37,9 +37,6 @@
     {
       "name": "Test  Suites",
       "description": "Test suites help in organizing test cases in a test plan. A test suite can contain child test suites, helping you build a folder structure under a test plan or it can contain test cases. Leaf test suites typically contain test cases, where are intermediate suites represent a folder hierarchy. Intermediate suites can on Static type, whereas leaf suites can be of static suites, requirement based suites or query based suites."
-    },
-    {
-      "name": "Test Case Clone"
     },
     {
       "name": "Test Cases",
@@ -70,7 +67,7 @@
         "tags": [
           "Test  Suites"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "suites",
         "x-ms-vss-method": "GetSuitesByTestCaseId",
         "description": "Find the list of all test suites in which a given test case is present. This is helpful if you need to find out which test suites are using a test case, when you need to make changes to a test case.",
@@ -128,7 +125,7 @@
         "tags": [
           "Configurations"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "configurations",
         "x-ms-vss-method": "CreateTestConfiguration",
         "x-ms-preview": true,
@@ -193,7 +190,7 @@
         "tags": [
           "Configurations"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "configurations",
         "x-ms-vss-method": "DeleteTestConfguration",
         "x-ms-preview": true,
@@ -248,7 +245,7 @@
         "tags": [
           "Configurations"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "configurations",
         "x-ms-vss-method": "GetTestConfigurations",
         "x-ms-preview": true,
@@ -311,7 +308,7 @@
         "tags": [
           "Configurations"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "configurations",
         "x-ms-vss-method": "UpdateTestConfiguration",
         "x-ms-preview": true,
@@ -386,7 +383,7 @@
         "tags": [
           "Configurations"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "configurations",
         "x-ms-vss-method": "GetTestConfigurationById",
         "x-ms-preview": true,
@@ -449,7 +446,7 @@
         "tags": [
           "Test  Plans"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "plans",
         "x-ms-vss-method": "CreateTestPlan",
         "x-ms-preview": true,
@@ -517,7 +514,7 @@
         "tags": [
           "Test  Plans"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "plans",
         "x-ms-vss-method": "GetTestPlans",
         "x-ms-preview": true,
@@ -606,7 +603,7 @@
         "tags": [
           "Test  Plans"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "plans",
         "x-ms-vss-method": "DeleteTestPlan",
         "x-ms-preview": true,
@@ -661,7 +658,7 @@
         "tags": [
           "Test  Plans"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "plans",
         "x-ms-vss-method": "GetTestPlanById",
         "x-ms-preview": true,
@@ -722,7 +719,7 @@
         "tags": [
           "Test  Plans"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "plans",
         "x-ms-vss-method": "UpdateTestPlan",
         "x-ms-preview": true,
@@ -800,7 +797,7 @@
         "tags": [
           "Test  Suites"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "suites",
         "x-ms-vss-method": "CreateTestSuite",
         "x-ms-preview": true,
@@ -873,7 +870,7 @@
         "tags": [
           "Test  Suites"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "suites",
         "x-ms-vss-method": "GetTestSuitesForPlan",
         "x-ms-preview": true,
@@ -985,7 +982,7 @@
         "tags": [
           "Test  Suites"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "suites",
         "x-ms-vss-method": "DeleteTestSuite",
         "x-ms-preview": true,
@@ -1048,7 +1045,7 @@
         "tags": [
           "Test  Suites"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "suites",
         "x-ms-vss-method": "GetTestSuiteById",
         "x-ms-preview": true,
@@ -1146,7 +1143,7 @@
         "tags": [
           "Test  Suites"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "suites",
         "x-ms-vss-method": "UpdateTestSuite",
         "x-ms-preview": true,
@@ -1232,7 +1229,7 @@
         "tags": [
           "Suite Test Case"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "suiteTestCase",
         "x-ms-vss-method": "AddTestCasesToSuite",
         "x-ms-preview": true,
@@ -1314,7 +1311,7 @@
         "tags": [
           "Suite Test Case"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "suiteTestCase",
         "x-ms-vss-method": "GetTestCaseList",
         "x-ms-preview": true,
@@ -1397,35 +1394,6 @@
             "type": "boolean"
           },
           {
-            "in": "query",
-            "name": "excludeFlags",
-            "description": "Flag to exclude various values from payload. For example to remove point assignments pass exclude = 1. To remove extra information (links, test plan , test suite) pass exclude = 2. To remove both extra information and point assignments pass exclude = 3 (1 + 2).",
-            "required": false,
-            "type": "string",
-            "enum": [
-              "none",
-              "pointAssignments",
-              "extraInformation"
-            ],
-            "x-ms-enum": {
-              "name": "ExcludeFlags",
-              "values": [
-                {
-                  "value": "none",
-                  "description": "To exclude nothing"
-                },
-                {
-                  "value": "pointAssignments",
-                  "description": "To exclude point assignments, pass exclude = 1"
-                },
-                {
-                  "value": "extraInformation",
-                  "description": "To exclude extra information (links, test plan, test suite), pass exclude = 2"
-                }
-              ]
-            }
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
@@ -1452,7 +1420,7 @@
         "tags": [
           "Suite Test Case"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "suiteTestCase",
         "x-ms-vss-method": "UpdateSuiteTestCases",
         "x-ms-preview": true,
@@ -1536,7 +1504,7 @@
         "tags": [
           "Suite Test Case"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "suiteTestCase",
         "x-ms-vss-method": "GetTestCase",
         "x-ms-preview": true,
@@ -1624,7 +1592,7 @@
         "tags": [
           "Suite Test Case"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "suiteTestCase",
         "x-ms-vss-method": "RemoveTestCasesFromSuite",
         "x-ms-preview": true,
@@ -1691,7 +1659,7 @@
         "tags": [
           "Test Point"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "testPoint",
         "x-ms-vss-method": "GetPointsList",
         "x-ms-preview": true,
@@ -1762,14 +1730,7 @@
           {
             "in": "query",
             "name": "includePointDetails",
-            "description": "If set to false, will get a smaller payload containing only basic details about the test point object",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "isRecursive",
-            "description": "If set to true, will also fetch test points belonging to child suites recursively.",
+            "description": "If set to false, returns only necessary information",
             "required": false,
             "type": "boolean"
           },
@@ -1800,7 +1761,7 @@
         "tags": [
           "Test Point"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "testPoint",
         "x-ms-vss-method": "UpdateTestPoints",
         "x-ms-preview": true,
@@ -1856,20 +1817,6 @@
             "format": "int32"
           },
           {
-            "in": "query",
-            "name": "includePointDetails",
-            "description": "If set to false, will get a smaller payload containing only basic details about the test point object",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "returnIdentityRef",
-            "description": "If set to true, returns the AssignedTo field in TestCaseReference as IdentityRef object.",
-            "required": false,
-            "type": "boolean"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
@@ -1898,7 +1845,7 @@
         "tags": [
           "Test Point"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "testPoint",
         "x-ms-vss-method": "GetPoints",
         "x-ms-preview": true,
@@ -1953,13 +1900,6 @@
             "type": "boolean"
           },
           {
-            "in": "query",
-            "name": "includePointDetails",
-            "description": "If set to false, will get a smaller payload containing only basic details about the test point object",
-            "required": false,
-            "type": "boolean"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
@@ -1988,7 +1928,7 @@
         "tags": [
           "Test Plan Clone"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "testPlanClone",
         "x-ms-vss-method": "CloneTestPlan",
         "x-ms-preview": true,
@@ -2057,7 +1997,7 @@
         "tags": [
           "Test Plan Clone"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "testPlanClone",
         "x-ms-vss-method": "GetCloneInformation",
         "x-ms-preview": true,
@@ -2115,7 +2055,7 @@
         "tags": [
           "Test  Suite  Entry"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "suiteEntry",
         "x-ms-vss-method": "GetSuiteEntries",
         "x-ms-preview": true,
@@ -2209,7 +2149,7 @@
         "tags": [
           "Test  Suite  Entry"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "suiteEntry",
         "x-ms-vss-method": "ReorderSuiteEntries",
         "x-ms-preview": true,
@@ -2302,7 +2242,7 @@
         "tags": [
           "Test Suite Clone"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "testSuiteClone",
         "x-ms-vss-method": "CloneTestSuite",
         "x-ms-preview": true,
@@ -2371,7 +2311,7 @@
         "tags": [
           "Test Suite Clone"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "testSuiteClone",
         "x-ms-vss-method": "GetSuiteCloneInformation",
         "x-ms-preview": true,
@@ -2429,7 +2369,7 @@
         "tags": [
           "Test Cases"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "testCases",
         "x-ms-vss-method": "DeleteTestCase",
         "x-ms-preview": true,
@@ -2467,122 +2407,9 @@
             "description": "successful operation"
           }
         },
-        "security": [
-          {
-            "oauth2": [
-              "vso.test_write"
-            ]
-          }
-        ],
         "x-ms-examples": {
           "Delete a test case": {
             "$ref": "./httpExamples/TestCases/DeleteTestCases.json"
-          }
-        }
-      }
-    },
-    "/{organization}/{project}/_apis/testplan/TestCases/CloneTestCaseOperation": {
-      "post": {
-        "tags": [
-          "Test Case Clone"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.2",
-        "x-ms-vss-resource": "testCaseClone",
-        "x-ms-vss-method": "CloneTestCase",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Test Case Clone_Clone Test Case",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/CloneTestCaseParams"
-            }
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.2"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/CloneTestCaseOperationInformation"
-            }
-          }
-        }
-      }
-    },
-    "/{organization}/{project}/_apis/testplan/TestCases/CloneTestCaseOperation/{cloneOperationId}": {
-      "get": {
-        "tags": [
-          "Test Case Clone"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.2",
-        "x-ms-vss-resource": "testCaseClone",
-        "x-ms-vss-method": "GetTestCaseCloneInformation",
-        "x-ms-preview": true,
-        "description": "Get clone information.",
-        "operationId": "Test Case Clone_Get",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "cloneOperationId",
-            "description": "Operation ID returned when we queue a clone operation",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.2"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/CloneTestCaseOperationInformation"
-            }
           }
         }
       }
@@ -2592,7 +2419,7 @@
         "tags": [
           "Variables"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "variables",
         "x-ms-vss-method": "CreateTestVariable",
         "x-ms-preview": true,
@@ -2657,7 +2484,7 @@
         "tags": [
           "Variables"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "variables",
         "x-ms-vss-method": "GetTestVariables",
         "x-ms-preview": true,
@@ -2722,7 +2549,7 @@
         "tags": [
           "Variables"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "variables",
         "x-ms-vss-method": "DeleteTestVariable",
         "x-ms-preview": true,
@@ -2777,7 +2604,7 @@
         "tags": [
           "Variables"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "variables",
         "x-ms-vss-method": "GetTestVariableById",
         "x-ms-preview": true,
@@ -2838,7 +2665,7 @@
         "tags": [
           "Variables"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "variables",
         "x-ms-vss-method": "UpdateTestVariable",
         "x-ms-preview": true,
@@ -3052,80 +2879,6 @@
         }
       }
     },
-    "CloneTestCaseOperationInformation": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "cloneOperationResponse": {
-          "description": "Various information related to the clone",
-          "$ref": "#/definitions/CloneOperationCommonResponse"
-        },
-        "cloneOptions": {
-          "description": "Test Plan Clone create parameters",
-          "$ref": "#/definitions/CloneTestCaseOptions"
-        },
-        "destinationTestSuite": {
-          "description": "Information of destination Test Suite",
-          "$ref": "#/definitions/TestSuiteReferenceWithProject"
-        },
-        "sourceTestSuite": {
-          "description": "Information of source Test Suite",
-          "$ref": "#/definitions/SourceTestSuiteResponse"
-        }
-      }
-    },
-    "CloneTestCaseOptions": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "includeAttachments": {
-          "description": "If set to true, include the attachments",
-          "type": "boolean"
-        },
-        "includeLinks": {
-          "description": "If set to true, include the links",
-          "type": "boolean"
-        },
-        "relatedLinkComment": {
-          "description": "Comment on the link that will link the new clone  test case to the original Set null for no comment",
-          "type": "string"
-        }
-      }
-    },
-    "CloneTestCaseParams": {
-      "description": "Parameters for Test Suite clone operation",
-      "type": "object",
-      "properties": {
-        "cloneOptions": {
-          "description": "Test Case Clone create parameters",
-          "$ref": "#/definitions/CloneTestCaseOptions"
-        },
-        "destinationTestPlan": {
-          "description": "Information about destination Test Plan",
-          "$ref": "#/definitions/TestPlanReference"
-        },
-        "destinationTestSuite": {
-          "description": "Information about destination Test Suite",
-          "$ref": "#/definitions/DestinationTestSuiteInfo"
-        },
-        "sourceTestPlan": {
-          "description": "Information about source Test Plan",
-          "$ref": "#/definitions/TestPlanReference"
-        },
-        "sourceTestSuite": {
-          "description": "Information about source Test Suite",
-          "$ref": "#/definitions/SourceTestSuiteInfo"
-        },
-        "testCaseIds": {
-          "description": "Test Case IDs",
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int32"
-          }
-        }
-      }
-    },
     "CloneTestPlanOperationInformation": {
       "description": "Response for Test Plan clone operation",
       "type": "object",
@@ -3335,151 +3088,6 @@
         "runBy": {
           "description": "RunBy.",
           "$ref": "#/definitions/IdentityRef"
-        }
-      }
-    },
-    "LibraryWorkItemsData": {
-      "description": "This data model is used in Work item-based tabs of Test Plans Library.",
-      "type": "object",
-      "properties": {
-        "columnOptions": {
-          "description": "Specifies the column option field names",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "continuationToken": {
-          "description": "Continuation token to fetch next set of elements. Present only when HasMoreElements is true.",
-          "type": "string"
-        },
-        "exceededWorkItemQueryLimit": {
-          "description": "Boolean indicating if the WIQL query has exceeded the limit of items returned.",
-          "type": "boolean"
-        },
-        "hasMoreElements": {
-          "description": "Boolean indicating if there are more elements present than what are being sent.",
-          "type": "boolean"
-        },
-        "returnCode": {
-          "description": "Specifies if there was an error while execution of data provider.",
-          "enum": [
-            "success",
-            "error"
-          ],
-          "x-ms-enum": {
-            "name": "LibraryTestCasesDataReturnCode",
-            "values": [
-              {
-                "value": "success",
-                "description": ""
-              },
-              {
-                "value": "error",
-                "description": ""
-              }
-            ]
-          }
-        },
-        "workItemIds": {
-          "description": "List of work items returned when OrderByField is sent something other than Id.",
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "workItems": {
-          "description": "List of work items to be returned.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/WorkItemDetails"
-          }
-        }
-      }
-    },
-    "LibraryWorkItemsDataProviderRequest": {
-      "description": "This is the request data contract for LibraryTestCaseDataProvider.",
-      "type": "object",
-      "properties": {
-        "columnOptions": {
-          "description": "Specifies the list of column options to show in test cases table.",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "continuationToken": {
-          "description": "The continuation token required for paging of work items. This is required when getting subsequent sets of work items when OrderByField is Id.",
-          "type": "string"
-        },
-        "filterValues": {
-          "description": "List of filter values to be supplied. Currently supported filters are Title, State, AssignedTo, Priority, AreaPath.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/TestPlansLibraryWorkItemFilter"
-          }
-        },
-        "isAscending": {
-          "description": "Whether the data is to be sorted in ascending or descending order. When not supplied, defaults to descending.",
-          "type": "boolean"
-        },
-        "libraryQueryType": {
-          "description": "The type of query to run.",
-          "enum": [
-            "none",
-            "allTestCases",
-            "testCasesWithActiveBugs",
-            "testCasesNotLinkedToRequirements",
-            "testCasesLinkedToRequirements",
-            "allSharedSteps",
-            "sharedStepsNotLinkedToRequirement"
-          ],
-          "x-ms-enum": {
-            "name": "TestPlansLibraryQuery",
-            "values": [
-              {
-                "value": "none",
-                "description": ""
-              },
-              {
-                "value": "allTestCases",
-                "description": ""
-              },
-              {
-                "value": "testCasesWithActiveBugs",
-                "description": ""
-              },
-              {
-                "value": "testCasesNotLinkedToRequirements",
-                "description": ""
-              },
-              {
-                "value": "testCasesLinkedToRequirements",
-                "description": ""
-              },
-              {
-                "value": "allSharedSteps",
-                "description": ""
-              },
-              {
-                "value": "sharedStepsNotLinkedToRequirement",
-                "description": ""
-              }
-            ]
-          }
-        },
-        "orderByField": {
-          "description": "Work item field on which to order the results. When not supplied, defaults to work item IDs.",
-          "type": "string"
-        },
-        "workItemIds": {
-          "description": "List of work items to query for field details. This is required when getting subsequent sets of work item fields when OrderByField is other than Id.",
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int32"
-          }
         }
       }
     },
@@ -3699,29 +3307,6 @@
         }
       }
     },
-    "SourceTestSuiteResponse": {
-      "description": "Source Test Suite Response for Test Case clone operation",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/TestSuiteReference"
-        }
-      ],
-      "properties": {
-        "project": {
-          "description": "project reference",
-          "$ref": "#/definitions/TeamProjectReference"
-        },
-        "testCaseIds": {
-          "description": "Id of suites to be cloned inside source Test Plan",
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int32"
-          }
-        }
-      }
-    },
     "SuiteEntry": {
       "description": "A suite entry defines properties for a test suite.",
       "type": "object",
@@ -3935,137 +3520,6 @@
         }
       }
     },
-    "TestCaseAssociatedResult": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "completedDate": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "configuration": {
-          "$ref": "#/definitions/TestConfigurationReference"
-        },
-        "outcome": {
-          "enum": [
-            "inProgress",
-            "blocked",
-            "failed",
-            "passed",
-            "ready",
-            "notApplicable",
-            "paused",
-            "timeout",
-            "warning",
-            "error",
-            "notExecuted",
-            "inconclusive",
-            "aborted",
-            "none",
-            "notImpacted",
-            "unspecified",
-            "maxValue"
-          ],
-          "x-ms-enum": {
-            "name": "UserFriendlyTestOutcome",
-            "values": [
-              {
-                "value": "inProgress",
-                "description": ""
-              },
-              {
-                "value": "blocked",
-                "description": ""
-              },
-              {
-                "value": "failed",
-                "description": ""
-              },
-              {
-                "value": "passed",
-                "description": ""
-              },
-              {
-                "value": "ready",
-                "description": ""
-              },
-              {
-                "value": "notApplicable",
-                "description": ""
-              },
-              {
-                "value": "paused",
-                "description": ""
-              },
-              {
-                "value": "timeout",
-                "description": ""
-              },
-              {
-                "value": "warning",
-                "description": ""
-              },
-              {
-                "value": "error",
-                "description": ""
-              },
-              {
-                "value": "notExecuted",
-                "description": ""
-              },
-              {
-                "value": "inconclusive",
-                "description": ""
-              },
-              {
-                "value": "aborted",
-                "description": ""
-              },
-              {
-                "value": "none",
-                "description": ""
-              },
-              {
-                "value": "notImpacted",
-                "description": ""
-              },
-              {
-                "value": "unspecified",
-                "description": ""
-              },
-              {
-                "value": "maxValue",
-                "description": ""
-              }
-            ]
-          }
-        },
-        "plan": {
-          "$ref": "#/definitions/TestPlanReference"
-        },
-        "pointId": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "resultId": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "runBy": {
-          "$ref": "#/definitions/IdentityRef"
-        },
-        "runId": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "suite": {
-          "$ref": "#/definitions/TestSuiteReference"
-        },
-        "tester": {
-          "$ref": "#/definitions/IdentityRef"
-        }
-      }
-    },
     "TestCaseReference": {
       "description": "Test Case Reference",
       "type": "object",
@@ -4085,27 +3539,6 @@
         },
         "state": {
           "description": "State of the test case work item",
-          "type": "string"
-        }
-      }
-    },
-    "TestCaseResultsData": {
-      "description": "This data model is used in TestCaseResultsDataProvider and populates the data required for initial page load",
-      "type": "object",
-      "properties": {
-        "contextPoint": {
-          "description": "Point information from where the execution history was viewed. Used to set initial filters.",
-          "$ref": "#/definitions/TestPointDetailedReference"
-        },
-        "results": {
-          "description": "Use to store the results displayed in the table",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/TestCaseAssociatedResult"
-          }
-        },
-        "testCaseName": {
-          "description": "Test Case Name to be displayed in the table header",
           "type": "string"
         }
       }
@@ -4187,32 +3620,6 @@
         "name": {
           "description": "Name of the configuration",
           "type": "string"
-        }
-      }
-    },
-    "TestEntityCount": {
-      "description": "Test Entity Count Used to store test cases count (define tab) and test point count (execute tab) Used to store test cases count (define tab) and test point count (execute tab)",
-      "type": "object",
-      "properties": {
-        "count": {
-          "description": "Test Entity Count",
-          "type": "integer",
-          "format": "int32"
-        },
-        "testPlanId": {
-          "description": "Test Plan under which the Test Entities are",
-          "type": "integer",
-          "format": "int32"
-        },
-        "testSuiteId": {
-          "description": "Test Suite under which the Test Entities are",
-          "type": "integer",
-          "format": "int32"
-        },
-        "totalCount": {
-          "description": "Total test entities in the suite without the applied filters",
-          "type": "integer",
-          "format": "int32"
         }
       }
     },
@@ -4393,30 +3800,15 @@
       "description": "This data model is used in TestPlansHubRefreshDataProvider and populates the data required for initial page load",
       "type": "object",
       "properties": {
-        "defineColumnOptionFields": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "errorMessage": {
-          "type": "string"
-        },
-        "executeColumnOptionFields": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "isAdvancedExtensionEnabled": {
           "type": "boolean"
-        },
-        "selectedPivotId": {
-          "type": "string"
         },
         "selectedSuiteId": {
           "type": "integer",
           "format": "int32"
+        },
+        "selectedSuiteName": {
+          "type": "string"
         },
         "testCasePageSize": {
           "type": "integer",
@@ -4455,43 +3847,6 @@
         },
         "testSuitesContinuationToken": {
           "type": "string"
-        }
-      }
-    },
-    "TestPlansLibraryWorkItemFilter": {
-      "description": "Container to hold information about a filter being applied in Test Plans Library.",
-      "type": "object",
-      "properties": {
-        "fieldName": {
-          "description": "Work item field name on which the items are to be filtered.",
-          "type": "string"
-        },
-        "fieldValues": {
-          "description": "Work item field values corresponding to the field name.",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "filterMode": {
-          "description": "Mode of the filter.",
-          "enum": [
-            "or",
-            "and"
-          ],
-          "x-ms-enum": {
-            "name": "TestPlansLibraryWorkItemFilterMode",
-            "values": [
-              {
-                "value": "or",
-                "description": "Default. Have the field values separated by an OR clause."
-              },
-              {
-                "value": "and",
-                "description": "Have the field values separated by an AND clause."
-              }
-            ]
-          }
         }
       }
     },
@@ -4580,25 +3935,24 @@
         }
       }
     },
-    "TestPointDetailedReference": {
-      "description": "",
+    "TestPointCount": {
+      "description": "Test Point Count",
       "type": "object",
       "properties": {
-        "configuration": {
-          "$ref": "#/definitions/TestConfigurationReference"
-        },
-        "plan": {
-          "$ref": "#/definitions/TestPlanReference"
-        },
-        "pointId": {
+        "count": {
+          "description": "Test Point Count",
           "type": "integer",
           "format": "int32"
         },
-        "suite": {
-          "$ref": "#/definitions/TestSuiteReference"
+        "testPlanId": {
+          "description": "Test Plan under which the Test Points are",
+          "type": "integer",
+          "format": "int32"
         },
-        "tester": {
-          "$ref": "#/definitions/IdentityRef"
+        "testSuiteId": {
+          "description": "Test Suite under which the Test Points are",
+          "type": "integer",
+          "format": "int32"
         }
       }
     },
@@ -4652,7 +4006,7 @@
           }
         },
         "lastResolutionState": {
-          "description": "Last Resolution State Id for the Test Point",
+          "description": "Last Resolution State Id for the TEst Point",
           "enum": [
             "none",
             "needsInvestigation",
@@ -5243,21 +4597,21 @@
     "api-Version": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.2": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.2' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.2' to use this version of the api.",
       "required": true,
       "type": "string"
     }

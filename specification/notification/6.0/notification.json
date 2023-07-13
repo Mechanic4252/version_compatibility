@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0"
+    "version": "5.1"
   },
   "host": "{service}dev.azure.com",
   "x-ms-parameterized-host": {
@@ -60,7 +60,7 @@
         "tags": [
           "Diagnostic Logs"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "diagnosticLogs",
         "x-ms-vss-method": "ListLogs",
         "description": "Get a list of diagnostic logs for this service.",
@@ -144,7 +144,7 @@
         "tags": [
           "Event Types"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "eventTypes",
         "x-ms-vss-method": "ListEventTypes",
         "description": "List available event types for this service. Optionally filter by only event types for the specified publisher.",
@@ -205,7 +205,7 @@
         "tags": [
           "Event Types"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "eventTypes",
         "x-ms-vss-method": "GetEventType",
         "description": "Get a specific event type.",
@@ -260,7 +260,7 @@
         "tags": [
           "Settings"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "settings",
         "x-ms-vss-method": "GetSettings",
         "description": "",
@@ -294,7 +294,7 @@
         "tags": [
           "Settings"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "settings",
         "x-ms-vss-method": "UpdateSettings",
         "description": "",
@@ -342,7 +342,7 @@
         "tags": [
           "Subscribers"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "subscribers",
         "x-ms-vss-method": "GetSubscriber",
         "description": "Get delivery preferences of a notifications subscriber.",
@@ -396,7 +396,7 @@
         "tags": [
           "Subscribers"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "subscribers",
         "x-ms-vss-method": "UpdateSubscriber",
         "description": "Update delivery preferences of a notifications subscriber.",
@@ -464,7 +464,7 @@
         "tags": [
           "Subscriptions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "subscriptionQuery",
         "x-ms-vss-method": "QuerySubscriptions",
         "description": "Query for subscriptions. A subscription is returned if it matches one or more of the specified conditions.",
@@ -527,7 +527,7 @@
         "tags": [
           "Subscriptions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "subscriptions",
         "x-ms-vss-method": "CreateSubscription",
         "description": "Create a new subscription.",
@@ -594,7 +594,7 @@
         "tags": [
           "Subscriptions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "subscriptions",
         "x-ms-vss-method": "ListSubscriptions",
         "description": "Get a list of notification subscriptions, either by subscription IDs or by all subscriptions for a given user or group.",
@@ -705,7 +705,7 @@
         "tags": [
           "Subscriptions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "subscriptions",
         "x-ms-vss-method": "DeleteSubscription",
         "description": "Delete a subscription.",
@@ -752,7 +752,7 @@
         "tags": [
           "Subscriptions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "subscriptions",
         "x-ms-vss-method": "GetSubscription",
         "description": "Get a notification subscription by its ID.",
@@ -849,7 +849,7 @@
         "tags": [
           "Subscriptions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "subscriptions",
         "x-ms-vss-method": "UpdateSubscription",
         "description": "Update an existing subscription. Depending on the type of subscription and permissions, the caller can update the description, filter settings, channel (delivery) settings and more.",
@@ -919,7 +919,7 @@
         "tags": [
           "Diagnostics"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "diagnostics",
         "x-ms-vss-method": "GetSubscriptionDiagnostics",
         "description": "Get the diagnostics settings for a subscription.",
@@ -972,7 +972,7 @@
         "tags": [
           "Diagnostics"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "diagnostics",
         "x-ms-vss-method": "UpdateSubscriptionDiagnostics",
         "description": "Update the diagnostics settings for a subscription.",
@@ -1040,7 +1040,7 @@
         "tags": [
           "Subscriptions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "userSettings",
         "x-ms-vss-method": "UpdateSubscriptionUserSettings",
         "description": "Update the specified user's settings for the specified subscription. This API is typically used to opt in or out of a shared subscription. User settings can only be applied to shared subscriptions, like team subscriptions or default subscriptions.",
@@ -1115,7 +1115,7 @@
         "tags": [
           "Subscriptions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "subscriptionTemplates",
         "x-ms-vss-method": "GetSubscriptionTemplates",
         "description": "Get available subscription templates.",
@@ -4354,7 +4354,7 @@
     "api-Version": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1' to use this version of the api.",
       "required": true,
       "type": "string"
     }

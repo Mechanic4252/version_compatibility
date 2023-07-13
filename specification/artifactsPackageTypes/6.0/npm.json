@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0-preview"
+    "version": "5.1-preview"
   },
   "host": "pkgs.dev.azure.com",
   "x-ms-vss-area": "Npm",
@@ -27,16 +27,16 @@
     "https"
   ],
   "paths": {
-    "/{organization}/{project}/_apis/packaging/feeds/{feedId}/npm/@{packageScope}/{unscopedPackageName}/versions/{packageVersion}": {
+    "/{organization}/_apis/packaging/feeds/{feedId}/npm/@{packageScope}/{unscopedPackageName}/versions/{packageVersion}": {
       "get": {
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "GetScopedPackageInfoAsync",
         "x-ms-preview": true,
-        "description": "Get information about a scoped package version (such as @scope/name).\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Get information about a scoped package version (such as @scope/name).",
         "operationId": "Npm_GetScopedPackageVersion",
         "produces": [
           "application/json"
@@ -78,14 +78,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -109,11 +101,11 @@
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "UnpublishScopedPackageAsync",
         "x-ms-preview": true,
-        "description": "Unpublish a scoped package version (such as @scope/name).\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Unpublish a scoped package version (such as @scope/name).",
         "operationId": "Npm_Unpublish Scoped Package",
         "produces": [
           "application/json"
@@ -155,14 +147,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -186,7 +170,7 @@
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "UpdateScopedPackageAsync",
         "x-ms-preview": true,
@@ -244,14 +228,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -272,16 +248,16 @@
         ]
       }
     },
-    "/{organization}/{project}/_apis/packaging/feeds/{feedId}/npm/{packageName}/versions/{packageVersion}": {
+    "/{organization}/_apis/packaging/feeds/{feedId}/npm/{packageName}/versions/{packageVersion}": {
       "get": {
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "GetPackageInfoAsync",
         "x-ms-preview": true,
-        "description": "Get information about an unscoped package version.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Get information about an unscoped package version.",
         "operationId": "Npm_GetPackageVersion",
         "produces": [
           "application/json"
@@ -316,14 +292,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -347,11 +315,11 @@
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "UnpublishPackageAsync",
         "x-ms-preview": true,
-        "description": "Unpublish an unscoped package version.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Unpublish an unscoped package version.",
         "operationId": "Npm_Unpublish Package",
         "produces": [
           "application/json"
@@ -386,14 +354,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -417,7 +377,7 @@
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "UpdatePackageAsync",
         "x-ms-preview": true,
@@ -468,14 +428,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -496,12 +448,12 @@
         ]
       }
     },
-    "/{organization}/{project}/_apis/packaging/feeds/{feedId}/npm/packages/@{packageScope}/{unscopedPackageName}/versions/{packageVersion}/content": {
+    "/{organization}/_apis/packaging/feeds/{feedId}/npm/packages/@{packageScope}/{unscopedPackageName}/versions/{packageVersion}/content": {
       "get": {
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "content",
         "x-ms-vss-method": "GetContentScopedPackageAsync",
         "x-ms-preview": true,
@@ -547,14 +499,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -576,16 +520,16 @@
         ]
       }
     },
-    "/{organization}/{project}/_apis/packaging/feeds/{feedId}/npm/packages/@{packageScope}/{unscopedPackageName}/versions/{packageVersion}/readme": {
+    "/{organization}/_apis/packaging/feeds/{feedId}/npm/packages/@{packageScope}/{unscopedPackageName}/versions/{packageVersion}/readme": {
       "get": {
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "readme",
         "x-ms-vss-method": "GetReadmeScopedPackageAsync",
         "x-ms-preview": true,
-        "description": "Get the Readme for a package version with an npm scope.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Get the Readme for a package version with an npm scope.",
         "operationId": "Npm_GetScopedPackageReadme",
         "produces": [
           "text/plain"
@@ -627,14 +571,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -656,16 +592,16 @@
         ]
       }
     },
-    "/{organization}/{project}/_apis/packaging/feeds/{feedId}/npm/packages/{packageName}/versions/{packageVersion}/content": {
+    "/{organization}/_apis/packaging/feeds/{feedId}/npm/packages/{packageName}/versions/{packageVersion}/content": {
       "get": {
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "content",
         "x-ms-vss-method": "GetContentUnscopedPackageAsync",
         "x-ms-preview": true,
-        "description": "Get an unscoped npm package.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Get an unscoped npm package.",
         "operationId": "Npm_DownloadPackage",
         "produces": [
           "application/octet-stream"
@@ -700,14 +636,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -729,16 +657,16 @@
         ]
       }
     },
-    "/{organization}/{project}/_apis/packaging/feeds/{feedId}/npm/packages/{packageName}/versions/{packageVersion}/readme": {
+    "/{organization}/_apis/packaging/feeds/{feedId}/npm/packages/{packageName}/versions/{packageVersion}/readme": {
       "get": {
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "readme",
         "x-ms-vss-method": "GetReadmeUnscopedPackageAsync",
         "x-ms-preview": true,
-        "description": "Get the Readme for a package version that has no npm scope.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Get the Readme for a package version that has no npm scope.",
         "operationId": "Npm_GetPackageReadme",
         "produces": [
           "text/plain"
@@ -773,14 +701,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -802,16 +722,16 @@
         ]
       }
     },
-    "/{organization}/{project}/_apis/packaging/feeds/{feedId}/npm/packagesbatch": {
+    "/{organization}/_apis/packaging/feeds/{feedId}/npm/packagesbatch": {
       "post": {
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "packagesbatch",
         "x-ms-vss-method": "UpdatePackagesAsync",
         "x-ms-preview": true,
-        "description": "Update several packages from a single feed in a single request. The updates to the packages do not happen atomically.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Update several packages from a single feed in a single request. The updates to the packages do not happen atomically.",
         "operationId": "Npm_Update Packages",
         "consumes": [
           "application/json"
@@ -841,14 +761,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -866,16 +778,16 @@
         ]
       }
     },
-    "/{organization}/{project}/_apis/packaging/feeds/{feedId}/npm/RecycleBin/packages/@{packageScope}/{unscopedPackageName}/versions/{packageVersion}": {
+    "/{organization}/_apis/packaging/feeds/{feedId}/npm/RecycleBin/packages/@{packageScope}/{unscopedPackageName}/versions/{packageVersion}": {
       "delete": {
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "DeleteScopedPackageVersionFromRecycleBin",
         "x-ms-preview": true,
-        "description": "Delete a package version with an npm scope from the recycle bin.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Delete a package version with an npm scope from the recycle bin.",
         "operationId": "Npm_Delete Scoped Package Version From Recycle Bin",
         "parameters": [
           {
@@ -914,14 +826,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -942,11 +846,11 @@
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "GetScopedPackageVersionMetadataFromRecycleBin",
         "x-ms-preview": true,
-        "description": "Get information about a scoped package version in the recycle bin.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Get information about a scoped package version in the recycle bin.",
         "operationId": "Npm_GetScopedPackageVersionFromRecycleBin",
         "produces": [
           "application/json"
@@ -988,14 +892,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -1019,11 +915,11 @@
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "RestoreScopedPackageVersionFromRecycleBin",
         "x-ms-preview": true,
-        "description": "Restore a package version with an npm scope from the recycle bin to its feed.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Restore a package version with an npm scope from the recycle bin to its feed.",
         "operationId": "Npm_Restore Scoped Package Version From Recycle Bin",
         "consumes": [
           "application/json"
@@ -1074,14 +970,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -1099,16 +987,16 @@
         ]
       }
     },
-    "/{organization}/{project}/_apis/packaging/feeds/{feedId}/npm/RecycleBin/packages/{packageName}/versions/{packageVersion}": {
+    "/{organization}/_apis/packaging/feeds/{feedId}/npm/RecycleBin/packages/{packageName}/versions/{packageVersion}": {
       "delete": {
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "DeletePackageVersionFromRecycleBin",
         "x-ms-preview": true,
-        "description": "Delete a package version without an npm scope from the recycle bin.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Delete a package version without an npm scope from the recycle bin.",
         "operationId": "Npm_Delete Package Version From Recycle Bin",
         "parameters": [
           {
@@ -1140,14 +1028,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -1168,11 +1048,11 @@
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "GetPackageVersionMetadataFromRecycleBin",
         "x-ms-preview": true,
-        "description": "Get information about an unscoped package version in the recycle bin.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Get information about an unscoped package version in the recycle bin.",
         "operationId": "Npm_GetPackageVersionFromRecycleBin",
         "produces": [
           "application/json"
@@ -1207,14 +1087,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -1238,11 +1110,11 @@
         "tags": [
           "Npm"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "RestorePackageVersionFromRecycleBin",
         "x-ms-preview": true,
-        "description": "Restore a package version without an npm scope from the recycle bin to its feed.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Restore a package version without an npm scope from the recycle bin to its feed.",
         "operationId": "Npm_Restore Package Version From Recycle Bin",
         "consumes": [
           "application/json"
@@ -1283,14 +1155,6 @@
             "name": "packageVersion",
             "description": "Version of the package.",
             "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
             "type": "string"
           },
           {
@@ -1609,7 +1473,7 @@
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     }

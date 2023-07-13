@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0-preview"
+    "version": "5.1-preview"
   },
   "host": "dev.azure.com",
   "x-ms-vss-area": "Dashboard",
@@ -41,11 +41,11 @@
         "tags": [
           "Widget Types"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "widgetTypes",
         "x-ms-vss-method": "GetWidgetTypes",
         "x-ms-preview": true,
-        "description": "Get all available widget metadata in alphabetical order, including widgets marked with isVisibleFromCatalog == false.",
+        "description": "Get all available widget metadata in alphabetical order.",
         "operationId": "Widget Types_Get Widget Types",
         "produces": [
           "application/json"
@@ -114,7 +114,7 @@
         "tags": [
           "Widget Types"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "widgetTypes",
         "x-ms-vss-method": "GetWidgetMetadata",
         "x-ms-preview": true,
@@ -170,7 +170,7 @@
         "tags": [
           "Dashboards"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "dashboards",
         "x-ms-vss-method": "CreateDashboard",
         "x-ms-preview": true,
@@ -215,7 +215,7 @@
             "type": "string"
           },
           {
-            "$ref": "#/parameters/api-Version-preview.3"
+            "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
         "responses": {
@@ -243,11 +243,11 @@
         "tags": [
           "Dashboards"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "dashboards",
-        "x-ms-vss-method": "GetDashboardsByProject",
+        "x-ms-vss-method": "GetDashboards",
         "x-ms-preview": true,
-        "description": "Get a list of dashboards under a project.",
+        "description": "Get a list of dashboards.",
         "operationId": "Dashboards_List",
         "produces": [
           "application/json"
@@ -276,30 +276,28 @@
             "type": "string"
           },
           {
-            "$ref": "#/parameters/api-Version-preview.3"
+            "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
         "responses": {
           "200": {
             "description": "successful operation",
             "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Dashboard"
-              }
+              "$ref": "#/definitions/DashboardGroup"
             }
           }
         },
         "security": [
           {
             "oauth2": [
-              "vso.dashboards"
+              "vso.dashboards",
+              "vso.dashboards_manage"
             ]
           }
         ],
         "x-ms-examples": {
           "": {
-            "$ref": "./httpExamples/Dashboards/GET_dashboards_by_project.json"
+            "$ref": "./httpExamples/Dashboards/GET_dashboards.json"
           }
         }
       },
@@ -307,7 +305,7 @@
         "tags": [
           "Dashboards"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "dashboards",
         "x-ms-vss-method": "ReplaceDashboards",
         "x-ms-preview": true,
@@ -352,7 +350,7 @@
             "type": "string"
           },
           {
-            "$ref": "#/parameters/api-Version-preview.3"
+            "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
         "responses": {
@@ -375,7 +373,7 @@
         "tags": [
           "Dashboards"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "dashboards",
         "x-ms-vss-method": "DeleteDashboard",
         "x-ms-preview": true,
@@ -413,7 +411,7 @@
             "type": "string"
           },
           {
-            "$ref": "#/parameters/api-Version-preview.3"
+            "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
         "responses": {
@@ -438,7 +436,7 @@
         "tags": [
           "Dashboards"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "dashboards",
         "x-ms-vss-method": "GetDashboard",
         "x-ms-preview": true,
@@ -479,7 +477,7 @@
             "type": "string"
           },
           {
-            "$ref": "#/parameters/api-Version-preview.3"
+            "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
         "responses": {
@@ -493,7 +491,8 @@
         "security": [
           {
             "oauth2": [
-              "vso.dashboards"
+              "vso.dashboards",
+              "vso.dashboards_manage"
             ]
           }
         ],
@@ -507,7 +506,7 @@
         "tags": [
           "Dashboards"
         ],
-        "x-ms-docs-override-version": "6.0-preview.3",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "dashboards",
         "x-ms-vss-method": "ReplaceDashboard",
         "x-ms-preview": true,
@@ -560,7 +559,7 @@
             "type": "string"
           },
           {
-            "$ref": "#/parameters/api-Version-preview.3"
+            "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
         "responses": {
@@ -578,7 +577,7 @@
         "tags": [
           "Widgets"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "widgets",
         "x-ms-vss-method": "CreateWidget",
         "x-ms-preview": true,
@@ -659,7 +658,7 @@
         "tags": [
           "Widgets"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "widgets",
         "x-ms-vss-method": "GetWidgets",
         "x-ms-preview": true,
@@ -729,7 +728,8 @@
         "security": [
           {
             "oauth2": [
-              "vso.dashboards"
+              "vso.dashboards",
+              "vso.dashboards_manage"
             ]
           }
         ],
@@ -743,7 +743,7 @@
         "tags": [
           "Widgets"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "widgets",
         "x-ms-vss-method": "ReplaceWidgets",
         "x-ms-preview": true,
@@ -842,7 +842,7 @@
         "tags": [
           "Widgets"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "widgets",
         "x-ms-vss-method": "UpdateWidgets",
         "x-ms-preview": true,
@@ -943,7 +943,7 @@
         "tags": [
           "Widgets"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "widgets",
         "x-ms-vss-method": "DeleteWidget",
         "x-ms-preview": true,
@@ -1020,7 +1020,7 @@
         "tags": [
           "Widgets"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "widgets",
         "x-ms-vss-method": "GetWidget",
         "x-ms-preview": true,
@@ -1083,7 +1083,8 @@
         "security": [
           {
             "oauth2": [
-              "vso.dashboards"
+              "vso.dashboards",
+              "vso.dashboards_manage"
             ]
           }
         ],
@@ -1097,7 +1098,7 @@
         "tags": [
           "Widgets"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "widgets",
         "x-ms-vss-method": "ReplaceWidget",
         "x-ms-preview": true,
@@ -1186,7 +1187,7 @@
         "tags": [
           "Widgets"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "widgets",
         "x-ms-vss-method": "UpdateWidget",
         "x-ms-preview": true,
@@ -1281,31 +1282,6 @@
         "_links": {
           "$ref": "#/definitions/ReferenceLinks"
         },
-        "dashboardScope": {
-          "description": "Entity to which the dashboard is scoped.",
-          "enum": [
-            "collection_User",
-            "project_Team",
-            "project"
-          ],
-          "x-ms-enum": {
-            "name": "DashboardScope",
-            "values": [
-              {
-                "value": "collection_User",
-                "description": "[DEPRECATED] Dashboard is scoped to the collection user."
-              },
-              {
-                "value": "project_Team",
-                "description": "Dashboard is scoped to the team."
-              },
-              {
-                "value": "project",
-                "description": "Dashboard is scoped to the project."
-              }
-            ]
-          }
-        },
         "description": {
           "description": "Description of the dashboard.",
           "type": "string"
@@ -1313,11 +1289,6 @@
         "eTag": {
           "description": "Server defined version tracking value, used for edit collision detection.",
           "type": "string"
-        },
-        "groupId": {
-          "description": "ID of the group for a dashboard. For team-scoped dashboards, this is the unique identifier for the team associated with the dashboard. For project-scoped dashboards this property is empty.",
-          "type": "string",
-          "format": "uuid"
         },
         "id": {
           "description": "ID of the Dashboard. Provided by service at creation time.",
@@ -1329,7 +1300,7 @@
           "type": "string"
         },
         "ownerId": {
-          "description": "ID of the owner for a dashboard. For team-scoped dashboards, this is the unique identifier for the team associated with the dashboard. For project-scoped dashboards, this is the unique identifier for the user identity associated with the dashboard.",
+          "description": "ID of the Owner for a dashboard. For any legacy dashboards, this would be the unique identifier for the team associated with the dashboard.",
           "type": "string",
           "format": "uuid"
         },
@@ -1552,31 +1523,6 @@
         }
       }
     },
-    "VssJsonCollectionWrapper": {
-      "description": "This class is used to serialized collections as a single JSON object on the wire, to avoid serializing JSON arrays directly to the client, which can be a security hole",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/VssJsonCollectionWrapperBase"
-        }
-      ],
-      "properties": {
-        "value": {
-          "type": "string",
-          "format": "T"
-        }
-      }
-    },
-    "VssJsonCollectionWrapperBase": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "count": {
-          "type": "integer",
-          "format": "int32"
-        }
-      }
-    },
     "Widget": {
       "description": "Widget data",
       "type": "object",
@@ -1721,13 +1667,6 @@
           "description": "Opt-out boolean indicating if the widget is hidden from the catalog. Commonly, this is used to allow developers to disable creation of a deprecated widget. A widget must have a functional default state, or have a configuration experience, in order to be visible from the catalog.",
           "type": "boolean"
         },
-        "keywords": {
-          "description": "Keywords associated with this widget, non-filterable and invisible",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "lightboxOptions": {
           "description": "Opt-in properties for customizing widget presentation in a \"lightbox\" dialog.",
           "$ref": "#/definitions/LightboxOptions"
@@ -1765,13 +1704,6 @@
                 }
               ]
             }
-          }
-        },
-        "tags": {
-          "description": "Tags associated with this widget, visible on each widget and filterable.",
-          "type": "array",
-          "items": {
-            "type": "string"
           }
         },
         "targets": {
@@ -1880,21 +1812,14 @@
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.2": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.2' to use this version of the api.",
-      "required": true,
-      "type": "string"
-    },
-    "api-Version-preview.3": {
-      "name": "api-version",
-      "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.3' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.2' to use this version of the api.",
       "required": true,
       "type": "string"
     }

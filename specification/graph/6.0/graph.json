@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0-preview"
+    "version": "5.1-preview"
   },
   "host": "vssps.dev.azure.com",
   "x-ms-vss-area": "Graph",
@@ -47,9 +47,6 @@
       "name": "Subject Lookup"
     },
     {
-      "name": "Subject Query"
-    },
-    {
       "name": "Users"
     }
   ],
@@ -62,7 +59,7 @@
         "tags": [
           "Descriptors"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "descriptors",
         "x-ms-vss-method": "GetDescriptor",
         "x-ms-preview": true,
@@ -119,7 +116,7 @@
         "tags": [
           "Groups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "groups",
         "x-ms-vss-method": "CreateGroup",
         "x-ms-preview": true,
@@ -204,7 +201,7 @@
         "tags": [
           "Groups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "groups",
         "x-ms-vss-method": "ListGroups",
         "x-ms-preview": true,
@@ -282,7 +279,7 @@
         "tags": [
           "Groups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "groups",
         "x-ms-vss-method": "DeleteGroup",
         "x-ms-preview": true,
@@ -329,7 +326,7 @@
         "tags": [
           "Groups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "groups",
         "x-ms-vss-method": "GetGroup",
         "x-ms-preview": true,
@@ -382,7 +379,7 @@
         "tags": [
           "Groups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "groups",
         "x-ms-vss-method": "UpdateGroup",
         "x-ms-preview": true,
@@ -449,7 +446,7 @@
         "tags": [
           "Memberships"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "membershipsBatch",
         "x-ms-vss-method": "ListMemberships",
         "x-ms-preview": true,
@@ -550,7 +547,7 @@
         "tags": [
           "Memberships"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "memberships",
         "x-ms-vss-method": "AddMembership",
         "x-ms-preview": true,
@@ -610,7 +607,7 @@
         "tags": [
           "Memberships"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "memberships",
         "x-ms-vss-method": "CheckMembershipExistence",
         "x-ms-preview": true,
@@ -664,7 +661,7 @@
         "tags": [
           "Memberships"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "memberships",
         "x-ms-vss-method": "GetMembership",
         "x-ms-preview": true,
@@ -727,7 +724,7 @@
         "tags": [
           "Memberships"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "memberships",
         "x-ms-vss-method": "RemoveMembership",
         "x-ms-preview": true,
@@ -783,7 +780,7 @@
         "tags": [
           "Membership States"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "membershipStates",
         "x-ms-vss-method": "GetMembershipState",
         "x-ms-preview": true,
@@ -838,7 +835,7 @@
         "tags": [
           "Request Access"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "requestAccess",
         "x-ms-vss-method": "RequestAccess",
         "x-ms-preview": true,
@@ -861,7 +858,7 @@
             "description": "",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/JToken"
+              "type": "string"
             }
           },
           {
@@ -880,7 +877,7 @@
         "tags": [
           "Storage Keys"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "storageKeys",
         "x-ms-vss-method": "GetStorageKey",
         "x-ms-preview": true,
@@ -936,7 +933,7 @@
         "tags": [
           "Subject Lookup"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "subjectLookup",
         "x-ms-vss-method": "LookupSubjects",
         "x-ms-preview": true,
@@ -994,63 +991,12 @@
         }
       }
     },
-    "/{organization}/_apis/graph/subjectquery": {
-      "post": {
-        "tags": [
-          "Subject Query"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "subjectQuery",
-        "x-ms-vss-method": "QuerySubjects",
-        "x-ms-preview": true,
-        "description": "Search for Azure Devops users, or/and groups. Results will be returned in a batch with no more than 100 graph subjects.",
-        "operationId": "Subject Query_Query",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "The query that we'll be using to search includes the following: Query: the search term. The search will be prefix matching only. SubjectKind: \"User\" or \"Group\" can be specified, both or either ScopeDescriptor: Non-default scope can be specified, i.e. project scope descriptor",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/GraphSubjectQuery"
-            }
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/GraphSubject"
-              }
-            }
-          }
-        }
-      }
-    },
     "/{organization}/_apis/graph/Subjects/{subjectDescriptor}/avatars": {
       "delete": {
         "tags": [
           "Avatars"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "avatars",
         "x-ms-vss-method": "DeleteAvatar",
         "x-ms-preview": true,
@@ -1086,7 +1032,7 @@
         "tags": [
           "Avatars"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "avatars",
         "x-ms-vss-method": "GetAvatar",
         "x-ms-preview": true,
@@ -1171,7 +1117,7 @@
         "tags": [
           "Avatars"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "avatars",
         "x-ms-vss-method": "SetAvatar",
         "x-ms-preview": true,
@@ -1221,7 +1167,7 @@
         "tags": [
           "Users"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "users",
         "x-ms-vss-method": "CreateUser",
         "x-ms-preview": true,
@@ -1299,7 +1245,7 @@
         "tags": [
           "Users"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "users",
         "x-ms-vss-method": "ListUsers",
         "x-ms-preview": true,
@@ -1328,13 +1274,6 @@
             "in": "query",
             "name": "continuationToken",
             "description": "An opaque data blob that allows the next page of data to resume immediately after where the previous page ended. The only reliable way to know if there is more data left is the presence of a continuation token.",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "scopeDescriptor",
-            "description": "Specify a non-default scope (collection, project) to search for users.",
             "required": false,
             "type": "string"
           },
@@ -1377,7 +1316,7 @@
         "tags": [
           "Users"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "users",
         "x-ms-vss-method": "DeleteUser",
         "x-ms-preview": true,
@@ -1424,7 +1363,7 @@
         "tags": [
           "Users"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "users",
         "x-ms-vss-method": "GetUser",
         "x-ms-preview": true,
@@ -1477,7 +1416,7 @@
         "tags": [
           "Users"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "users",
         "x-ms-vss-method": "UpdateUser",
         "x-ms-preview": true,
@@ -1532,7 +1471,7 @@
         "tags": [
           "Provider Info"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "providerInfo",
         "x-ms-vss-method": "GetProviderInfo",
         "x-ms-preview": true,
@@ -2076,27 +2015,6 @@
         }
       }
     },
-    "GraphSubjectQuery": {
-      "description": "Subject to search using the Graph API",
-      "type": "object",
-      "properties": {
-        "query": {
-          "description": "Search term to search for Azure Devops users or/and groups",
-          "type": "string"
-        },
-        "scopeDescriptor": {
-          "description": "Optional parameter. Specify a non-default scope (collection, project) to search for users or groups within the scope.",
-          "type": "string"
-        },
-        "subjectKind": {
-          "description": "\"User\" or \"Group\" can be specified, both or either",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
-    },
     "GraphSystemSubject": {
       "description": "",
       "type": "object",
@@ -2280,53 +2198,6 @@
         }
       }
     },
-    "JToken": {
-      "description": "Represents an abstract JSON token.",
-      "type": "object",
-      "properties": {
-        "first": {
-          "description": "Get the first child token of this token.",
-          "$ref": "#/definitions/JToken"
-        },
-        "hasValues": {
-          "description": "Gets a value indicating whether this token has child tokens.",
-          "type": "boolean"
-        },
-        "item": {
-          "$ref": "#/definitions/JToken"
-        },
-        "last": {
-          "description": "Get the last child token of this token.",
-          "$ref": "#/definitions/JToken"
-        },
-        "next": {
-          "description": "Gets the next sibling token of this node.",
-          "$ref": "#/definitions/JToken"
-        },
-        "parent": {
-          "description": "Gets or sets the parent.",
-          "type": "string",
-          "format": "JContainer"
-        },
-        "path": {
-          "description": "Gets the path of the JSON token.",
-          "type": "string"
-        },
-        "previous": {
-          "description": "Gets the previous sibling token of this node.",
-          "$ref": "#/definitions/JToken"
-        },
-        "root": {
-          "description": "Gets the root JToken of this JToken.",
-          "$ref": "#/definitions/JToken"
-        },
-        "type": {
-          "description": "Gets the node type for this JToken.",
-          "type": "string",
-          "format": "JTokenType"
-        }
-      }
-    },
     "PagedGraphGroups": {
       "description": "",
       "type": "object",
@@ -2380,21 +2251,6 @@
         }
       }
     },
-    "RequestAccessPayLoad": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "message": {
-          "type": "string"
-        },
-        "projectUri": {
-          "type": "string"
-        },
-        "urlRequested": {
-          "type": "string"
-        }
-      }
-    },
     "VssJsonCollectionWrapper": {
       "description": "This class is used to serialized collections as a single JSON object on the wire, to avoid serializing JSON arrays directly to the client, which can be a security hole",
       "type": "object",
@@ -2425,7 +2281,7 @@
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     }

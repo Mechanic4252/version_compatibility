@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0"
+    "version": "5.1"
   },
   "host": "dev.azure.com",
   "x-ms-vss-area": "Work",
@@ -75,12 +75,6 @@
       "name": "Rows"
     },
     {
-      "name": "Taskboard Columns"
-    },
-    {
-      "name": "Taskboard Work Items"
-    },
-    {
       "name": "Teamdaysoff"
     },
     {
@@ -102,7 +96,7 @@
         "tags": [
           "Boardcolumns"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "boardcolumns",
         "x-ms-vss-method": "GetColumnSuggestedValues",
         "description": "Get available board columns in a project",
@@ -160,7 +154,7 @@
         "tags": [
           "Boardrows"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "boardrows",
         "x-ms-vss-method": "GetRowSuggestedValues",
         "description": "Get available board rows in a project",
@@ -218,7 +212,7 @@
         "tags": [
           "Plans"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "plans",
         "x-ms-vss-method": "CreatePlan",
         "description": "Add a new plan for the team",
@@ -270,7 +264,7 @@
         "tags": [
           "Plans"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "plans",
         "x-ms-vss-method": "GetPlans",
         "description": "Get the information for all the plans configured for the given team",
@@ -315,7 +309,7 @@
         "tags": [
           "Plans"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "plans",
         "x-ms-vss-method": "DeletePlan",
         "description": "Delete the specified plan",
@@ -356,7 +350,7 @@
         "tags": [
           "Plans"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "plans",
         "x-ms-vss-method": "GetPlan",
         "description": "Get the information for the specified plan",
@@ -403,7 +397,7 @@
         "tags": [
           "Plans"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "plans",
         "x-ms-vss-method": "UpdatePlan",
         "description": "Update the information for the specified plan",
@@ -464,7 +458,7 @@
         "tags": [
           "Deliverytimeline"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "deliverytimeline",
         "x-ms-vss-method": "GetDeliveryTimelineData",
         "description": "Get Delivery View Data",
@@ -537,7 +531,7 @@
         "tags": [
           "Processconfiguration"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "processconfiguration",
         "x-ms-vss-method": "GetProcessConfiguration",
         "x-ms-preview": true,
@@ -592,7 +586,7 @@
         "tags": [
           "Backlogconfiguration"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "backlogconfiguration",
         "x-ms-vss-method": "GetBacklogConfigurations",
         "description": "Gets backlog configuration for a team",
@@ -654,7 +648,7 @@
         "tags": [
           "Backlogs"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "backlogs",
         "x-ms-vss-method": "GetBacklogs",
         "x-ms-preview": true,
@@ -719,7 +713,7 @@
         "tags": [
           "Backlogs"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "backlogs",
         "x-ms-vss-method": "GetBacklogLevelWorkItems",
         "x-ms-preview": true,
@@ -788,7 +782,7 @@
         "tags": [
           "Backlogs"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "backlogs",
         "x-ms-vss-method": "GetBacklog",
         "x-ms-preview": true,
@@ -857,7 +851,7 @@
         "tags": [
           "Boards"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "boards",
         "x-ms-vss-method": "GetBoards",
         "description": "Get boards",
@@ -917,7 +911,7 @@
         "tags": [
           "Boardusersettings"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "boardusersettings",
         "x-ms-vss-method": "GetBoardUserSettings",
         "x-ms-preview": true,
@@ -985,7 +979,7 @@
         "tags": [
           "Boardusersettings"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "boardusersettings",
         "x-ms-vss-method": "UpdateBoardUserSettings",
         "x-ms-preview": true,
@@ -1070,7 +1064,7 @@
         "tags": [
           "Cardrulesettings"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "cardrulesettings",
         "x-ms-vss-method": "GetBoardCardRuleSettings",
         "description": "Get board card Rule settings for the board id or board by name",
@@ -1132,7 +1126,7 @@
         "tags": [
           "Cardrulesettings"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "cardrulesettings",
         "x-ms-vss-method": "UpdateBoardCardRuleSettings",
         "description": "Update board card Rule settings for the board id or board by name",
@@ -1208,7 +1202,7 @@
         "tags": [
           "Cardsettings"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "cardsettings",
         "x-ms-vss-method": "GetBoardCardSettings",
         "description": "Get board card settings for the board id or board by name",
@@ -1270,7 +1264,7 @@
         "tags": [
           "Cardsettings"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "cardsettings",
         "x-ms-vss-method": "UpdateBoardCardSettings",
         "description": "Update board card settings for the board id or board by name",
@@ -1346,7 +1340,7 @@
         "tags": [
           "Chartimages"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "chartimages",
         "x-ms-vss-method": "GetBoardChartImage",
         "x-ms-preview": true,
@@ -1448,7 +1442,7 @@
         "tags": [
           "Charts"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "charts",
         "x-ms-vss-method": "GetBoardCharts",
         "description": "Get board charts",
@@ -1515,7 +1509,7 @@
         "tags": [
           "Charts"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "charts",
         "x-ms-vss-method": "GetBoardChart",
         "description": "Get a board chart",
@@ -1584,7 +1578,7 @@
         "tags": [
           "Charts"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "charts",
         "x-ms-vss-method": "UpdateBoardChart",
         "description": "Update a board chart",
@@ -1667,7 +1661,7 @@
         "tags": [
           "Columns"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "columns",
         "x-ms-vss-method": "GetBoardColumns",
         "description": "Get columns on a board",
@@ -1740,7 +1734,7 @@
         "tags": [
           "Columns"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "columns",
         "x-ms-vss-method": "UpdateBoardColumns",
         "description": "Update columns on a board",
@@ -1827,7 +1821,7 @@
         "tags": [
           "Rows"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "rows",
         "x-ms-vss-method": "GetBoardRows",
         "description": "Get rows on a board",
@@ -1900,7 +1894,7 @@
         "tags": [
           "Rows"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "rows",
         "x-ms-vss-method": "UpdateBoardRows",
         "description": "Update rows on a board",
@@ -1987,7 +1981,7 @@
         "tags": [
           "Boards"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "boards",
         "x-ms-vss-method": "GetBoard",
         "description": "Get board",
@@ -2049,7 +2043,7 @@
         "tags": [
           "Boards"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "boards",
         "x-ms-vss-method": "SetBoardOptions",
         "description": "Update board options",
@@ -2131,7 +2125,7 @@
         "tags": [
           "Boardparents"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "boardparents",
         "x-ms-vss-method": "GetBoardMappingParentItems",
         "x-ms-preview": true,
@@ -2207,7 +2201,7 @@
         "tags": [
           "Chartimages"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "chartimages",
         "x-ms-vss-method": "GetIterationChartImage",
         "x-ms-preview": true,
@@ -2310,7 +2304,7 @@
         "tags": [
           "Workitemsorder"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "workitemsorder",
         "x-ms-vss-method": "ReorderIterationWorkItems",
         "x-ms-preview": true,
@@ -2395,7 +2389,7 @@
         "tags": [
           "Chartimages"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "chartimages",
         "x-ms-vss-method": "GetIterationsChartImage",
         "x-ms-preview": true,
@@ -2498,7 +2492,7 @@
         "tags": [
           "Cardrulesettings"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "cardrulesettings",
         "x-ms-vss-method": "UpdateTaskboardCardRuleSettings",
         "x-ms-preview": true,
@@ -2554,7 +2548,7 @@
         "tags": [
           "Cardsettings"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "cardsettings",
         "x-ms-vss-method": "UpdateTaskboardCardSettings",
         "x-ms-preview": true,
@@ -2605,286 +2599,12 @@
         }
       }
     },
-    "/{organization}/{project}/{team}/_apis/work/taskboardcolumns": {
-      "get": {
-        "tags": [
-          "Taskboard Columns"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "taskboardColumns",
-        "x-ms-vss-method": "GetColumns",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Taskboard Columns_Get",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "team",
-            "description": "Team ID or team name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/TaskboardColumns"
-            }
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.work"
-            ]
-          }
-        ]
-      },
-      "put": {
-        "tags": [
-          "Taskboard Columns"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "taskboardColumns",
-        "x-ms-vss-method": "UpdateColumns",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Taskboard Columns_Update",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/UpdateTaskboardColumn"
-              }
-            }
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "team",
-            "description": "Team ID or team name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/TaskboardColumns"
-            }
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.work_write"
-            ]
-          }
-        ]
-      }
-    },
-    "/{organization}/{project}/{team}/_apis/work/taskboardworkitems/{iterationId}": {
-      "get": {
-        "tags": [
-          "Taskboard Work Items"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "taskboardWorkItems",
-        "x-ms-vss-method": "GetWorkItemColumns",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Taskboard Work Items_List",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "team",
-            "description": "Team ID or team name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "iterationId",
-            "description": "",
-            "required": true,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/TaskboardWorkItemColumn"
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.work"
-            ]
-          }
-        ]
-      }
-    },
-    "/{organization}/{project}/{team}/_apis/work/taskboardworkitems/{iterationId}/{workItemId}": {
-      "patch": {
-        "tags": [
-          "Taskboard Work Items"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "taskboardWorkItems",
-        "x-ms-vss-method": "UpdateWorkItemColumn",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Taskboard Work Items_Update",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/UpdateTaskboardWorkItemColumn"
-            }
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "team",
-            "description": "Team ID or team name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "iterationId",
-            "description": "",
-            "required": true,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "in": "path",
-            "name": "workItemId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation"
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.work_write"
-            ]
-          }
-        ]
-      }
-    },
     "/{organization}/{project}/{team}/_apis/work/teamsettings": {
       "get": {
         "tags": [
           "Teamsettings"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "teamsettings",
         "x-ms-vss-method": "GetTeamSettings",
         "description": "Get a team's settings",
@@ -2944,7 +2664,7 @@
         "tags": [
           "Teamsettings"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "teamsettings",
         "x-ms-vss-method": "UpdateTeamSettings",
         "description": "Update a team's settings",
@@ -3021,7 +2741,7 @@
         "tags": [
           "Iterations"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "iterations",
         "x-ms-vss-method": "GetTeamIterations",
         "description": "Get a team's iterations using timeframe filter",
@@ -3091,7 +2811,7 @@
         "tags": [
           "Iterations"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "iterations",
         "x-ms-vss-method": "PostTeamIteration",
         "description": "Add an iteration to the team",
@@ -3165,7 +2885,7 @@
         "tags": [
           "Iterations"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "iterations",
         "x-ms-vss-method": "DeleteTeamIteration",
         "description": "Delete a team's iteration by iterationId",
@@ -3227,7 +2947,7 @@
         "tags": [
           "Iterations"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "iterations",
         "x-ms-vss-method": "GetTeamIteration",
         "description": "Get team's iteration by iterationId",
@@ -3297,7 +3017,7 @@
         "tags": [
           "Capacities"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "capacities",
         "x-ms-vss-method": "GetCapacitiesWithIdentityRef",
         "description": "Get a team's capacity",
@@ -3368,7 +3088,7 @@
         "tags": [
           "Capacities"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "capacities",
         "x-ms-vss-method": "ReplaceCapacitiesWithIdentityRef",
         "description": "Replace a team's capacity",
@@ -3456,7 +3176,7 @@
         "tags": [
           "Capacities"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "capacities",
         "x-ms-vss-method": "GetCapacityWithIdentityRef",
         "description": "Get a team member's capacity",
@@ -3532,7 +3252,7 @@
         "tags": [
           "Capacities"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "capacities",
         "x-ms-vss-method": "UpdateCapacityWithIdentityRef",
         "description": "Update a team member's capacity",
@@ -3622,7 +3342,7 @@
         "tags": [
           "Teamdaysoff"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "teamdaysoff",
         "x-ms-vss-method": "GetTeamDaysOff",
         "description": "Get team's days off for an iteration",
@@ -3690,7 +3410,7 @@
         "tags": [
           "Teamdaysoff"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "teamdaysoff",
         "x-ms-vss-method": "UpdateTeamDaysOff",
         "description": "Set a team's days off for an iteration",
@@ -3775,7 +3495,7 @@
         "tags": [
           "Iterations"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "workitems",
         "x-ms-vss-method": "GetIterationWorkItems",
         "x-ms-preview": true,
@@ -3846,7 +3566,7 @@
         "tags": [
           "Teamfieldvalues"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "teamfieldvalues",
         "x-ms-vss-method": "GetTeamFieldValues",
         "description": "Get a collection of team field values",
@@ -3906,7 +3626,7 @@
         "tags": [
           "Teamfieldvalues"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "teamfieldvalues",
         "x-ms-vss-method": "UpdateTeamFieldValues",
         "description": "Update team field values",
@@ -3983,7 +3703,7 @@
         "tags": [
           "Workitemsorder"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "workitemsorder",
         "x-ms-vss-method": "ReorderBacklogWorkItems",
         "x-ms-preview": true,
@@ -4062,8 +3782,8 @@
       "type": "object",
       "properties": {
         "capacityPerDay": {
-          "type": "number",
-          "format": "float"
+          "type": "string",
+          "format": "Single"
         },
         "name": {
           "type": "string"
@@ -5020,18 +4740,6 @@
         }
       }
     },
-    "ITaskboardColumnMapping": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "state": {
-          "type": "string"
-        },
-        "workItemType": {
-          "type": "string"
-        }
-      }
-    },
     "IterationWorkItems": {
       "description": "Represents work items in an iteration backlog",
       "type": "object",
@@ -5461,95 +5169,6 @@
         },
         "settings": {
           "$ref": "#/definitions/attribute"
-        }
-      }
-    },
-    "TaskboardColumn": {
-      "description": "Represents the taskbord column",
-      "type": "object",
-      "properties": {
-        "id": {
-          "description": "Column ID",
-          "type": "string",
-          "format": "uuid"
-        },
-        "mappings": {
-          "description": "Work item type states mapped to this column to support auto state update when column is updated.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ITaskboardColumnMapping"
-          }
-        },
-        "name": {
-          "description": "Column name",
-          "type": "string"
-        },
-        "order": {
-          "description": "Column position relative to other columns in the same board",
-          "type": "integer",
-          "format": "int32"
-        }
-      }
-    },
-    "TaskboardColumnMapping": {
-      "description": "Represents the state to column mapping per work item type This allows auto state update when the column changes",
-      "type": "object",
-      "properties": {
-        "state": {
-          "description": "State of the work item type mapped to the column",
-          "type": "string"
-        },
-        "workItemType": {
-          "description": "Work Item Type name who's state is mapped to the column",
-          "type": "string"
-        }
-      }
-    },
-    "TaskboardColumns": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "columns": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/TaskboardColumn"
-          }
-        },
-        "isCustomized": {
-          "description": "Are the columns cutomized for this team",
-          "type": "boolean"
-        },
-        "isValid": {
-          "description": "Specifies if the referenced WIT and State is valid",
-          "type": "boolean"
-        },
-        "validationMesssage": {
-          "description": "Details of validation failure if the state to column mapping is invalid",
-          "type": "string"
-        }
-      }
-    },
-    "TaskboardWorkItemColumn": {
-      "description": "Column value of a work item in the taskboard",
-      "type": "object",
-      "properties": {
-        "column": {
-          "description": "Work item column value in the taskboard",
-          "type": "string"
-        },
-        "columnId": {
-          "description": "Work item column id in the taskboard",
-          "type": "string",
-          "format": "uuid"
-        },
-        "state": {
-          "description": "Work Item state value",
-          "type": "string"
-        },
-        "workItemId": {
-          "description": "Work item id",
-          "type": "integer",
-          "format": "int32"
         }
       }
     },
@@ -6265,42 +5884,6 @@
         }
       }
     },
-    "UpdateTaskboardColumn": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "id": {
-          "description": "Column ID, keep it null for new column",
-          "type": "string",
-          "format": "uuid"
-        },
-        "mappings": {
-          "description": "Work item type states mapped to this column to support auto state update when column is updated.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/TaskboardColumnMapping"
-          }
-        },
-        "name": {
-          "description": "Column name is required",
-          "type": "string"
-        },
-        "order": {
-          "description": "Column position relative to other columns in the same board",
-          "type": "integer",
-          "format": "int32"
-        }
-      }
-    },
-    "UpdateTaskboardWorkItemColumn": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "newColumn": {
-          "type": "string"
-        }
-      }
-    },
     "VssJsonCollectionWrapper": {
       "description": "This class is used to serialized collections as a single JSON object on the wire, to avoid serializing JSON arrays directly to the client, which can be a security hole",
       "type": "object",
@@ -6536,21 +6119,21 @@
     "api-Version": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.2": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.2' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.2' to use this version of the api.",
       "required": true,
       "type": "string"
     }

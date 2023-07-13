@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0-preview"
+    "version": "5.1-preview"
   },
   "host": "pkgs.dev.azure.com",
   "x-ms-vss-area": "PyPi",
@@ -32,7 +32,7 @@
         "tags": [
           "Python"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "DeletePackageVersion",
         "x-ms-preview": true,
@@ -102,7 +102,7 @@
         "tags": [
           "Python"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "GetPackageVersion",
         "x-ms-preview": true,
@@ -179,7 +179,7 @@
         "tags": [
           "Python"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "UpdatePackageVersion",
         "x-ms-preview": true,
@@ -257,14 +257,14 @@
         "tags": [
           "Python"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "content",
         "x-ms-vss-method": "DownloadPackage",
         "x-ms-preview": true,
         "description": "Download a python package file directly. This API is intended for manual UI download options, not for programmatic access and scripting.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
         "operationId": "Python_Download Package",
         "produces": [
-          "application/octet-stream"
+          "application/json"
         ],
         "parameters": [
           {
@@ -337,7 +337,7 @@
         "tags": [
           "Python"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "DeletePackageVersionFromRecycleBin",
         "x-ms-preview": true,
@@ -401,7 +401,7 @@
         "tags": [
           "Python"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "GetPackageVersionMetadataFromRecycleBin",
         "x-ms-preview": true,
@@ -471,7 +471,7 @@
         "tags": [
           "Python"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "RestorePackageVersionFromRecycleBin",
         "x-ms-preview": true,
@@ -809,7 +809,7 @@
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     }

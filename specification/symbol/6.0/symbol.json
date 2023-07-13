@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0-preview"
+    "version": "5.1-preview"
   },
   "host": "artifacts.dev.azure.com",
   "x-ms-vss-area": "Symbol",
@@ -45,7 +45,7 @@
         "tags": [
           "Availability"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "availability",
         "x-ms-vss-method": "CheckAvailabilityAsync",
         "x-ms-preview": true,
@@ -75,7 +75,7 @@
         "tags": [
           "Client"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "client",
         "x-ms-vss-method": "HeadClient",
         "x-ms-preview": true,
@@ -105,7 +105,7 @@
         "tags": [
           "Client"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "client",
         "x-ms-vss-method": "GetClient",
         "x-ms-preview": true,
@@ -156,7 +156,7 @@
         "tags": [
           "Requests"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "requests",
         "x-ms-vss-method": "CreateRequestsAsync",
         "x-ms-preview": true,
@@ -220,7 +220,7 @@
         "tags": [
           "Requests"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "requests",
         "x-ms-vss-method": "DeleteRequestsRequestNameAsync",
         "x-ms-preview": true,
@@ -269,7 +269,7 @@
         "tags": [
           "Requests"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "requests",
         "x-ms-vss-method": "GetRequestsRequestNameAsync",
         "x-ms-preview": true,
@@ -323,7 +323,7 @@
         "tags": [
           "Requests"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "requests",
         "x-ms-vss-method": "UpdateRequestsRequestNameAsync",
         "x-ms-preview": true,
@@ -397,7 +397,7 @@
         "tags": [
           "Requests"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "requests",
         "x-ms-vss-method": "CreateRequestsRequestIdDebugEntriesAsync",
         "x-ms-preview": true,
@@ -490,7 +490,7 @@
         "tags": [
           "Requests"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "requests",
         "x-ms-vss-method": "DeleteRequestsRequestIdAsync",
         "x-ms-preview": true,
@@ -544,7 +544,7 @@
         "tags": [
           "Requests"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "requests",
         "x-ms-vss-method": "GetRequestsRequestIdAsync",
         "x-ms-preview": true,
@@ -603,7 +603,7 @@
         "tags": [
           "Requests"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "requests",
         "x-ms-vss-method": "UpdateRequestsRequestIdAsync",
         "x-ms-preview": true,
@@ -682,7 +682,7 @@
         "tags": [
           "Symsrv"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "symsrv",
         "x-ms-vss-method": "GetSymSrvDebugEntryClientKeyAsync",
         "x-ms-preview": true,
@@ -731,7 +731,7 @@
         "tags": [
           "Requests"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "requests",
         "x-ms-vss-method": "CreateRequestsRequestNameDebugEntriesAsync",
         "x-ms-preview": true,
@@ -902,11 +902,6 @@
           "description": "The identifier of symbol request to which this debug entry belongs.",
           "type": "string"
         },
-        "size": {
-          "description": "The size for the debug entry.",
-          "type": "integer",
-          "format": "int64"
-        },
         "status": {
           "description": "The status of debug entry.",
           "enum": [
@@ -1042,11 +1037,6 @@
           "description": "A human-facing name for the request. Required on POST, ignored on PATCH.",
           "type": "string"
         },
-        "size": {
-          "description": "The total Size for this request.",
-          "type": "integer",
-          "format": "int64"
-        },
         "status": {
           "description": "The status for this request.",
           "enum": [
@@ -1112,7 +1102,7 @@
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     }

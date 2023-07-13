@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0-preview"
+    "version": "5.1-preview"
   },
   "host": "pkgs.dev.azure.com",
   "x-ms-vss-area": "NuGet",
@@ -32,7 +32,7 @@
         "tags": [
           "NuGet"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "DeletePackageVersion",
         "x-ms-preview": true,
@@ -102,7 +102,7 @@
         "tags": [
           "NuGet"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "GetPackageVersion",
         "x-ms-preview": true,
@@ -179,7 +179,7 @@
         "tags": [
           "NuGet"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "UpdatePackageVersion",
         "x-ms-preview": true,
@@ -257,11 +257,11 @@
         "tags": [
           "NuGet"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "content",
         "x-ms-vss-method": "DownloadPackage",
         "x-ms-preview": true,
-        "description": "Download a package version directly.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Download a package version directly.  This API is intended for manual UI download options, not for programmatic access and scripting.  You may be heavily throttled if accessing this api for scripting purposes.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
         "operationId": "NuGet_Download Package",
         "produces": [
           "application/octet-stream"
@@ -337,7 +337,7 @@
         "tags": [
           "NuGet"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "packagesBatch",
         "x-ms-vss-method": "UpdatePackageVersions",
         "x-ms-preview": true,
@@ -401,7 +401,7 @@
         "tags": [
           "NuGet"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "DeletePackageVersionFromRecycleBin",
         "x-ms-preview": true,
@@ -465,7 +465,7 @@
         "tags": [
           "NuGet"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "GetPackageVersionMetadataFromRecycleBin",
         "x-ms-preview": true,
@@ -535,7 +535,7 @@
         "tags": [
           "NuGet"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "RestorePackageVersionFromRecycleBin",
         "x-ms-preview": true,
@@ -897,7 +897,7 @@
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     }

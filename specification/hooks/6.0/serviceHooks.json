@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0"
+    "version": "5.1"
   },
   "host": "dev.azure.com",
   "x-ms-vss-area": "ServiceHooks",
@@ -43,7 +43,7 @@
         "tags": [
           "Consumers"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "consumers",
         "x-ms-vss-method": "ListConsumers",
         "description": "Get a list of available service hook consumer services. Optionally filter by consumers that support at least one event type from the specific publisher.",
@@ -93,7 +93,7 @@
         "tags": [
           "Consumers"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "consumers",
         "x-ms-vss-method": "GetConsumer",
         "description": "Get a specific consumer service. Optionally filter out consumer actions that do not support any event types for the specified publisher.",
@@ -147,7 +147,7 @@
         "tags": [
           "Consumers"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "actions",
         "x-ms-vss-method": "ListConsumerActions",
         "description": "Get a list of consumer actions for a specific consumer.",
@@ -204,7 +204,7 @@
         "tags": [
           "Consumers"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "actions",
         "x-ms-vss-method": "GetConsumerAction",
         "description": "Get details about a specific consumer action.",
@@ -265,7 +265,7 @@
         "tags": [
           "Notifications"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "notificationsQuery",
         "x-ms-vss-method": "QueryNotifications",
         "description": "Query for notifications. A notification includes details about the event, the request to and the response from the consumer service.",
@@ -312,7 +312,7 @@
         "tags": [
           "Publishers"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "publishers",
         "x-ms-vss-method": "ListPublishers",
         "description": "Get a list of publishers.",
@@ -355,7 +355,7 @@
         "tags": [
           "Publishers"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "publishers",
         "x-ms-vss-method": "GetPublisher",
         "description": "Get a specific service hooks publisher.",
@@ -397,7 +397,7 @@
         "tags": [
           "Publishers"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "eventTypes",
         "x-ms-vss-method": "ListEventTypes",
         "description": "Get the event types for a specific publisher.",
@@ -447,7 +447,7 @@
         "tags": [
           "Publishers"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "eventTypes",
         "x-ms-vss-method": "GetEventType",
         "description": "Get a specific event type.",
@@ -501,7 +501,7 @@
         "tags": [
           "Publishers"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "publisherInputValuesQuery",
         "x-ms-vss-method": "QueryInputValues",
         "description": "",
@@ -555,7 +555,7 @@
         "tags": [
           "Publishers"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "publishersQuery",
         "x-ms-vss-method": "QueryPublishers",
         "description": "Query for service hook publishers.",
@@ -602,7 +602,7 @@
         "tags": [
           "Subscriptions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "subscriptions",
         "x-ms-vss-method": "CreateSubscription",
         "description": "Create a subscription.",
@@ -652,7 +652,7 @@
         "tags": [
           "Subscriptions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "subscriptions",
         "x-ms-vss-method": "ListSubscriptions",
         "description": "Get a list of subscriptions.",
@@ -723,7 +723,7 @@
         "tags": [
           "Subscriptions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "subscriptions",
         "x-ms-vss-method": "DeleteSubscription",
         "description": "Delete a specific service hooks subscription.",
@@ -763,7 +763,7 @@
         "tags": [
           "Subscriptions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "subscriptions",
         "x-ms-vss-method": "GetSubscription",
         "description": "Get a specific service hooks subscription.",
@@ -809,7 +809,7 @@
         "tags": [
           "Subscriptions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "subscriptions",
         "x-ms-vss-method": "ReplaceSubscription",
         "description": "Update a subscription. <param name=\"subscriptionId\">ID for a subscription that you wish to update.</param>",
@@ -870,7 +870,7 @@
         "tags": [
           "Diagnostics"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "diagnostics",
         "x-ms-vss-method": "GetSubscriptionDiagnostics",
         "x-ms-preview": true,
@@ -916,7 +916,7 @@
         "tags": [
           "Diagnostics"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "diagnostics",
         "x-ms-vss-method": "UpdateSubscriptionDiagnostics",
         "x-ms-preview": true,
@@ -976,7 +976,7 @@
         "tags": [
           "Notifications"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "notifications",
         "x-ms-vss-method": "GetNotifications",
         "description": "Get a list of notifications for a specific subscription. A notification includes details about the event, the request to and the response from the consumer service.",
@@ -1098,7 +1098,7 @@
         "tags": [
           "Notifications"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "notifications",
         "x-ms-vss-method": "GetNotification",
         "description": "Get a specific notification for a subscription.",
@@ -1149,7 +1149,7 @@
         "tags": [
           "Subscriptions"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "subscriptionsQuery",
         "x-ms-vss-method": "CreateSubscriptionsQuery",
         "description": "Query for service hook subscriptions.",
@@ -1196,7 +1196,7 @@
         "tags": [
           "Notifications"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "testNotifications",
         "x-ms-vss-method": "CreateTestNotification",
         "description": "Sends a test notification. This is useful for verifying the configuration of an updated or new service hooks subscription.",
@@ -2761,14 +2761,14 @@
     "api-Version": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     }

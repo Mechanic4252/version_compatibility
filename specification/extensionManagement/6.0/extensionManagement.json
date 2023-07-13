@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0-preview"
+    "version": "5.1-preview"
   },
   "host": "extmgmt.dev.azure.com",
   "x-ms-vss-area": "ExtensionManagement",
@@ -32,7 +32,7 @@
         "tags": [
           "Installed Extensions"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "installedExtensions",
         "x-ms-vss-method": "GetInstalledExtensions",
         "x-ms-preview": true,
@@ -110,7 +110,7 @@
         "tags": [
           "Installed Extensions"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "installedExtensions",
         "x-ms-vss-method": "UpdateInstalledExtension",
         "x-ms-preview": true,
@@ -165,7 +165,7 @@
         "tags": [
           "Installed Extensions"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "installedExtensionsByName",
         "x-ms-vss-method": "GetInstalledExtensionByName",
         "x-ms-preview": true,
@@ -233,7 +233,7 @@
         "tags": [
           "Installed Extensions"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "installedExtensionsByName",
         "x-ms-vss-method": "UninstallExtensionByName",
         "x-ms-preview": true,
@@ -303,7 +303,7 @@
         "tags": [
           "Installed Extensions"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "installedExtensionsByName",
         "x-ms-vss-method": "InstallExtensionByName",
         "x-ms-preview": true,
@@ -2531,8 +2531,8 @@
       "properties": {
         "duration": {
           "description": "The total time the data provider took to resolve its data (in milliseconds)",
-          "type": "number",
-          "format": "float"
+          "type": "string",
+          "format": "Single"
         },
         "error": {
           "type": "string"
@@ -2623,7 +2623,7 @@
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     }

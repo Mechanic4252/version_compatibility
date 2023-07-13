@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0-preview"
+    "version": "5.1-preview"
   },
   "host": "pkgs.dev.azure.com",
   "x-ms-vss-area": "UPack",
@@ -28,16 +28,16 @@
     "https"
   ],
   "paths": {
-    "/{organization}/{project}/_apis/packaging/feeds/{feedId}/upack/packages/{packageName}/versions/{packageVersion}": {
+    "/{organization}/_apis/packaging/feeds/{feedId}/upack/packages/{packageName}/versions/{packageVersion}": {
       "delete": {
         "tags": [
           "Universal"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "DeletePackageVersion",
         "x-ms-preview": true,
-        "description": "Delete a package version from a feed's recycle bin.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Delete a package version from a feed's recycle bin.",
         "operationId": "Universal_Delete Package Version",
         "produces": [
           "application/json"
@@ -72,14 +72,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -103,11 +95,11 @@
         "tags": [
           "Universal"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "GetPackageVersion",
         "x-ms-preview": true,
-        "description": "Show information about a package version.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Show information about a package version.",
         "operationId": "Universal_Get Package Version",
         "produces": [
           "application/json"
@@ -142,14 +134,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "in": "query",
             "name": "showDeleted",
             "description": "True to show information for deleted versions",
@@ -180,11 +164,11 @@
         "tags": [
           "Universal"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "versions",
         "x-ms-vss-method": "UpdatePackageVersion",
         "x-ms-preview": true,
-        "description": "Update information for a package version.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Update information for a package version.",
         "operationId": "Universal_Update Package Version",
         "consumes": [
           "application/json"
@@ -228,14 +212,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -253,16 +229,16 @@
         ]
       }
     },
-    "/{organization}/{project}/_apis/packaging/feeds/{feedId}/upack/RecycleBin/packages/{packageName}/versions/{packageVersion}": {
+    "/{organization}/_apis/packaging/feeds/{feedId}/upack/RecycleBin/packages/{packageName}/versions/{packageVersion}": {
       "delete": {
         "tags": [
           "Universal"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "DeletePackageVersionFromRecycleBin",
         "x-ms-preview": true,
-        "description": "Delete a package version from the recycle bin.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Delete a package version from the recycle bin.",
         "operationId": "Universal_Delete Package Version From Recycle Bin",
         "parameters": [
           {
@@ -294,14 +270,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -322,11 +290,11 @@
         "tags": [
           "Universal"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "GetPackageVersionMetadataFromRecycleBin",
         "x-ms-preview": true,
-        "description": "Get information about a package version in the recycle bin.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Get information about a package version in the recycle bin.",
         "operationId": "Universal_GetPackageVersionFromRecycleBin",
         "produces": [
           "application/json"
@@ -361,14 +329,6 @@
             "type": "string"
           },
           {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
             "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
@@ -392,11 +352,11 @@
         "tags": [
           "Universal"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "recycleBinVersions",
         "x-ms-vss-method": "RestorePackageVersionFromRecycleBin",
         "x-ms-preview": true,
-        "description": "Restore a package version from the recycle bin to its associated feed.\n\nThe project parameter must be supplied if the feed was created in a project.\nIf the feed is not associated with any project, omit the project parameter from the request.",
+        "description": "Restore a package version from the recycle bin to its associated feed.",
         "operationId": "Universal_Restore Package Version From Recycle Bin",
         "consumes": [
           "application/json"
@@ -437,14 +397,6 @@
             "name": "packageVersion",
             "description": "Version of the package.",
             "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
             "type": "string"
           },
           {
@@ -680,7 +632,7 @@
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     }

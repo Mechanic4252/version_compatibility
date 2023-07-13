@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0"
+    "version": "5.1"
   },
   "host": "dev.azure.com",
   "x-ms-vss-area": "TaskAgent",
@@ -31,15 +31,6 @@
     },
     {
       "name": "Deploymentgroups"
-    },
-    {
-      "name": "Environmentdeployment Records"
-    },
-    {
-      "name": "Environments"
-    },
-    {
-      "name": "Kubernetes"
     },
     {
       "name": "Pools",
@@ -62,12 +53,6 @@
       "name": "Variablegroups"
     },
     {
-      "name": "Virtualmachinegroups"
-    },
-    {
-      "name": "Virtualmachines"
-    },
-    {
       "name": "Yamlschema"
     }
   ],
@@ -80,7 +65,7 @@
         "tags": [
           "Agentclouds"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "agentclouds",
         "x-ms-vss-method": "AddAgentCloud",
         "x-ms-preview": true,
@@ -126,7 +111,7 @@
         "tags": [
           "Agentclouds"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "agentclouds",
         "x-ms-vss-method": "GetAgentClouds",
         "x-ms-preview": true,
@@ -165,7 +150,7 @@
         "tags": [
           "Agentclouds"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "agentclouds",
         "x-ms-vss-method": "DeleteAgentCloud",
         "x-ms-preview": true,
@@ -207,7 +192,7 @@
         "tags": [
           "Agentclouds"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "agentclouds",
         "x-ms-vss-method": "GetAgentCloud",
         "x-ms-preview": true,
@@ -244,60 +229,6 @@
             }
           }
         }
-      },
-      "patch": {
-        "tags": [
-          "Agentclouds"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "agentclouds",
-        "x-ms-vss-method": "UpdateAgentCloud",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Agentclouds_Update",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/TaskAgentCloud"
-            }
-          },
-          {
-            "in": "path",
-            "name": "agentCloudId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/TaskAgentCloud"
-            }
-          }
-        }
       }
     },
     "/{organization}/_apis/distributedtask/agentclouds/{agentCloudId}/requests": {
@@ -305,7 +236,7 @@
         "tags": [
           "Requests"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "requests",
         "x-ms-vss-method": "GetAgentCloudRequests",
         "x-ms-preview": true,
@@ -352,7 +283,7 @@
         "tags": [
           "Agentcloudtypes"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "agentcloudtypes",
         "x-ms-vss-method": "GetAgentCloudTypes",
         "x-ms-preview": true,
@@ -391,7 +322,7 @@
         "tags": [
           "Pools"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "pools",
         "x-ms-vss-method": "AddAgentPool",
         "description": "Create an agent pool.",
@@ -443,7 +374,7 @@
         "tags": [
           "Pools"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "pools",
         "x-ms-vss-method": "GetAgentPoolsByIds",
         "description": "Get a list of agent pools.",
@@ -525,7 +456,7 @@
         "tags": [
           "Pools"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "pools",
         "x-ms-vss-method": "DeleteAgentPool",
         "description": "Delete an agent pool.",
@@ -567,7 +498,7 @@
         "tags": [
           "Pools"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "pools",
         "x-ms-vss-method": "GetAgentPool",
         "description": "Get information about an agent pool.",
@@ -652,7 +583,7 @@
         "tags": [
           "Pools"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "pools",
         "x-ms-vss-method": "UpdateAgentPool",
         "description": "Update properties on an agent pool",
@@ -714,7 +645,7 @@
         "tags": [
           "Agents"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "agents",
         "x-ms-vss-method": "AddAgent",
         "description": "Adds an agent to a pool.  You probably don't want to call this endpoint directly. Instead, [configure an agent](https://docs.microsoft.com/azure/devops/pipelines/agents/agents) using the agent download package.",
@@ -774,7 +705,7 @@
         "tags": [
           "Agents"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "agents",
         "x-ms-vss-method": "GetAgents",
         "description": "Get a list of agents.",
@@ -871,7 +802,7 @@
         "tags": [
           "Agents"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "agents",
         "x-ms-vss-method": "DeleteAgent",
         "description": "Delete an agent.  You probably don't want to call this endpoint directly. Instead, [use the agent configuration script](https://docs.microsoft.com/azure/devops/pipelines/agents/agents) to remove an agent from your organization.",
@@ -921,7 +852,7 @@
         "tags": [
           "Agents"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "agents",
         "x-ms-vss-method": "GetAgent",
         "description": "Get information about an agent.",
@@ -1006,7 +937,7 @@
         "tags": [
           "Agents"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "agents",
         "x-ms-vss-method": "ReplaceAgent",
         "description": "Replace an agent.  You probably don't want to call this endpoint directly. Instead, [use the agent configuration script](https://docs.microsoft.com/azure/devops/pipelines/agents/agents) to remove and reconfigure an agent from your organization.",
@@ -1074,7 +1005,7 @@
         "tags": [
           "Agents"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "agents",
         "x-ms-vss-method": "UpdateAgent",
         "description": "Update agent details.",
@@ -1139,214 +1070,15 @@
         ]
       }
     },
-    "/{organization}/_apis/distributedtask/variablegroups": {
-      "post": {
-        "tags": [
-          "Variablegroups"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.2",
-        "x-ms-vss-resource": "variablegroups",
-        "x-ms-vss-method": "AddVariableGroup",
-        "x-ms-preview": true,
-        "description": "Add a variable group.",
-        "operationId": "Variablegroups_Add",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/VariableGroupParameters"
-            }
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.2"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/VariableGroup"
-            }
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Variablegroups"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.2",
-        "x-ms-vss-resource": "variablegroups",
-        "x-ms-vss-method": "ShareVariableGroup",
-        "x-ms-preview": true,
-        "description": "Add a variable group.",
-        "operationId": "Variablegroups_Share Variable Group",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/VariableGroupProjectReference"
-              }
-            }
-          },
-          {
-            "in": "query",
-            "name": "variableGroupId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.2"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation"
-          }
-        }
-      }
-    },
-    "/{organization}/_apis/distributedtask/variablegroups/{groupId}": {
-      "delete": {
-        "tags": [
-          "Variablegroups"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.2",
-        "x-ms-vss-resource": "variablegroups",
-        "x-ms-vss-method": "DeleteVariableGroup",
-        "x-ms-preview": true,
-        "description": "Delete a variable group",
-        "operationId": "Variablegroups_Delete",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "groupId",
-            "description": "Id of the variable group.",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "projectIds",
-            "description": "",
-            "required": true,
-            "type": "string",
-            "format": "array (string)"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.2"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation"
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Variablegroups"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.2",
-        "x-ms-vss-resource": "variablegroups",
-        "x-ms-vss-method": "UpdateVariableGroup",
-        "x-ms-preview": true,
-        "description": "Update a variable group.",
-        "operationId": "Variablegroups_Update",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/VariableGroupParameters"
-            }
-          },
-          {
-            "in": "path",
-            "name": "groupId",
-            "description": "Id of the variable group to update.",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.2"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/VariableGroup"
-            }
-          }
-        }
-      }
-    },
     "/{organization}/_apis/distributedtask/yamlschema": {
       "get": {
         "tags": [
           "Yamlschema"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "yamlschema",
         "x-ms-vss-method": "GetYamlSchema",
-        "description": "GET the Yaml schema used for Yaml file validation.",
+        "description": "",
         "operationId": "Yamlschema_Get",
         "produces": [
           "application/json"
@@ -1359,13 +1091,6 @@
             "required": true,
             "x-ms-required": false,
             "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "validateTaskNames",
-            "description": "Whether the schema should validate that tasks are actually installed (useful for offline tools where you don't want validation).",
-            "required": false,
-            "type": "boolean"
           },
           {
             "$ref": "#/parameters/api-Version"
@@ -1386,7 +1111,7 @@
         "tags": [
           "Deploymentgroups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "deploymentgroups",
         "x-ms-vss-method": "AddDeploymentGroup",
         "x-ms-preview": true,
@@ -1451,7 +1176,7 @@
         "tags": [
           "Deploymentgroups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "deploymentgroups",
         "x-ms-vss-method": "GetDeploymentGroups",
         "x-ms-preview": true,
@@ -1606,7 +1331,7 @@
         "tags": [
           "Deploymentgroups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "deploymentgroups",
         "x-ms-vss-method": "DeleteDeploymentGroup",
         "x-ms-preview": true,
@@ -1661,7 +1386,7 @@
         "tags": [
           "Deploymentgroups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "deploymentgroups",
         "x-ms-vss-method": "GetDeploymentGroup",
         "x-ms-preview": true,
@@ -1780,7 +1505,7 @@
         "tags": [
           "Deploymentgroups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "deploymentgroups",
         "x-ms-vss-method": "UpdateDeploymentGroup",
         "x-ms-preview": true,
@@ -1855,7 +1580,7 @@
         "tags": [
           "Targets"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "targets",
         "x-ms-vss-method": "GetDeploymentTargets",
         "x-ms-preview": true,
@@ -2083,7 +1808,7 @@
         "tags": [
           "Targets"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "targets",
         "x-ms-vss-method": "UpdateDeploymentTargets",
         "x-ms-preview": true,
@@ -2164,7 +1889,7 @@
         "tags": [
           "Targets"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "targets",
         "x-ms-vss-method": "DeleteDeploymentTarget",
         "x-ms-preview": true,
@@ -2227,7 +1952,7 @@
         "tags": [
           "Targets"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "targets",
         "x-ms-vss-method": "GetDeploymentTarget",
         "x-ms-preview": true,
@@ -2327,966 +2052,12 @@
         }
       }
     },
-    "/{organization}/{project}/_apis/distributedtask/environments": {
-      "post": {
-        "tags": [
-          "Environments"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "environments",
-        "x-ms-vss-method": "AddEnvironment",
-        "x-ms-preview": true,
-        "description": "Create an environment.",
-        "operationId": "Environments_Add",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Environment to create.",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/EnvironmentCreateParameter"
-            }
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/EnvironmentInstance"
-            }
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Environments"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "environments",
-        "x-ms-vss-method": "GetEnvironments",
-        "x-ms-preview": true,
-        "description": "Get all environments.",
-        "operationId": "Environments_List",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "name",
-            "description": "",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "continuationToken",
-            "description": "",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "$top",
-            "description": "",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/EnvironmentInstance"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/{organization}/{project}/_apis/distributedtask/environments/{environmentId}": {
-      "delete": {
-        "tags": [
-          "Environments"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "environments",
-        "x-ms-vss-method": "DeleteEnvironment",
-        "x-ms-preview": true,
-        "description": "Delete the specified environment.",
-        "operationId": "Environments_Delete",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "environmentId",
-            "description": "ID of the environment.",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Environments"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "environments",
-        "x-ms-vss-method": "GetEnvironmentById",
-        "x-ms-preview": true,
-        "description": "Get an environment by its ID.",
-        "operationId": "Environments_Get",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "environmentId",
-            "description": "ID of the environment.",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "expands",
-            "description": "Include these additional details in the returned objects.",
-            "required": false,
-            "type": "string",
-            "enum": [
-              "none",
-              "resourceReferences"
-            ],
-            "x-ms-enum": {
-              "name": "EnvironmentExpands",
-              "values": [
-                {
-                  "value": "none",
-                  "description": "No additional properties"
-                },
-                {
-                  "value": "resourceReferences",
-                  "description": "Include resource references referring to the environment."
-                }
-              ]
-            }
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/EnvironmentInstance"
-            }
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Environments"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "environments",
-        "x-ms-vss-method": "UpdateEnvironment",
-        "x-ms-preview": true,
-        "description": "Update the specified environment.",
-        "operationId": "Environments_Update",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Environment data to update.",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/EnvironmentUpdateParameter"
-            }
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "environmentId",
-            "description": "ID of the environment.",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/EnvironmentInstance"
-            }
-          }
-        }
-      }
-    },
-    "/{organization}/{project}/_apis/distributedtask/environments/{environmentId}/environmentdeploymentrecords": {
-      "get": {
-        "tags": [
-          "Environmentdeployment Records"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "environmentdeploymentRecords",
-        "x-ms-vss-method": "GetEnvironmentDeploymentExecutionRecords",
-        "x-ms-preview": true,
-        "description": "Get environment deployment execution history",
-        "operationId": "Environmentdeployment Records_List",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "environmentId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "continuationToken",
-            "description": "",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "top",
-            "description": "",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/EnvironmentDeploymentExecutionRecord"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/{organization}/{project}/_apis/distributedtask/environments/{environmentId}/providers/kubernetes": {
-      "post": {
-        "tags": [
-          "Kubernetes"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "kubernetes",
-        "x-ms-vss-method": "AddKubernetesResource",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Kubernetes_Add",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/KubernetesResourceCreateParameters"
-            }
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "environmentId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/KubernetesResource"
-            }
-          }
-        }
-      }
-    },
-    "/{organization}/{project}/_apis/distributedtask/environments/{environmentId}/providers/kubernetes/{resourceId}": {
-      "delete": {
-        "tags": [
-          "Kubernetes"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "kubernetes",
-        "x-ms-vss-method": "DeleteKubernetesResource",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Kubernetes_Delete",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "environmentId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "path",
-            "name": "resourceId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Kubernetes"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "kubernetes",
-        "x-ms-vss-method": "GetKubernetesResource",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Kubernetes_Get",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "environmentId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "path",
-            "name": "resourceId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/KubernetesResource"
-            }
-          }
-        }
-      }
-    },
-    "/{organization}/{project}/_apis/distributedtask/environments/{environmentId}/providers/virtualmachinegroups": {
-      "post": {
-        "tags": [
-          "Virtualmachinegroups"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "virtualmachinegroups",
-        "x-ms-vss-method": "AddVirtualMachineGroup",
-        "x-ms-preview": true,
-        "deprecated": true,
-        "description": "",
-        "operationId": "Virtualmachinegroups_Add",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/VirtualMachineGroupCreateParameters"
-            }
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "environmentId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/VirtualMachineGroup"
-            }
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Virtualmachinegroups"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "virtualmachinegroups",
-        "x-ms-vss-method": "UpdateVirtualMachineGroup",
-        "x-ms-preview": true,
-        "deprecated": true,
-        "description": "",
-        "operationId": "Virtualmachinegroups_Update",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/VirtualMachineGroup"
-            }
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "environmentId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/VirtualMachineGroup"
-            }
-          }
-        }
-      }
-    },
-    "/{organization}/{project}/_apis/distributedtask/environments/{environmentId}/providers/virtualmachinegroups/{resourceId}": {
-      "delete": {
-        "tags": [
-          "Virtualmachinegroups"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "virtualmachinegroups",
-        "x-ms-vss-method": "DeleteVirtualMachineGroup",
-        "x-ms-preview": true,
-        "deprecated": true,
-        "description": "",
-        "operationId": "Virtualmachinegroups_Delete",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "environmentId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "path",
-            "name": "resourceId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Virtualmachinegroups"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "virtualmachinegroups",
-        "x-ms-vss-method": "GetVirtualMachineGroup",
-        "x-ms-preview": true,
-        "deprecated": true,
-        "description": "",
-        "operationId": "Virtualmachinegroups_Get",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "environmentId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "path",
-            "name": "resourceId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/VirtualMachineGroup"
-            }
-          }
-        }
-      }
-    },
-    "/{organization}/{project}/_apis/distributedtask/environments/{environmentId}/providers/virtualmachinegroups/{resourceId}/virtualmachines": {
-      "get": {
-        "tags": [
-          "Virtualmachines"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "virtualmachines",
-        "x-ms-vss-method": "GetVirtualMachines",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Virtualmachines_List",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "environmentId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "path",
-            "name": "resourceId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "query",
-            "name": "continuationToken",
-            "description": "",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "name",
-            "description": "",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "partialNameMatch",
-            "description": "",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "in": "query",
-            "name": "tags",
-            "description": "",
-            "required": false,
-            "type": "string",
-            "format": "array (string)"
-          },
-          {
-            "in": "query",
-            "name": "$top",
-            "description": "",
-            "required": false,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/VirtualMachine"
-              }
-            }
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Virtualmachines"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "virtualmachines",
-        "x-ms-vss-method": "UpdateVirtualMachines",
-        "x-ms-preview": true,
-        "description": "",
-        "operationId": "Virtualmachines_Update",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "",
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/VirtualMachine"
-              }
-            }
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "environmentId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "in": "path",
-            "name": "resourceId",
-            "description": "",
-            "required": true,
-            "type": "integer",
-            "format": "int32"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/VirtualMachine"
-              }
-            }
-          }
-        }
-      }
-    },
     "/{organization}/{project}/_apis/distributedtask/queues": {
       "post": {
         "tags": [
           "Queues"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "queues",
         "x-ms-vss-method": "AddAgentQueue",
         "x-ms-preview": true,
@@ -3354,12 +2125,12 @@
         "tags": [
           "Queues"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "queues",
-        "x-ms-vss-method": "GetAgentQueuesForPools",
+        "x-ms-vss-method": "GetAgentQueuesByNames",
         "x-ms-preview": true,
-        "description": "Get a list of agent queues by pool ids",
-        "operationId": "Queues_Get Agent Queues For Pools",
+        "description": "Get a list of agent queues by their names",
+        "operationId": "Queues_Get Agent Queues By Names",
         "produces": [
           "application/json"
         ],
@@ -3373,11 +2144,11 @@
           },
           {
             "in": "query",
-            "name": "poolIds",
-            "description": "A comma-separated list of pool ids to get the corresponding queues for",
+            "name": "queueNames",
+            "description": "A comma-separated list of agent names to retrieve",
             "required": true,
             "type": "string",
-            "format": "array (int32)"
+            "format": "array (string)"
           },
           {
             "in": "path",
@@ -3445,7 +2216,7 @@
         "tags": [
           "Queues"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "queues",
         "x-ms-vss-method": "DeleteAgentQueue",
         "x-ms-preview": true,
@@ -3496,7 +2267,7 @@
         "tags": [
           "Queues"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "queues",
         "x-ms-vss-method": "GetAgentQueue",
         "x-ms-preview": true,
@@ -3584,7 +2355,7 @@
         "tags": [
           "Taskgroups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "taskgroups",
         "x-ms-vss-method": "AddTaskGroup",
         "x-ms-preview": true,
@@ -3651,7 +2422,7 @@
         "tags": [
           "Taskgroups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "taskgroups",
         "x-ms-vss-method": "DeleteTaskGroup",
         "x-ms-preview": true,
@@ -3713,7 +2484,7 @@
         "tags": [
           "Taskgroups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "taskgroups",
         "x-ms-vss-method": "GetTaskGroups",
         "x-ms-preview": true,
@@ -3843,7 +2614,7 @@
         "tags": [
           "Taskgroups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "taskgroups",
         "x-ms-vss-method": "UpdateTaskGroup",
         "x-ms-preview": true,
@@ -3915,11 +2686,76 @@
       }
     },
     "/{organization}/{project}/_apis/distributedtask/variablegroups": {
+      "post": {
+        "tags": [
+          "Variablegroups"
+        ],
+        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-vss-resource": "variablegroups",
+        "x-ms-vss-method": "AddVariableGroup",
+        "x-ms-preview": true,
+        "description": "Add a variable group.",
+        "operationId": "Variablegroups_Add",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "organization",
+            "description": "The name of the Azure DevOps organization.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Variable group to add.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/VariableGroupParameters"
+            }
+          },
+          {
+            "in": "path",
+            "name": "project",
+            "description": "Project ID or project name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/api-Version-preview.1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/VariableGroup"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "vso.variablegroups_write"
+            ]
+          }
+        ],
+        "x-ms-examples": {
+          "Add a variable group": {
+            "$ref": "./httpExamples/variablegroups/POST_CreateVariableGroup.json"
+          }
+        }
+      },
       "get": {
         "tags": [
           "Variablegroups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "variablegroups",
         "x-ms-vss-method": "GetVariableGroupsById",
         "x-ms-preview": true,
@@ -3952,7 +2788,7 @@
             "format": "array (int32)"
           },
           {
-            "$ref": "#/parameters/api-Version-preview.2"
+            "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
         "responses": {
@@ -3981,11 +2817,66 @@
       }
     },
     "/{organization}/{project}/_apis/distributedtask/variablegroups/{groupId}": {
+      "delete": {
+        "tags": [
+          "Variablegroups"
+        ],
+        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-vss-resource": "variablegroups",
+        "x-ms-vss-method": "DeleteVariableGroup",
+        "x-ms-preview": true,
+        "description": "Delete a variable group",
+        "operationId": "Variablegroups_Delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "organization",
+            "description": "The name of the Azure DevOps organization.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "project",
+            "description": "Project ID or project name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "groupId",
+            "description": "Id of the variable group.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "$ref": "#/parameters/api-Version-preview.1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "vso.variablegroups_manage"
+            ]
+          }
+        ],
+        "x-ms-examples": {
+          "Delete a variable group": {
+            "$ref": "./httpExamples/variablegroups/DELETE_VariableGroup.json"
+          }
+        }
+      },
       "get": {
         "tags": [
           "Variablegroups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "variablegroups",
         "x-ms-vss-method": "GetVariableGroup",
         "x-ms-preview": true,
@@ -4018,7 +2909,7 @@
             "format": "int32"
           },
           {
-            "$ref": "#/parameters/api-Version-preview.2"
+            "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
         "responses": {
@@ -4041,6 +2932,79 @@
             "$ref": "./httpExamples/variablegroups/GET_VariableGroup.json"
           }
         }
+      },
+      "put": {
+        "tags": [
+          "Variablegroups"
+        ],
+        "x-ms-docs-override-version": "5.1-preview.1",
+        "x-ms-vss-resource": "variablegroups",
+        "x-ms-vss-method": "UpdateVariableGroup",
+        "x-ms-preview": true,
+        "description": "Update a variable group.",
+        "operationId": "Variablegroups_Update",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "organization",
+            "description": "The name of the Azure DevOps organization.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Variable group to update.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/VariableGroupParameters"
+            }
+          },
+          {
+            "in": "path",
+            "name": "project",
+            "description": "Project ID or project name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "groupId",
+            "description": "Id of the variable group to update.",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "$ref": "#/parameters/api-Version-preview.1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/VariableGroup"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "vso.variablegroups_manage"
+            ]
+          }
+        ],
+        "x-ms-examples": {
+          "Update a variable group": {
+            "$ref": "./httpExamples/variablegroups/PUT_UpdateVariableGroup.json"
+          }
+        }
       }
     }
   },
@@ -4050,7 +3014,7 @@
         "tags": [
           "Pools"
         ],
-        "x-ms-docs-override-version": "6.0",
+        "x-ms-docs-override-version": "5.1",
         "x-ms-vss-resource": "pools",
         "x-ms-vss-method": "GetAgentPools",
         "description": "Get a list of agent pools.",
@@ -4158,103 +3122,12 @@
         ]
       }
     },
-    "/{organization}/{project}/_apis/distributedtask/queues?queueNames={queueNames}": {
-      "get": {
-        "tags": [
-          "Queues"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.1",
-        "x-ms-vss-resource": "queues",
-        "x-ms-vss-method": "GetAgentQueuesByNames",
-        "x-ms-preview": true,
-        "description": "Get a list of agent queues by their names",
-        "operationId": "Queues_Get Agent Queues By Names",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "queueNames",
-            "description": "A comma-separated list of agent names to retrieve",
-            "required": true,
-            "type": "string",
-            "format": "array (string)"
-          },
-          {
-            "in": "path",
-            "name": "project",
-            "description": "Project ID or project name",
-            "required": true,
-            "x-ms-required": false,
-            "type": "string"
-          },
-          {
-            "in": "query",
-            "name": "actionFilter",
-            "description": "Filter by whether the calling user has use or manage permissions",
-            "required": false,
-            "type": "string",
-            "enum": [
-              "none",
-              "manage",
-              "use"
-            ],
-            "x-ms-enum": {
-              "name": "TaskAgentQueueActionFilter",
-              "values": [
-                {
-                  "value": "none",
-                  "description": ""
-                },
-                {
-                  "value": "manage",
-                  "description": ""
-                },
-                {
-                  "value": "use",
-                  "description": ""
-                }
-              ]
-            }
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.1"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/TaskAgentQueue"
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "oauth2": [
-              "vso.agentpools"
-            ]
-          }
-        ]
-      }
-    },
     "/{organization}/{project}/_apis/distributedtask/queues?queueIds={queueIds}": {
       "get": {
         "tags": [
           "Queues"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "queues",
         "x-ms-vss-method": "GetAgentQueuesByIds",
         "x-ms-preview": true,
@@ -4345,7 +3218,7 @@
         "tags": [
           "Queues"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "queues",
         "x-ms-vss-method": "GetAgentQueues",
         "x-ms-preview": true,
@@ -4435,7 +3308,7 @@
         "tags": [
           "Variablegroups"
         ],
-        "x-ms-docs-override-version": "6.0-preview.2",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "variablegroups",
         "x-ms-vss-method": "GetVariableGroups",
         "x-ms-preview": true,
@@ -4536,7 +3409,7 @@
             }
           },
           {
-            "$ref": "#/parameters/api-Version-preview.2"
+            "$ref": "#/parameters/api-Version-preview.1"
           }
         ],
         "responses": {
@@ -4640,6 +3513,15 @@
           "items": {
             "$ref": "#/definitions/TaskInstance"
           }
+        }
+      }
+    },
+    "AgentMigrationMessage": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "accessToken": {
+          "type": "string"
         }
       }
     },
@@ -5108,42 +3990,7 @@
           "$ref": "#/definitions/Demand"
         }
       ],
-      "properties": {
-        "source": {
-          "$ref": "#/definitions/DemandSource"
-        }
-      }
-    },
-    "DemandSource": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "sourceName": {
-          "type": "string"
-        },
-        "sourceType": {
-          "enum": [
-            "task",
-            "feature"
-          ],
-          "x-ms-enum": {
-            "name": "DemandSourceType",
-            "values": [
-              {
-                "value": "task",
-                "description": ""
-              },
-              {
-                "value": "feature",
-                "description": ""
-              }
-            ]
-          }
-        },
-        "sourceVersion": {
-          "type": "string"
-        }
-      }
+      "properties": {}
     },
     "DependencyBinding": {
       "description": "",
@@ -5499,138 +4346,6 @@
         }
       }
     },
-    "ElasticAgentPoolResizedEvent": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "newSize": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "poolId": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "poolName": {
-          "type": "string"
-        },
-        "previousSize": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "resourceId": {
-          "type": "string"
-        }
-      }
-    },
-    "ElasticPool": {
-      "description": "Data and settings for an elastic pool",
-      "type": "object",
-      "properties": {
-        "azureId": {
-          "description": "Azure string representing to location of the resource",
-          "type": "string"
-        },
-        "desiredIdle": {
-          "description": "Number of machines to have ready waiting for jobs",
-          "type": "integer",
-          "format": "int32"
-        },
-        "desiredSize": {
-          "description": "The desired size of the pool",
-          "type": "integer",
-          "format": "int32"
-        },
-        "maxCapacity": {
-          "description": "Maximum number of machines that will exist in the elastic pool",
-          "type": "integer",
-          "format": "int32"
-        },
-        "offlineSince": {
-          "description": "Timestamp the pool was first detected to be offline",
-          "type": "string",
-          "format": "date-time"
-        },
-        "osType": {
-          "description": "Operating system type of the machines in the pool",
-          "enum": [
-            "windows",
-            "linux"
-          ],
-          "x-ms-enum": {
-            "name": "OperatingSystemType",
-            "values": [
-              {
-                "value": "windows",
-                "description": ""
-              },
-              {
-                "value": "linux",
-                "description": ""
-              }
-            ]
-          }
-        },
-        "poolId": {
-          "description": "Id of the associated TaskAgentPool",
-          "type": "integer",
-          "format": "int32"
-        },
-        "preserveFailures": {
-          "description": "Keep machines in the pool on failure for investigation",
-          "type": "boolean"
-        },
-        "recycleAfterEachUse": {
-          "description": "Discard machines after each job completes",
-          "type": "boolean"
-        },
-        "serviceEndpointId": {
-          "description": "Id of the Service Endpoint used to connect to Azure",
-          "type": "string",
-          "format": "uuid"
-        },
-        "serviceEndpointScope": {
-          "description": "Scope the Service Endpoint belongs to",
-          "type": "string",
-          "format": "uuid"
-        },
-        "sizingAttempts": {
-          "description": "The number of sizing attempts executed while trying to achieve a desired size",
-          "type": "integer",
-          "format": "int32"
-        },
-        "state": {
-          "description": "State of the pool",
-          "enum": [
-            "online",
-            "offline",
-            "unhealthy",
-            "new"
-          ],
-          "x-ms-enum": {
-            "name": "ElasticPoolState",
-            "values": [
-              {
-                "value": "online",
-                "description": "Online and healthy"
-              },
-              {
-                "value": "offline",
-                "description": ""
-              },
-              {
-                "value": "unhealthy",
-                "description": ""
-              },
-              {
-                "value": "new",
-                "description": ""
-              }
-            ]
-          }
-        }
-      }
-    },
     "EndpointAuthorization": {
       "description": "",
       "type": "object",
@@ -5848,10 +4563,6 @@
           "description": "Name of the Environment.",
           "type": "string"
         },
-        "project": {
-          "description": "Project information for environment.",
-          "$ref": "#/definitions/ProjectReference"
-        },
         "resources": {
           "type": "array",
           "items": {
@@ -5915,13 +4626,6 @@
         "name": {
           "type": "string"
         },
-        "tags": {
-          "description": "Tags of the Environment Resource.",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
         "type": {
           "description": "Environment resource type",
           "enum": [
@@ -5954,77 +4658,6 @@
         }
       }
     },
-    "EnvironmentResourceDeploymentExecutionRecord": {
-      "description": "EnvironmentResourceDeploymentExecutionRecord.",
-      "type": "object",
-      "properties": {
-        "environmentId": {
-          "description": "Id of the Environment",
-          "type": "integer",
-          "format": "int32"
-        },
-        "finishTime": {
-          "description": "Finish time of the environment resource deployment execution",
-          "type": "string",
-          "format": "date-time"
-        },
-        "requestId": {
-          "description": "Id of the Environment deployment execution history record",
-          "type": "integer",
-          "format": "int64"
-        },
-        "resourceId": {
-          "description": "Resource Id",
-          "type": "integer",
-          "format": "int32"
-        },
-        "result": {
-          "description": "Result of the environment deployment execution",
-          "enum": [
-            "succeeded",
-            "succeededWithIssues",
-            "failed",
-            "canceled",
-            "skipped",
-            "abandoned"
-          ],
-          "x-ms-enum": {
-            "name": "TaskResult",
-            "values": [
-              {
-                "value": "succeeded",
-                "description": ""
-              },
-              {
-                "value": "succeededWithIssues",
-                "description": ""
-              },
-              {
-                "value": "failed",
-                "description": ""
-              },
-              {
-                "value": "canceled",
-                "description": ""
-              },
-              {
-                "value": "skipped",
-                "description": ""
-              },
-              {
-                "value": "abandoned",
-                "description": ""
-              }
-            ]
-          }
-        },
-        "startTime": {
-          "description": "Start time of the environment resource deployment execution",
-          "type": "string",
-          "format": "date-time"
-        }
-      }
-    },
     "EnvironmentResourceReference": {
       "description": "EnvironmentResourceReference.",
       "type": "object",
@@ -6037,13 +4670,6 @@
         "name": {
           "description": "Name of the resource.",
           "type": "string"
-        },
-        "tags": {
-          "description": "Tags of the Environment Resource Reference.",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
         },
         "type": {
           "description": "Type of the resource.",
@@ -6551,9 +5177,6 @@
         }
       ],
       "properties": {
-        "agentShuttingDown": {
-          "type": "boolean"
-        },
         "requestId": {
           "type": "integer",
           "format": "int64"
@@ -6831,61 +5454,9 @@
         "namespace": {
           "type": "string"
         },
-        "tags": {
-          "description": "Tags of the kubernetes resource.",
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    "KubernetesResourceCreateParametersExistingEndpoint": {
-      "description": "",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/KubernetesResourceCreateParameters"
-        }
-      ],
-      "properties": {
         "serviceEndpointId": {
           "type": "string",
           "format": "uuid"
-        }
-      }
-    },
-    "KubernetesResourceCreateParametersNewEndpoint": {
-      "description": "",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/KubernetesResourceCreateParameters"
-        }
-      ],
-      "properties": {
-        "endpoint": {
-          "$ref": "#/definitions/ServiceEndpoint"
-        }
-      }
-    },
-    "KubernetesResourcePatchParameters": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "authorizationParameters": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          }
-        },
-        "providerType": {
-          "description": "Provider type (CustomProvider or AzureKubernetesServiceProvider) of the resource to be updated",
-          "type": "string"
-        },
-        "resourceId": {
-          "type": "integer",
-          "format": "int32"
         }
       }
     },
@@ -7266,118 +5837,12 @@
         }
       }
     },
-    "ResourceLockRequest": {
-      "description": "A request for a resource's exclusive lock",
-      "type": "object",
-      "properties": {
-        "assignTime": {
-          "description": "The date/time this request was assigned.",
-          "type": "string",
-          "format": "date-time"
-        },
-        "checkRunId": {
-          "description": "The ID of the check run waiting on this request",
-          "type": "string",
-          "format": "uuid"
-        },
-        "definitionId": {
-          "description": "The ID of the pipeline that requested this resource",
-          "type": "integer",
-          "format": "int32"
-        },
-        "finishTime": {
-          "description": "The date/time this request was finished.",
-          "type": "string",
-          "format": "date-time"
-        },
-        "nodeAttempt": {
-          "description": "Attempt of the graph node",
-          "type": "integer",
-          "format": "int32"
-        },
-        "nodeName": {
-          "description": "Name of the graph node (currently stage) requesting this resource",
-          "type": "string"
-        },
-        "planId": {
-          "description": "Internal ID for the orchestration plan connected with this request.",
-          "type": "string",
-          "format": "uuid"
-        },
-        "projectId": {
-          "description": "The ID of the project of the check run and definition exist in",
-          "type": "string",
-          "format": "uuid"
-        },
-        "queueTime": {
-          "description": "The date/time this request was queued.",
-          "type": "string",
-          "format": "date-time"
-        },
-        "requestId": {
-          "description": "ID of the request.",
-          "type": "integer",
-          "format": "int64"
-        },
-        "resourceId": {
-          "description": "The id of the resource",
-          "type": "string"
-        },
-        "resourceType": {
-          "description": "The type of the resource",
-          "type": "string"
-        },
-        "status": {
-          "description": "The result of this request.",
-          "enum": [
-            "queued",
-            "inUse",
-            "finished",
-            "timedOut",
-            "canceled",
-            "abandoned"
-          ],
-          "x-ms-enum": {
-            "name": "ResourceLockStatus",
-            "values": [
-              {
-                "value": "queued",
-                "description": ""
-              },
-              {
-                "value": "inUse",
-                "description": ""
-              },
-              {
-                "value": "finished",
-                "description": ""
-              },
-              {
-                "value": "timedOut",
-                "description": ""
-              },
-              {
-                "value": "canceled",
-                "description": ""
-              },
-              {
-                "value": "abandoned",
-                "description": ""
-              }
-            ]
-          }
-        }
-      }
-    },
     "ResourcesHubData": {
       "description": "",
       "type": "object",
       "properties": {
         "continuationToken": {
           "type": "string"
-        },
-        "hasProjectLevelManagePermission": {
-          "type": "boolean"
         },
         "resourceFilterOptions": {
           "$ref": "#/definitions/ResourceFilterOptions"
@@ -8307,16 +6772,6 @@
         }
       }
     },
-    "TaskAgentDowngrade": {
-      "description": "",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/TaskAgentUpdateReason"
-        }
-      ],
-      "properties": {}
-    },
     "TaskAgentJob": {
       "description": "",
       "type": "object",
@@ -8700,10 +7155,6 @@
           "description": "Whether or not the pool should autosize itself based on the Agent Cloud Provider settings.",
           "type": "boolean"
         },
-        "autoUpdate": {
-          "description": "Whether or not agents in this pool are allowed to automatically update",
-          "type": "boolean"
-        },
         "createdBy": {
           "description": "Creator of the pool. The creator of the pool is automatically added into the administrators group for the pool on creation.",
           "$ref": "#/definitions/IdentityRef"
@@ -9071,36 +7522,6 @@
         "name": {
           "type": "string"
         },
-        "options": {
-          "description": "Additional pool settings and details",
-          "enum": [
-            "none",
-            "elasticPool",
-            "singleUseAgents",
-            "preserveAgentOnJobFailure"
-          ],
-          "x-ms-enum": {
-            "name": "TaskAgentPoolOptions",
-            "values": [
-              {
-                "value": "none",
-                "description": ""
-              },
-              {
-                "value": "elasticPool",
-                "description": "TaskAgentPool backed by the Elastic pool service"
-              },
-              {
-                "value": "singleUseAgents",
-                "description": "Set to true if agents are re-imaged after each TaskAgentJobRequest"
-              },
-              {
-                "value": "preserveAgentOnJobFailure",
-                "description": "Set to true if agents are held for investigation after a TaskAgentJobRequest failure"
-              }
-            ]
-          }
-        },
         "poolType": {
           "description": "Gets or sets the type of the pool",
           "enum": [
@@ -9377,8 +7798,7 @@
         "code": {
           "enum": [
             "manual",
-            "minAgentVersionRequired",
-            "downgrade"
+            "minAgentVersionRequired"
           ],
           "x-ms-enum": {
             "name": "TaskAgentUpdateReasonType",
@@ -9389,10 +7809,6 @@
               },
               {
                 "value": "minAgentVersionRequired",
-                "description": ""
-              },
-              {
-                "value": "downgrade",
                 "description": ""
               }
             ]
@@ -9885,49 +8301,6 @@
         }
       }
     },
-    "TaskGroupPublishPreviewParameter": {
-      "description": "",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/TaskGroupUpdatePropertiesBase"
-        }
-      ],
-      "properties": {
-        "disablePriorVersions": {
-          "description": "This is to disable previous versions of task group upon publish",
-          "type": "boolean"
-        },
-        "preview": {
-          "description": "Denotes if task group is in preview",
-          "type": "boolean"
-        },
-        "revision": {
-          "description": "This is the revision of task group that is getting published",
-          "type": "integer",
-          "format": "int32"
-        },
-        "version": {
-          "description": "This is the version of task group that is getting published",
-          "$ref": "#/definitions/TaskVersion"
-        }
-      }
-    },
-    "TaskGroupRestoreParameter": {
-      "description": "",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/TaskGroupUpdatePropertiesBase"
-        }
-      ],
-      "properties": {
-        "restore": {
-          "description": "This is to restore deleted Task Group",
-          "type": "boolean"
-        }
-      }
-    },
     "TaskGroupRevision": {
       "description": "",
       "type": "object",
@@ -10116,16 +8489,6 @@
         }
       }
     },
-    "TaskGroupUpdatePropertiesBase": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "comment": {
-          "description": "Comment for this update request",
-          "type": "string"
-        }
-      }
-    },
     "TaskHubLicenseDetails": {
       "description": "",
       "type": "object",
@@ -10158,6 +8521,12 @@
         },
         "hostedLicensesArePremium": {
           "type": "boolean"
+        },
+        "marketplacePurchasedHostedLicenses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MarketplacePurchasedLicense"
+          }
         },
         "msdnUsersCount": {
           "type": "integer",
@@ -10484,9 +8853,6 @@
       "properties": {
         "environment": {
           "$ref": "#/definitions/PlanEnvironment"
-        },
-        "expandedYaml": {
-          "$ref": "#/definitions/TaskLogReference"
         },
         "finishTime": {
           "type": "string",
@@ -10909,9 +9275,6 @@
       "description": "",
       "type": "object",
       "properties": {
-        "agentSpecification": {
-          "$ref": "#/definitions/JObject"
-        },
         "attempt": {
           "type": "integer",
           "format": "int32"
@@ -10977,10 +9340,6 @@
           "items": {
             "$ref": "#/definitions/TimelineAttempt"
           }
-        },
-        "queueId": {
-          "type": "integer",
-          "format": "int32"
         },
         "refName": {
           "type": "string"
@@ -11084,14 +9443,6 @@
           "type": "integer",
           "format": "int32"
         },
-        "endLine": {
-          "type": "integer",
-          "format": "int64"
-        },
-        "startLine": {
-          "type": "integer",
-          "format": "int64"
-        },
         "stepId": {
           "type": "string",
           "format": "uuid"
@@ -11190,13 +9541,6 @@
           "description": "Gets or sets type of the variable group.",
           "type": "string"
         },
-        "variableGroupProjectReferences": {
-          "description": "all project references where the variable group is shared with other projects.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/VariableGroupProjectReference"
-          }
-        },
         "variables": {
           "description": "Gets or sets variables contained in the variable group.",
           "type": "object",
@@ -11226,36 +9570,12 @@
           "description": "Sets type of the variable group.",
           "type": "string"
         },
-        "variableGroupProjectReferences": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/VariableGroupProjectReference"
-          }
-        },
         "variables": {
           "description": "Sets variables contained in the variable group.",
           "type": "object",
           "additionalProperties": {
             "$ref": "#/definitions/VariableValue"
           }
-        }
-      }
-    },
-    "VariableGroupProjectReference": {
-      "description": "A variable group reference is a shallow reference to variable group.",
-      "type": "object",
-      "properties": {
-        "description": {
-          "description": "Gets or sets description of the variable group.",
-          "type": "string"
-        },
-        "name": {
-          "description": "Gets or sets name of the variable group.",
-          "type": "string"
-        },
-        "projectReference": {
-          "description": "Gets or sets project reference of the variable group.",
-          "$ref": "#/definitions/ProjectReference"
         }
       }
     },
@@ -11268,9 +9588,6 @@
       "description": "",
       "type": "object",
       "properties": {
-        "isReadOnly": {
-          "type": "boolean"
-        },
         "isSecret": {
           "type": "boolean"
         },
@@ -11322,29 +9639,6 @@
         }
       }
     },
-    "VirtualMachineResource": {
-      "description": "",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/EnvironmentResource"
-        }
-      ],
-      "properties": {
-        "agent": {
-          "$ref": "#/definitions/TaskAgent"
-        }
-      }
-    },
-    "VirtualMachineResourceCreateParameters": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "virtualMachineResource": {
-          "$ref": "#/definitions/VirtualMachineResource"
-        }
-      }
-    },
     "VssJsonCollectionWrapper": {
       "description": "This class is used to serialized collections as a single JSON object on the wire, to avoid serializing JSON arrays directly to the client, which can be a security hole",
       "type": "object",
@@ -11375,28 +9669,28 @@
     "api-Version": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.2": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.2' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.2' to use this version of the api.",
       "required": true,
       "type": "string"
     },
     "api-Version-preview.3": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.3' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.3' to use this version of the api.",
       "required": true,
       "type": "string"
     }
@@ -11418,6 +9712,8 @@
         "vso.taskgroups_manage": "Grants the ability to read, create and manage taskgroups.",
         "vso.taskgroups_read": "Grants the ability to read task groups",
         "vso.taskgroups_write": "Grants the ability to read and create task groups",
+        "vso.variablegroups_write": "Grants the ability to read and create variable groups",
+        "vso.variablegroups_manage": "Grants the ability to read, create and manage variablegroups.",
         "vso.variablegroups_read": "Grants the ability to read variable groups",
         "vso.securefiles_write": "Grants the ability to read and create secure files.",
         "vso.securefiles_read": "Grants the ability to read secure files.",

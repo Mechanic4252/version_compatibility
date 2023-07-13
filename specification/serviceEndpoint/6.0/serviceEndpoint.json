@@ -12,7 +12,7 @@
       "name": "MICROSOFT SOFTWARE LICENSE TERMS",
       "url": "https://go.microsoft.com/fwlink/?LinkId=329770"
     },
-    "version": "6.0-preview"
+    "version": "5.1-preview"
   },
   "host": "dev.azure.com",
   "x-ms-vss-area": "ServiceEndpoint",
@@ -36,305 +36,12 @@
     "https"
   ],
   "paths": {
-    "/{organization}/_apis/serviceendpoint/endpoints": {
-      "post": {
-        "tags": [
-          "Endpoints"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.4",
-        "x-ms-vss-resource": "endpoints",
-        "x-ms-vss-method": "CreateServiceEndpoint",
-        "x-ms-preview": true,
-        "description": "Creates a new service endpoint",
-        "operationId": "Endpoints_Create",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Service endpoint to create",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/ServiceEndpoint"
-            }
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.4"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/ServiceEndpoint"
-            }
-          }
-        },
-        "x-ms-examples": {
-          "Create service endpoint": {
-            "$ref": "./httpExamples/endpoints/CreateGenericEndpoint.json"
-          },
-          "Create Azure RM service endpoint": {
-            "$ref": "./httpExamples/endpoints/CreateAzureRMEndpoint.json"
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Endpoints"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.4",
-        "x-ms-vss-resource": "endpoints",
-        "x-ms-vss-method": "UpdateServiceEndpoints",
-        "x-ms-preview": true,
-        "description": "Update the service endpoints.",
-        "operationId": "Endpoints_Update Service Endpoints",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Names of the service endpoints to update.",
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ServiceEndpoint"
-              }
-            }
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.4"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ServiceEndpoint"
-              }
-            }
-          }
-        },
-        "x-ms-examples": {
-          "Update service endpoints": {
-            "$ref": "./httpExamples/endpoints/UpdateServiceEndpoints.json"
-          }
-        }
-      }
-    },
-    "/{organization}/_apis/serviceendpoint/endpoints/{endpointId}": {
-      "delete": {
-        "tags": [
-          "Endpoints"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.4",
-        "x-ms-vss-resource": "endpoints",
-        "x-ms-vss-method": "DeleteServiceEndpoint",
-        "x-ms-preview": true,
-        "description": "Delete a service endpoint",
-        "operationId": "Endpoints_Delete",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "path",
-            "name": "endpointId",
-            "description": "Endpoint Id of endpoint to delete",
-            "required": true,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "in": "query",
-            "name": "projectIds",
-            "description": "project Ids from which endpoint needs to be deleted",
-            "required": true,
-            "type": "string",
-            "format": "array (string)"
-          },
-          {
-            "in": "query",
-            "name": "deep",
-            "description": "delete the spn created by endpoint",
-            "required": false,
-            "type": "boolean"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.4"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation"
-          }
-        },
-        "x-ms-examples": {
-          "Delete service endpoint": {
-            "$ref": "./httpExamples/endpoints/DeleteServiceEndpoint.json"
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Endpoints"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.4",
-        "x-ms-vss-resource": "endpoints",
-        "x-ms-vss-method": "ShareServiceEndpoint",
-        "x-ms-preview": true,
-        "description": "Share service endpoint across projects",
-        "operationId": "Endpoints_Share Service Endpoint",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Project reference details of the target project",
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/ServiceEndpointProjectReference"
-              }
-            }
-          },
-          {
-            "in": "path",
-            "name": "endpointId",
-            "description": "Endpoint Id of the endpoint to share",
-            "required": true,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.4"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation"
-          }
-        },
-        "x-ms-examples": {
-          "Share service endpoint": {
-            "$ref": "./httpExamples/endpoints/ShareServiceEndpoint.json"
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Endpoints"
-        ],
-        "x-ms-docs-override-version": "6.0-preview.4",
-        "x-ms-vss-resource": "endpoints",
-        "x-ms-vss-method": "UpdateServiceEndpoint",
-        "x-ms-preview": true,
-        "description": "Update the service endpoint",
-        "operationId": "Endpoints_Update Service Endpoint",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "path",
-            "name": "organization",
-            "description": "The name of the Azure DevOps organization.",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Updated data for the endpoint",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/ServiceEndpoint"
-            }
-          },
-          {
-            "in": "path",
-            "name": "endpointId",
-            "description": "Endpoint Id of the endpoint to update",
-            "required": true,
-            "type": "string",
-            "format": "uuid"
-          },
-          {
-            "in": "query",
-            "name": "operation",
-            "description": "operation type",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.4"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "schema": {
-              "$ref": "#/definitions/ServiceEndpoint"
-            }
-          }
-        },
-        "x-ms-examples": {
-          "Update service endpoint": {
-            "$ref": "./httpExamples/endpoints/UpdateServiceEndpoint.json"
-          }
-        }
-      }
-    },
     "/{organization}/_apis/serviceendpoint/types": {
       "get": {
         "tags": [
           "Types"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "types",
         "x-ms-vss-method": "GetServiceEndpointTypes",
         "x-ms-preview": true,
@@ -399,7 +106,7 @@
         "tags": [
           "Executionhistory"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "executionhistory",
         "x-ms-vss-method": "GetServiceEndpointExecutionRecords",
         "x-ms-preview": true,
@@ -474,7 +181,7 @@
         "tags": [
           "Endpointproxy"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "endpointproxy",
         "x-ms-vss-method": "QueryServiceEndpoint",
         "x-ms-preview": true,
@@ -536,11 +243,76 @@
       }
     },
     "/{organization}/{project}/_apis/serviceendpoint/endpoints": {
+      "post": {
+        "tags": [
+          "Endpoints"
+        ],
+        "x-ms-docs-override-version": "5.1-preview.2",
+        "x-ms-vss-resource": "endpoints",
+        "x-ms-vss-method": "CreateServiceEndpoint",
+        "x-ms-preview": true,
+        "description": "Create a service endpoint.",
+        "operationId": "Endpoints_Create",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "organization",
+            "description": "The name of the Azure DevOps organization.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Service endpoint to create.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ServiceEndpoint"
+            }
+          },
+          {
+            "in": "path",
+            "name": "project",
+            "description": "Project ID or project name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/api-Version-preview.2"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ServiceEndpoint"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "vso.serviceendpoint_manage"
+            ]
+          }
+        ],
+        "x-ms-examples": {
+          "Create a service endpoint": {
+            "$ref": "./httpExamples/endpoints/POST__CreateServiceEndpoint.json"
+          }
+        }
+      },
       "get": {
         "tags": [
           "Endpoints"
         ],
-        "x-ms-docs-override-version": "6.0-preview.4",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "endpoints",
         "x-ms-vss-method": "GetServiceEndpointsByNames",
         "x-ms-preview": true,
@@ -609,7 +381,7 @@
             "type": "boolean"
           },
           {
-            "$ref": "#/parameters/api-Version-preview.4"
+            "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
         "responses": {
@@ -632,20 +404,20 @@
         ],
         "x-ms-examples": {
           "Get service endpoints by names": {
-            "$ref": "./httpExamples/endpoints/GetServiceEndpointsByName.json"
+            "$ref": "./httpExamples/endpoints/Get__ServiceEndpointsByNames.json"
           }
         }
       },
-      "post": {
+      "put": {
         "tags": [
           "Endpoints"
         ],
-        "x-ms-docs-override-version": "6.0-preview.4",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "endpoints",
-        "x-ms-vss-method": "GetServiceEndpointsWithRefreshedAuthentication",
+        "x-ms-vss-method": "UpdateServiceEndpoints",
         "x-ms-preview": true,
-        "description": "Gets the service endpoints and patch new authorization parameters",
-        "operationId": "Endpoints_Get Service Endpoints With Refreshed Authentication",
+        "description": "Update the service endpoints.",
+        "operationId": "Endpoints_Update Service Endpoints",
         "consumes": [
           "application/json"
         ],
@@ -663,12 +435,12 @@
           {
             "in": "body",
             "name": "body",
-            "description": "Scope, Validity of Token requested.",
+            "description": "Names of the service endpoints to update.",
             "required": true,
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/RefreshAuthenticationParameters"
+                "$ref": "#/definitions/ServiceEndpoint"
               }
             }
           },
@@ -680,15 +452,7 @@
             "type": "string"
           },
           {
-            "in": "query",
-            "name": "endpointIds",
-            "description": "Ids of the service endpoints.",
-            "required": true,
-            "type": "string",
-            "format": "array (uuid)"
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.4"
+            "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
         "responses": {
@@ -708,15 +472,82 @@
               "vso.serviceendpoint_manage"
             ]
           }
-        ]
+        ],
+        "x-ms-examples": {
+          "Update service endpoints": {
+            "$ref": "./httpExamples/endpoints/PUT__UpdateServiceEndpoints.json"
+          }
+        }
       }
     },
     "/{organization}/{project}/_apis/serviceendpoint/endpoints/{endpointId}": {
+      "delete": {
+        "tags": [
+          "Endpoints"
+        ],
+        "x-ms-docs-override-version": "5.1-preview.2",
+        "x-ms-vss-resource": "endpoints",
+        "x-ms-vss-method": "DeleteServiceEndpoint",
+        "x-ms-preview": true,
+        "description": "Delete a service endpoint.",
+        "operationId": "Endpoints_Delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "organization",
+            "description": "The name of the Azure DevOps organization.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "project",
+            "description": "Project ID or project name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "endpointId",
+            "description": "Id of the service endpoint to delete.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "query",
+            "name": "deep",
+            "description": "Specific to AzureRM endpoint created in Automatic flow. When set to true, this will also delete corresponding AAD application in Azure. Default value is true.",
+            "required": false,
+            "type": "boolean"
+          },
+          {
+            "$ref": "#/parameters/api-Version-preview.2"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "vso.serviceendpoint_manage"
+            ]
+          }
+        ],
+        "x-ms-examples": {
+          "Delete a service endpoint": {
+            "$ref": "./httpExamples/endpoints/DELETE__ServiceEndpoint.json"
+          }
+        }
+      },
       "get": {
         "tags": [
           "Endpoints"
         ],
-        "x-ms-docs-override-version": "6.0-preview.4",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "endpoints",
         "x-ms-vss-method": "GetServiceEndpointDetails",
         "x-ms-preview": true,
@@ -749,41 +580,7 @@
             "format": "uuid"
           },
           {
-            "in": "query",
-            "name": "actionFilter",
-            "description": "Action filter for the service connection. It specifies the action which can be performed on the service connection.",
-            "required": false,
-            "type": "string",
-            "enum": [
-              "none",
-              "manage",
-              "use",
-              "view"
-            ],
-            "x-ms-enum": {
-              "name": "ServiceEndpointActionFilter",
-              "values": [
-                {
-                  "value": "none",
-                  "description": ""
-                },
-                {
-                  "value": "manage",
-                  "description": ""
-                },
-                {
-                  "value": "use",
-                  "description": ""
-                },
-                {
-                  "value": "view",
-                  "description": ""
-                }
-              ]
-            }
-          },
-          {
-            "$ref": "#/parameters/api-Version-preview.4"
+            "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
         "responses": {
@@ -803,7 +600,87 @@
         ],
         "x-ms-examples": {
           "Get service endpoint details": {
-            "$ref": "./httpExamples/endpoints/GetServiceEndpointDetails.json"
+            "$ref": "./httpExamples/endpoints/GET__ServiceEndpointDetails.json"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Endpoints"
+        ],
+        "x-ms-docs-override-version": "5.1-preview.2",
+        "x-ms-vss-resource": "endpoints",
+        "x-ms-vss-method": "UpdateServiceEndpoint",
+        "x-ms-preview": true,
+        "description": "Update a service endpoint.",
+        "operationId": "Endpoints_Update Service Endpoint",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "organization",
+            "description": "The name of the Azure DevOps organization.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Service endpoint to update.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ServiceEndpoint"
+            }
+          },
+          {
+            "in": "path",
+            "name": "project",
+            "description": "Project ID or project name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "endpointId",
+            "description": "Id of the service endpoint to update.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          },
+          {
+            "in": "query",
+            "name": "operation",
+            "description": "Operation for the service endpoint.",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/api-Version-preview.2"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/ServiceEndpoint"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "vso.serviceendpoint_manage"
+            ]
+          }
+        ],
+        "x-ms-examples": {
+          "Update a service endpoint": {
+            "$ref": "./httpExamples/endpoints/PUT__UpdateServiceEndpoint.json"
           }
         }
       }
@@ -815,7 +692,7 @@
         "tags": [
           "Endpointproxy"
         ],
-        "x-ms-docs-override-version": "6.0-preview.1",
+        "x-ms-docs-override-version": "5.1-preview.1",
         "x-ms-vss-resource": "endpointproxy",
         "x-ms-vss-method": "ExecuteServiceEndpointRequest",
         "x-ms-preview": true,
@@ -889,7 +766,7 @@
         "tags": [
           "Endpoints"
         ],
-        "x-ms-docs-override-version": "6.0-preview.4",
+        "x-ms-docs-override-version": "5.1-preview.2",
         "x-ms-vss-resource": "endpoints",
         "x-ms-vss-method": "GetServiceEndpoints",
         "x-ms-preview": true,
@@ -958,7 +835,7 @@
             "type": "boolean"
           },
           {
-            "$ref": "#/parameters/api-Version-preview.4"
+            "$ref": "#/parameters/api-Version-preview.2"
           }
         ],
         "responses": {
@@ -981,7 +858,7 @@
         ],
         "x-ms-examples": {
           "Get service endpoints": {
-            "$ref": "./httpExamples/endpoints/ListEndpoints.json"
+            "$ref": "./httpExamples/endpoints/GET__ServiceEndpoints.json"
           }
         }
       }
@@ -1063,18 +940,6 @@
         },
         "value": {
           "description": "Gets or sets the value of authorization header.",
-          "type": "string"
-        }
-      }
-    },
-    "AzureAppService": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "string"
-        },
-        "name": {
           "type": "string"
         }
       }
@@ -1505,10 +1370,6 @@
         },
         "displayName": {
           "description": "Gets or sets the display name of service endpoint url.",
-          "type": "string"
-        },
-        "format": {
-          "description": "Gets or sets the format of the url.",
           "type": "string"
         },
         "helpText": {
@@ -2074,30 +1935,6 @@
         }
       }
     },
-    "RefreshAuthenticationParameters": {
-      "description": "Specify the properties for refreshing the endpoint authentication object being queried",
-      "type": "object",
-      "properties": {
-        "endpointId": {
-          "description": "EndpointId which needs new authentication params",
-          "type": "string",
-          "format": "uuid"
-        },
-        "scope": {
-          "description": "Scope of the token requested. For GitHub marketplace apps, scope contains repository Ids",
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "tokenValidityInMinutes": {
-          "description": "The requested endpoint authentication should be valid for _ minutes. Authentication params will not be refreshed if the token contained in endpoint already has active token.",
-          "type": "integer",
-          "format": "int16"
-        }
-      }
-    },
     "ResultTransformationDetails": {
       "description": "Represents template to transform the result data.",
       "type": "object",
@@ -2176,13 +2013,6 @@
           "description": "Gets or sets the identity reference for the readers group of the service endpoint.",
           "$ref": "#/definitions/IdentityRef"
         },
-        "serviceEndpointProjectReferences": {
-          "description": "All other project references where the service endpoint is shared.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ServiceEndpointProjectReference"
-          }
-        },
         "type": {
           "description": "Gets or sets the type of the endpoint.",
           "type": "string"
@@ -2232,17 +2062,6 @@
           "items": {
             "$ref": "#/definitions/InputDescriptor"
           }
-        },
-        "properties": {
-          "description": "Gets or sets the properties of service endpoint authentication scheme.",
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          }
-        },
-        "requiresOAuth2Configuration": {
-          "description": "Gets or sets whether this auth scheme requires OAuth2 configuration or not.",
-          "type": "boolean"
         },
         "scheme": {
           "description": "Gets or sets the scheme for service endpoint authentication.",
@@ -2412,24 +2231,6 @@
         "serviceEndpointProjectId": {
           "type": "string",
           "format": "uuid"
-        }
-      }
-    },
-    "ServiceEndpointProjectReference": {
-      "description": "",
-      "type": "object",
-      "properties": {
-        "description": {
-          "description": "Gets or sets description of the service endpoint.",
-          "type": "string"
-        },
-        "name": {
-          "description": "Gets or sets name of the service endpoint.",
-          "type": "string"
-        },
-        "projectReference": {
-          "description": "Gets or sets project reference of the service endpoint.",
-          "$ref": "#/definitions/ProjectReference"
         }
       }
     },
@@ -2824,14 +2625,14 @@
     "api-Version-preview.1": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.1' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.1' to use this version of the api.",
       "required": true,
       "type": "string"
     },
-    "api-Version-preview.4": {
+    "api-Version-preview.2": {
       "name": "api-version",
       "in": "query",
-      "description": "Version of the API to use.  This should be set to '6.0-preview.4' to use this version of the api.",
+      "description": "Version of the API to use.  This should be set to '5.1-preview.2' to use this version of the api.",
       "required": true,
       "type": "string"
     }
